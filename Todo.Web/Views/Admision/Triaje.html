@@ -1,0 +1,75 @@
+﻿<div class="container main box-shaded">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="main-header">
+                <h1 class="pull-left"><span class="glyphicon glyphicon-list-alt"></span> Datos de Triaje</h1>
+                <div class="cont-buttons pull-right">
+                    <button type="submit" class="btn btn-default" ng-click="cleanTriaje()">Limpiar</button>
+                    <button type="submit" class="btn btn-success" ng-click="saveTriaje(newPatient.id, triaje)">Grabar</button>
+                </div>
+            </div>
+            <form role="form">
+                <div class="row form-group">
+                    <div class="col-md-2">
+                        <label>Tipo Doc</label>
+                        <select class="form-control" ng-model="newPatient.documentType" ng-options="type.name for type in documentTypes">
+                            <option value="">-- seleccione --</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label>N°</label>
+                        <input type="text" class="form-control" ng-model="newPatient.documentNumber" ng-enter="verifyPatient(newPatient)">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <label>Nombres y Apellidos</label>
+                        <input type="text" class="form-control" ng-model="newPatient.fullName">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-3">
+                        <label>Fecha Nac</label>
+                        <input type="text" class="form-control" ng-model="newPatient.birthday">
+                    </div>
+                    <div class="col-md-3">
+                        <label>Edad</label>
+                        <input type="text" class="form-control" ng-model="newPatient.age" ng-disabled="true">
+                    </div>
+                    <div class="col-md-3">
+                        <label>Peso|Kg</label>
+                        <input type="text" class="form-control" ng-model="triaje.weight">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-3">
+                        <label>Talla|mts</label>
+                        <input type="text" class="form-control" ng-model="triaje.height" ng-blur="getIMC(triaje)">
+                    </div>
+                    <div class="col-md-3">
+                        <label>% SAT</label>
+                        <input type="text" class="form-control" ng-model="triaje.satPercentage">
+                    </div>
+                    <div class="col-md-3">
+                        <label>Temperatura|º</label>
+                        <input type="text" class="form-control" ng-model="triaje.temperature">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-3">
+                        <label>Frecuencia cardiaca|min</label>
+                        <input type="text" class="form-control" ng-model="triaje.heartRate">
+                    </div>
+                    <div class="col-md-3">
+                        <label>Frecuencia respiratoria|min</label>
+                        <input type="text" class="form-control" ng-model="triaje.respiratoryRate">
+                    </div>
+                    <div class="col-md-3">
+                        <label>IMC</label>
+                        <input type="text" class="form-control" ng-model="triaje.imc" ng-disabled="true">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

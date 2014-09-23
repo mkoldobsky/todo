@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://getbootstrap.com/examples/dashboard/ -->
+<html lang="en" class="no-touch">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="http://getbootstrap.com/assets/ico/favicon.ico">
+        <title>Administrador</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+
+        <!-- Overrides styles -->
+        <link href="css/overrides.css" rel="stylesheet">
+
+        <!-- Animate styles -->
+        <link href="css/animate.css" rel="stylesheet">
+
+        <!-- Call to Google Fonts -->
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,600" rel="stylesheet" type="text/css">
+
+        <!-- Just for debugging purposes. Don't actually copy this line! -->
+        <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+                    <!--[if lt IE 9]>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <![endif]-->
+        <style id="holderjs-style" type="text/css"></style>
+        <script type="text/javascript" src="./Dashboard Template for Bootstrap_files/version.php"></script>
+        <script src="js/modernizr.custom.js"></script>
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand fadeInLeftBig animated"><img alt="Todo" src="images/logo.png" /></a>
+                </div>
+                <div class="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown profile">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Nombre de Usuario <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">22/05/2014</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Desconectar</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="container secundary-navbar">
+            <ul class="nav navbar-nav">
+                <li><a href="#">Agenda</a></li>
+                <li><a href="#">Admisión</a></li>
+                <li><a href="#">Triaje</a></li>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Circuito Preocupacional</a></li>
+                <li class="active"><a href="#">Administrador</a></li>
+            </ul>
+        </div>
+        <div class="container main box-shaded">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="bs-example bs-example-bg-classes">
+                        <p class="bg-primary">Este es un mensaje de prueba</p>
+                    </div>
+                    <div class="main-header">
+                        <h1 class="pull-left">Administrador</h1>
+                        <div class="cont-buttons pull-right">
+                        </div>
+                    </div>
+                    <ul id="tab-admin" class="nav nav-tabs">
+                        <li class="active"><a href="#usuarios" data-toggle="tab">Usuarios</a></li>
+                        <li><a href="#empresas" data-toggle="tab">Empresas</a></li>
+                        <li><a href="#protocolos" data-toggle="tab">Protocolos</a></li>
+                    </ul>
+                    <div id="tab-admin" class="tab-content">
+                        <!-- USUARIOS -------------------------------------------->
+                        <div class="tab-pane fade in active" id="usuarios">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="filter form-inline">
+                                        <div class="pull-left">
+                                            <select class="form-control input-sm">
+                                                <option>DNI</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                            <input type="text" class="form-control input-sm" id="" placeholder="N°">
+                                            <input type="text" class="form-control input-sm" id="" placeholder="Nombre">
+                                            <input type="text" class="form-control input-sm" id="" placeholder="Apellido Paterno">
+                                            <input type="text" class="form-control input-sm" id="" placeholder="Apellido Materno">
+                                            <button type="submit" class="btn btn-default">Buscar</button>
+                                        </div>
+                                        <div class="pull-right">
+                                            <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span> Nuevo Usuario</button>
+                                        </div>
+                                    </div>
+                                    <!-- Large modal usuarios-->
+                                    <div id="myModal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                    <h4 class="modal-title" id="myModalLabel">Datos</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <ul id="tab-usuarios" class="nav nav-tabs">
+                                                                <li class="active"><a href="#perfil" data-toggle="tab">Perfil</a></li>
+                                                                <li><a href="#permisos" data-toggle="tab">Permisos</a></li>
+                                                            </ul>
+                                                            <div id="tab-usuarios" class="tab-content">
+                                                                <div class="tab-pane fade in active" id="perfil">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            <div class="checkbox">
+                                                                                <label>
+                                                                                    <input type="checkbox">
+                                                                                        Activo
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-2">
+                                                                            <div class="form-group">
+                                                                                <label>Tipo Doc</label>
+                                                                                <select class="form-control">
+                                                                                    <option>DNI</option>
+                                                                                    <option>2</option>
+                                                                                    <option>3</option>
+                                                                                    <option>4</option>
+                                                                                    <option>5</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-4">
+                                                                            <div class="form-group">
+                                                                                <label>Nº</label>
+                                                                                <input type="text" class="form-control" id="" placeholder="">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label>Nombre</label>
+                                                                                <input type="text" class="form-control" id="" placeholder="">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label>Apellido Paterno</label>
+                                                                                <input type="text" class="form-control" id="" placeholder="">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label class="pull-left">Apellido Paterno</label>
+                                                                                <input type="text" class="form-control" id="" placeholder="">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label>Contraseña</label>
+                                                                                <input type="text" class="form-control" id="" placeholder="">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label class="pull-left">Repetir Contraseña</label>
+                                                                                <input type="text" class="form-control" id="" placeholder="">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div id="permisos" class="tab-pane fade">
+                                                                    <legend class="subtitle">Lista de Menús</legend>
+                                                                    <div class="row">
+                                                                        <div class="col-md-4">
+                                                                            <div class="checkbox">
+                                                                                <label>
+                                                                                    <input type="checkbox"> Agenda
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="checkbox">
+                                                                                <label>
+                                                                                    <input type="checkbox"> Admisión
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="checkbox">
+                                                                                <label>
+                                                                                    <input type="checkbox"> Triaje
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="checkbox">
+                                                                                <label>
+                                                                                    <input type="checkbox"> Dashboard
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="checkbox">
+                                                                                <label>
+                                                                                    <input type="checkbox"> Circuito preocupacional
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="checkbox">
+                                                                                <label>
+                                                                                    <input type="checkbox"> Administrador
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-8">
+                                                                            <fieldset>
+                                                                                <legend>Circuito Preocupacional</legend>
+                                                                                <div class="checkbox">
+                                                                                    <label>
+                                                                                        <input checked="checked" type="checkbox"> Espirometría
+                                                                                    </label>
+                                                                                </div>
+                                                                                <div class="checkbox">
+                                                                                    <label>
+                                                                                        <input type="checkbox"> Cardiología
+                                                                                    </label>
+                                                                                </div>
+                                                                                <div class="checkbox">
+                                                                                    <label>
+                                                                                        <input type="checkbox"> Radiología
+                                                                                    </label>
+                                                                                </div>
+                                                                                <div class="checkbox">
+                                                                                    <label>
+                                                                                        <input checked="checked" type="checkbox"> Laboratorio
+                                                                                    </label>
+                                                                                </div>
+                                                                                <div class="checkbox col-md-offset-1">
+                                                                                    <label>
+                                                                                        <input type="checkbox"> Examén 1
+                                                                                        <button type="submit" class="btn">
+                                                                                            <span class="glyphicon glyphicon-plus">
+                                                                                            </span>
+                                                                                        </button>
+                                                                                    </label>
+                                                                                </div>
+                                                                            </fieldset>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Limpiar</button>
+                                                    <button type="button" class="btn btn-success">Grabar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <table class="table admin table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th>Tipo Doc</th>
+                                            <th>Nº</th>
+                                            <th>Nombre</th>
+                                            <th>Apellido Paterno</th>
+                                            <th>Apellido Materno</th>
+                                            <th></th>
+                                        </tr>
+                                            </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>DNI</td>
+                                            <td>28324543</td>
+                                            <td>Juan</td>
+                                            <td>Roque Perez</td>
+                                            <td>Del Huerto</td>
+                                            <td>
+                                                <div class="pull-right">
+                                                    <div class="btn-group bs-glyphicons acciones">
+                                                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                                                            <span class="glyphicon glyphicon-cog"></span>
+                                                            <span class="caret"></span>
+                                                        </button>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li><a href="#">Resetear</a></li>
+                                                            <li><a href="#">Modificar</a></li>
+                                                            <li><a href="#">Desactivar</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>CE</td>
+                                            <td>100212156</td>
+                                            <td>Ana Maria</td>
+                                            <td>Rosaura Gimenez</td>
+                                            <td>Lopez</td>
+                                            <td>
+                                                <div class="pull-right">
+                                                    <div class="btn-group bs-glyphicons acciones">
+                                                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                                                            <span class="glyphicon glyphicon-cog"></span>
+                                                            <span class="caret"></span>
+                                                        </button>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li><a href="#">Resetear</a></li>
+                                                            <li><a href="#">Modificar</a></li>
+                                                            <li><a href="#">Desactivar</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="no-active">
+                                            <td>Pasaporte</td>
+                                            <td>65437634</td>
+                                            <td>Ruben Jorge</td>
+                                            <td>Esteban Dario</td>
+                                            <td></td>
+                                            <td>
+                                                <div class="pull-right">
+                                                    <div class="btn-group bs-glyphicons acciones">
+                                                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                                                            <span class="glyphicon glyphicon-cog"></span>
+                                                            <span class="caret"></span>
+                                                        </button>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li><a href="#">Resetear</a></li>
+                                                            <li><a href="#">Modificar</a></li>
+                                                            <li><a href="#">Desactivar</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                            </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- EMPRESAS -------------------------------------------->
+                        <div class="tab-pane fade" id="empresas">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="filter form-inline">
+                                        <div class="pull-left">
+                                            <input type="text" class="form-control input-sm" id="" placeholder="RUC">
+                                            <input type="text" class="form-control input-sm" id="" placeholder="Razón Social">
+                                            <button type="submit" class="btn btn-default">Buscar</button>
+                                        </div>
+                                        <div class="pull-right">
+                                            <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#myModal-1"><span class="glyphicon glyphicon-plus"></span> Nueva Empresa</button>
+                                        </div>
+                                    </div>
+                                    <!-- Large modal empresas-->
+                                    <div id="myModal-1" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                    <h4 class="modal-title" id="myModalLabel">Datos</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="checkbox">
+                                                                        <label>
+                                                                            <input type="checkbox">
+                                                                                Activo
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label>RUC</label>
+                                                                        <input type="text" class="form-control" id="" placeholder="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label>Razón Social</label>
+                                                                        <input type="text" class="form-control" id="" placeholder="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label>Dirección</label>
+                                                                        <input type="text" class="form-control" id="" placeholder="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label>Departamento</label>
+                                                                        <select class="form-control" "">
+                                                                            <option>Seleccionar una opción</option>
+                                                                            <option>1</option>
+                                                                            <option>2</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label class="pull-left">
+                                                                            Estado
+                                                                        </label>
+                                                                        <select class="form-control" style="clear: both;">
+                                                                            <option>Seleccionar una opción</option>
+                                                                            <option>1</option>
+                                                                            <option>2</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label>Distrito</label>
+                                                                        <select class="form-control">
+                                                                            <option>Seleccionar una opción</option>
+                                                                            <option>1</option>
+                                                                            <option>2</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Limpiar</button>
+                                                    <button type="button" class="btn btn-success">Grabar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <table class="table admin table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th>RUC</th>
+                                            <th>Razón Social</th>
+                                            <th>Departamento</th>
+                                            <th>Estado</th>
+                                            <th>Distrito</th>
+                                            <th></th>
+                                        </tr>
+                                            </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>28324543</td>
+                                            <td>Empresa S.R.L</td>
+                                            <td>Lima</td>
+                                            <td>Barranca</td>
+                                            <td>Barranca</td>
+                                            <td>
+                                                <div class="pull-right">
+                                                    <div class="btn-group bs-glyphicons acciones">
+                                                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                                                            <span class="glyphicon glyphicon-cog"></span>
+                                                            <span class="caret"></span>
+                                                        </button>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li><a href="#">Modificar</a></li>
+                                                            <li><a href="#">Desactivar</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>54534234</td>
+                                            <td>Empresa S.A.</td>
+                                            <td>Lima</td>
+                                            <td>Barranca</td>
+                                            <td>Barranca</td>
+                                            <td>
+                                                <div class="pull-right">
+                                                    <div class="btn-group bs-glyphicons acciones">
+                                                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                                                            <span class="glyphicon glyphicon-cog"></span>
+                                                            <span class="caret"></span>
+                                                        </button>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li><a href="#">Modificar</a></li>
+                                                            <li><a href="#">Desactivar</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>99853643</td>
+                                            <td>Empresa Don Jerónimo S.A.</td>
+                                            <td>Lima</td>
+                                            <td>Barranca</td>
+                                            <td>Barranca</td>
+                                            <td>
+                                                <div class="pull-right">
+                                                    <div class="btn-group bs-glyphicons acciones">
+                                                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                                                            <span class="glyphicon glyphicon-cog"></span>
+                                                            <span class="caret"></span>
+                                                        </button>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li><a href="#">Modificar</a></li>
+                                                            <li><a href="#">Desactivar</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                            </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- PROTOCOLO -------------------------------------------->
+                        <div class="tab-pane fade" id="protocolos">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="filter form-inline">
+                                        <div class="pull-left">
+                                            <input type="text" class="form-control input-sm" id="" placeholder="Nombre">
+                                            <button type="submit" class="btn btn-default">Buscar</button>
+                                        </div>
+                                        <div class="pull-right">
+                                            <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#myModal-2"><span class="glyphicon glyphicon-plus"></span> Nuevo Protocolo</button>
+                                        </div>
+                                    </div>
+                                    <!-- Large modal protocolo-->
+                                    <div id="myModal-2" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                    <h4 class="modal-title" id="myModalLabel">Datos</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <ul id="tab-protocolo" class="nav nav-tabs">
+                                                                <li class="active"><a href="#datos-protocolo" data-toggle="tab">Datos</a></li>
+                                                                <li><a href="#detalle-protocolo" data-toggle="tab">Detalle Lab</a></li>
+                                                            </ul>
+                                                            <div id="tab-protocolo" class="tab-content">
+                                                                <div id="datos-protocolo" class="tab-pane fade in active">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            <div class="checkbox">
+                                                                                <label>
+                                                                                    <input type="checkbox">
+                                                                                    Activo
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            <div class="form-group">
+                                                                                <label>Nombre</label>
+                                                                                <input type="text" class="form-control" id="" placeholder="">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <br />
+                                                                    <div class="row">
+                                                                        <div class="form-group">
+                                                                            <div class="col-md-6">
+                                                                                <label>Exámenes</label>
+                                                                                <select class="form-control">
+                                                                                    <option>Seleccionar valor</option>
+                                                                                    <option>2</option>
+                                                                                    <option>3</option>
+                                                                                    <option>4</option>
+                                                                                    <option>5</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-md-6 cont-buttons">
+                                                                                <div class="icon icon-ok">
+                                                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                                                </div>
+                                                                                <button type="submit" class="btn btn-default">
+                                                                                    <span class="glyphicon glyphicon-plus"></span>
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="form-group">
+                                                                            <div class="col-md-6">
+                                                                                <select class="form-control">
+                                                                                    <option>Seleccionar valor</option>
+                                                                                    <option>2</option>
+                                                                                    <option>3</option>
+                                                                                    <option>4</option>
+                                                                                    <option>5</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-md-6 cont-buttons">
+                                                                                <div class="icon icon-ok">
+                                                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                                                </div>
+                                                                                <button type="submit" class="btn btn-default">
+                                                                                    <span class="glyphicon glyphicon-plus"></span>
+                                                                                </button>
+                                                                                <button type="submit" class="btn btn-default">
+                                                                                    <span class="glyphicon glyphicon-remove"></span>
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="form-group">
+                                                                            <div class="col-md-6">
+                                                                                <select class="form-control">
+                                                                                    <option>Seleccionar valor</option>
+                                                                                    <option>2</option>
+                                                                                    <option>3</option>
+                                                                                    <option>4</option>
+                                                                                    <option>5</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-md-6 form-inline cont-buttons">
+                                                                                <div class="icon icon-ok">
+                                                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                                                </div>
+                                                                                <button type="submit" class="btn btn-default">
+                                                                                    <span class="glyphicon glyphicon-plus"></span>
+                                                                                </button>
+                                                                                <button type="submit" class="btn btn-default">
+                                                                                    <span class="glyphicon glyphicon-remove"></span>
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div id="detalle-protocolo" class="tab-pane fade">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            <div class="form-group">
+                                                                                <label>Nombre</label>
+                                                                                <input type="text" class="form-control" id="" placeholder="">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <br />
+                                                                    <div class="row">
+                                                                        <div class="form-group">
+                                                                            <div class="col-md-6">
+                                                                                <label>Detalle de Laboratorio</label>
+                                                                                <select class="form-control">
+                                                                                    <option>Seleccionar valor</option>
+                                                                                    <option>2</option>
+                                                                                    <option>3</option>
+                                                                                    <option>4</option>
+                                                                                    <option>5</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-md-6 cont-buttons">
+                                                                                <div class="icon icon-ok">
+                                                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                                                </div>
+                                                                                <button type="submit" class="btn btn-default">
+                                                                                    <span class="glyphicon glyphicon-plus"></span>
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="form-group">
+                                                                            <div class="col-md-6">
+                                                                                <select class="form-control">
+                                                                                    <option>Seleccionar valor</option>
+                                                                                    <option>2</option>
+                                                                                    <option>3</option>
+                                                                                    <option>4</option>
+                                                                                    <option>5</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-md-6 cont-buttons">
+                                                                                <div class="icon icon-ok">
+                                                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                                                </div>
+                                                                                <button type="submit" class="btn btn-default">
+                                                                                    <span class="glyphicon glyphicon-plus"></span>
+                                                                                </button>
+                                                                                <button type="submit" class="btn btn-default">
+                                                                                    <span class="glyphicon glyphicon-remove"></span>
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="form-group">
+                                                                            <div class="col-md-6">
+                                                                                <select class="form-control">
+                                                                                    <option>Seleccionar valor</option>
+                                                                                    <option>2</option>
+                                                                                    <option>3</option>
+                                                                                    <option>4</option>
+                                                                                    <option>5</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-md-6 form-inline cont-buttons">
+                                                                                <div class="icon icon-ok">
+                                                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                                                </div>
+                                                                                <button type="submit" class="btn btn-default">
+                                                                                    <span class="glyphicon glyphicon-plus"></span>
+                                                                                </button>
+                                                                                <button type="submit" class="btn btn-default">
+                                                                                    <span class="glyphicon glyphicon-remove"></span>
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Limpiar</button>
+                                                    <button type="button" class="btn btn-success">Grabar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <table class="table admin table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Nombre</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>Ejecutivos Glencore</td>
+                                            <td>
+                                                <div class="pull-right">
+                                                    <div class="btn-group bs-glyphicons acciones">
+                                                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                                                            <span class="glyphicon glyphicon-cog"></span>
+                                                            <span class="caret"></span>
+                                                        </button>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li><a href="#">Modificar</a></li>
+                                                            <li><a href="#">Desactivar</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mineros de Mina 1</td>
+                                            <td>
+                                                <div class="pull-right">
+                                                    <div class="btn-group bs-glyphicons acciones">
+                                                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                                                            <span class="glyphicon glyphicon-cog"></span>
+                                                            <span class="caret"></span>
+                                                        </button>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li><a href="#">Modificar</a></li>
+                                                            <li><a href="#">Desactivar</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ejecutivos de Mina 1</td>
+                                            <td>
+                                                <div class="pull-right">
+                                                    <div class="btn-group bs-glyphicons acciones">
+                                                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                                                            <span class="glyphicon glyphicon-cog"></span>
+                                                            <span class="caret"></span>
+                                                        </button>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li><a href="#">Modificar</a></li>
+                                                            <li><a href="#">Desactivar</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                            </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                    <!-- Bootstrap core JavaScript
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/docs.min.js"></script>
+        <script src="js/classie.js"></script>
+        <script src="js/gnmenu.js"></script>
+        <script>
+            new gnMenu( document.getElementById( 'gn-menu' ) );
+        </script>
+    </body>
+</html>

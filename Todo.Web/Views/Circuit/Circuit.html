@@ -1,0 +1,181 @@
+﻿<div class="container main box-shaded">
+    <div class="row stations">
+        <div class="col-lg-12">
+            <div class="main-header">
+                <h1 class="pull-left"><span class="glyphicon glyphicon-file"></span> Circuito preocupacional</h1>
+            </div>
+            <ul id="tab-circuito" class="nav nav-tabs">
+                <li ng-class="{active:activeAudiometria}" ng-show="visibleAudiometria"><a href="#" data-toggle="tab">Audiometría</a></li>
+                <li ng-class="{active:activeClinico}" ng-show="visibleClinico"><a href="#" data-toggle="tab">Clínico</a></li>
+                <li ng-class="{active:activeRadiologia}" ng-show="visibleRadiologia"><a href="#" data-toggle="tab">Radiología</a></li>
+                <li ng-class="{active:activeEspirometria}" ng-show="visibleEspirometria"><a href="#" data-toggle="tab">Espirometría</a></li>
+                <li ng-class="{active:activePsicologia}" ng-show="visiblePsicologia"><a href="#" data-toggle="tab">Psicología</a></li>
+                <li ng-class="{active:activeLaboratorio}" ng-show="visibleLaboratorio"><a href="#" data-toggle="tab">Laboratorio</a></li>
+                <li ng-class="{active:activeCardiologia}" ng-show="visibleCardiologia"><a href="#" data-toggle="tab">Cardiología</a></li>
+                <li ng-class="{active:activeOftamologia}" ng-show="visibleOftalmologia"><a href="#" data-toggle="tab">Oftalmología</a></li>
+                <li ng-class="{active:activeOdontologia}" ng-show="visibleOdontologia"><a href="#" data-toggle="tab">Odontología</a></li>
+                <li ng-class="{active:activeAuditoria}" ng-show="visibleAuditoria"><a href="#" data-toggle="tab">Auditoría</a></li>
+            </ul>
+            <div class="row form-group" style="margin-top: -10px;" ng-show="showMulipleFormsForm">
+                <div class="col-md-12">
+                    <div class="pull-left form-inline" ng-show="">
+                        <label>
+                            <select class="form-control">
+                                <option value="default">Nombre de un exámen</option>
+                                <option>1</option>
+                                <option>2</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <div class="filter form-inline">
+                        <div class="pull-left">
+                            <label>Tipo Doc: </label>
+                            <select class="form-control input-sm" ng-model="filter.documentType.number" ng-options="type.number as type.name for type in documentTypes">
+                                <option value="">-- seleccione --</option>
+                            </select>
+                            <input type="text" class="form-control input-sm" id="" placeholder="N°" ng-model="filter.documentNumber">
+                            <button type="submit" class="btn btn-default" ng-click="search()">Buscar</button>
+                            <button type="submit" class="btn btn-default" ng-click="clean()">Limpiar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" ng-show="searchResults.length > 0">
+            <div class="col-md-12">
+                <table class="table admin table-hover">
+                    <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Tipo Doc</th>
+                        <th>Número</th>
+                        <th>Nombre</th>
+                        <th>Tipo Examen</th>
+                        <th>
+
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="exam in searchResults" ng-click="selectExam(exam)">
+                        <td ng-click="selectExam(exam)">{{exam.dateTime|date:shortdate}}</td>
+                        <td ng-click="selectExam(exam)">{{exam.documentType}}</td>
+                        <td ng-click="selectExam(exam)">{{exam.documentNumber}}</td>
+                        <td ng-click="selectExam(exam)">{{exam.name}}</td>
+                        <td ng-click="selectExam(exam)">{{exam.type}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="print">
+            <div ng-show="showForm">
+                <div class="page-header">
+                    <ul>
+                        <li><img src="../../Content/images/logo-print.png" alt="Todo" /></li>
+                        <li><div class="printh2">Ocupacional</div></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row form-header" ng-show="showForm">
+                <div class="col-md-12">
+                    <h2 class="h2">Cuestionario de {{station.practice.name}}</h2>
+                </div>
+                <div class="col-md-12 form-horizontal">
+                    <div class="form-group">
+                        <div class="col-md-3 col-md-offset-9 text-right">
+                            <label class="control-label">FECHA: <span>{{station.dateTime|date:longdate}} | {{station.dateTime|date:'H:mm'}}</span></label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="pull-right test-ocup">
+                            <div class="btn-group" data-toggle="buttons">
+                                <label class="btn btn-default btn-sm" ng-radio-button value="true" ng-model="station.empo">
+                                    EMPO
+                                </label>
+                                <label class="btn btn-default btn-sm" ng-radio-button value="true" ng-model="station.emoa">
+                                    EMOA
+                                </label>
+                                <label class="btn btn-default btn-sm" ng-radio-button value="true" ng-model="station.emor">
+                                    EMOR
+                                </label>
+                            </div>
+                        </div>
+                        <label class="pull-right text-right control-label">TIPO DE EXÁMEN OCUPACIONAL:</label>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="cont-bordered">
+                        <table>
+                            <tr>
+                                <td id="cell-1"><strong>APELLIDOS Y NOMBRES:</strong></td>
+                                <td id="cell-2">{{station.patient.names}} {{station.patient.fatherLastName}} {{station.patient.motherLastName}}</td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <td id="cell-3"><strong>EDAD:</strong></td>
+                                <td id="cell-4">{{station.patient.age}}</td>
+                                <td id="cell-5"><strong>SEXO:</strong></td>
+                                <td id="cell-6">{{station.patient.sex}}</td>
+                                <td id="cell-7"><strong>TIPO DE DOC:</strong></td>
+                                <td id="cell-8">{{station.patient.documentTypeName}}</td>
+                                <td id="cell-9"><strong>NÚMERO  DE DOC:</strong></td>
+                                <td id="cell-10">{{station.patient.documentNumber}}</td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <td id="cell-11"><strong>EMPRESA:</strong></td>
+                                <td id="cell-12" colspan="5">{{station.company.name}}</td>
+                                <td id="cell-13"><strong>PUESTO DE TRABAJO:</strong></td>
+                                <td id="cell-14">{{station.job}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="triaje" ng-show="showForm">
+                <div class="row form-group">
+                    <div class="col-md-3">
+                        <label>Peso|Kg:</label>
+                        <label>{{station.triaje.weight}}</label>
+                    </div>
+                    <div class="col-md-3">
+                        <label>Talla|mts:</label>
+                        <label>{{station.triaje.height}}</label>
+                    </div>
+                    <div class="col-md-3">
+                        <label>IMC:</label>
+                        <label>{{station.triaje.imc}}</label>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-3">
+                        <label>FC|min:</label>
+                        <label>{{station.triaje.heartRate}}</label>
+                    </div>
+                    <div class="col-md-3">
+                        <label>FR|min:</label>
+                        <label>{{station.triaje.respiratoryRate}}</label>
+                    </div>
+                    <div class="col-md-3">
+                        <label>% SAT:</label>
+                        <label>{{station.triaje.satPercentage}}</label>
+                    </div>
+                    <div class="col-md-3">
+                        <label>Temperatura|°:</label>
+                        <label>{{station.triaje.temperature}}</label>
+                    </div>
+                </div>
+            </div>
+            <hr class="line">
+            <div ng-include="station.selectedForm.url"></div>
+        </div>
+    </div>
+</div>
+

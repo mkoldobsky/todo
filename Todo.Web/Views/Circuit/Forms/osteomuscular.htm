@@ -1,0 +1,2010 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://getbootstrap.com/examples/dashboard/ -->
+<html lang="en" class="no-touch">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="http://getbootstrap.com/assets/ico/favicon.ico">
+        <title>Circuito Pre-Ocupacional</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+
+        <!-- Overrides styles -->
+        <link href="css/overrides.css" rel="stylesheet">
+
+        <!-- Print styles -->
+        <link href="css/print.css" rel="stylesheet" media="print">
+
+        <!-- Animate styles -->
+        <link href="css/animate.css" rel="stylesheet">
+
+        <!-- Call to Google Fonts -->
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,600" rel="stylesheet" type="text/css">
+
+        <!-- Just for debugging purposes. Don't actually copy this line! -->
+        <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+                    <!--[if lt IE 9]>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <![endif]-->
+        <style id="holderjs-style" type="text/css"></style>
+        <script type="text/javascript" src="./Dashboard Template for Bootstrap_files/version.php"></script>
+        <script src="js/modernizr.custom.js"></script>
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand fadeInLeftBig animated"><img alt="Clinisanitas" src="images/logo.png" /></a>
+                </div>
+                <div class="secundary-navbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Agenda</a></li>
+                        <li><a href="#">Admisión</a></li>
+                        <li><a href="#">Triaje</a></li>
+                        <li><a href="#">Dashboard</a></li>
+                        <li class="active"><a href="#">Circuito Preocupacional</a></li>
+                        <li><a href="#">Administrador</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown profile">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Nombre de Usuario <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">22/05/2014</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Desconectar</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="container main box-shaded">
+            <div class="row stations">
+                <div class="col-lg-12">
+                    <div class="main-header">
+                        <h1 class="pull-left">Circuito preocupacional</h1>
+                        <div class="cont-buttons pull-right">
+                        </div>
+                    </div>
+                    <ul id="tab-circuito" class="nav nav-tabs">
+                        <li class="active"><a href="#espirometria" data-toggle="tab">Clínico</a></li>
+                    </ul>
+                    <div class="row form-group hide-print" style="margin-top: -10px;">
+                        <div class="col-md-12">
+                            <div class="pull-left form-inline" ng-show="">
+                                <label>
+                                    <select class="form-control">
+                                        <option value="default">Ficha Músculo Esquelética</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-circuito" class="tab-content">
+                        <!-- TEST -------------------------------------------->
+                        <div id="espirometria" class="tab-pane active">
+                            <div class="page-header">
+                                <ul>
+                                    <li><img src="../../Content/images/logo-print.png" alt="Clinisanitas" /></li>
+                                    <li><div class="printh2">Ocupacional</div></li>
+                                </ul>
+                            </div>
+                            <div class="row form-header">
+                                <div class="col-md-12">
+                                    <h2 class="h2">FICHA MÚSCULO ESQUELÉTICA</h2>
+                                </div>
+                                <div class="col-md-12 form-horizontal">
+                                    <div class="form-group">
+                                        <div class="col-md-2 pull-right">
+                                            <input type="text" class="form-control input-sm">
+                                        </div>
+                                        <label class="pull-right text-right control-label">FECHA:</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="pull-right test-ocup">
+                                            <div class="btn-group" data-toggle="buttons">
+                                                <label class="btn btn-default btn-sm active">
+                                                    <input type="checkbox" checked> EMPO
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="checkbox"> EMOA
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="checkbox"> EMOR
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <label class="pull-right text-right control-label">TIPO DE EXÁMEN OCUPACIONAL:</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="cont-bordered">
+                                        <table>
+                                            <tr>
+                                                <td id="cell-1"><strong>APELLIDOS Y NOMBRES:</strong></td>
+                                                <td id="cell-2">Hugo Mauro German Rauber</td>
+                                            </tr>
+                                        </table>
+                                        <table>
+                                            <tr>
+                                                <td id="cell-3"><strong>EDAD:</strong></td>
+                                                <td id="cell-4">30</td>
+                                                <td id="cell-5"><strong>SEXO:</strong></td>
+                                                <td id="cell-6">Masculino</td>
+                                                <td id="cell-7"><strong>TIPO DE DOC:</strong></td>
+                                                <td id="cell-8">Pasaporte</td>
+                                                <td id="cell-9"><strong>NÚMERO  DE DOC:</strong></td>
+                                                <td id="cell-10">24703373</td>
+                                            </tr>
+                                        </table>
+                                        <table>
+                                            <tr>
+                                                <td id="cell-11"><strong>EMPRESA:</strong></td>
+                                                <td id="cell-12" colspan="5">BVision</td>
+                                                <td id="cell-13"><strong>PUESTO DE TRABAJO:</strong></td>
+                                                <td id="cell-14">Herrero</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="triaje">
+                                <div class="row form-group">
+                                    <div class="col-md-4">
+                                        <label>Talla|mts:</label>
+                                        <label>xxxx</label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>% SAT:</label>
+                                        <label>xxxx</label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>Temperatura|°:</label>
+                                        <label>xxxx</label>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-md-4">
+                                        <label>FC|min:</label>
+                                        <label>xxxx</label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>FR|min:</label>
+                                        <label>xxxx</label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>IMC:</label>
+                                        <label>xxxx</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="line">
+                            <div class="row main-form">
+                                <div id="container-18" class="col-md-12">
+                                    <h4>SÍNTOMAS ACTUALES, TIEMPO Y FORMA DE INICIO:</h4>
+                                    <textarea class="form-control input-sm" rows="3"></textarea>
+                                    <hr class="line">
+                                    <h4>ANTECEDENTES DE ENFERMEDADES MÚSCULO ESQUELÉTICAS:</h4>
+                                    <table class="table table-1 form-group">
+                                        <thead>
+                                        <tr>
+                                            <th>Fecha</th>
+                                            <th>Diagnóstico</th>
+                                            <th>Tratamiento</th>
+                                            <th>Comentarios</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <input type="text" class="form-control input-sm">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control input-sm">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control input-sm">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control input-sm">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">
+                                                <button type="button" class="btn tooltips" title="" data-original-title="Agregar nueva fila" data-placement="right">
+                                                    <span class="glyphicon glyphicon-plus"></span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <hr class="line">
+                                    <h4>POSTURA:</h4>
+                                    <div class="row row-1 form-group form-inline">
+                                        <div class="col-md-4">
+                                            <label>Sedente:
+                                                <input type="text" class="form-control input-sm">
+                                            </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>Bidepestación:
+                                                <input type="text" class="form-control input-sm">
+                                            </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>¿Postura forzada?
+                                                <div class="btn-group" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> Si
+                                                    </label>
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> No
+                                                    </label>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group form-inline">
+                                        <div class="col-md-12">
+                                            <label>¿Realiza movimientos repetitivos?
+                                                <div class="btn-group" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> Si
+                                                    </label>
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> No
+                                                    </label>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group form-inline">
+                                        <div class="col-md-12">
+                                            <label>
+                                                 ¿Movimiento manual de cargas? Peso aprox. Entre
+                                                <input type="text" class="form-control input-sm" style="width: 60px;">
+                                                 Kg &nbsp; y &nbsp;
+                                                <input type="text" class="form-control input-sm" style="width: 60px;">
+                                                 Kg
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group form-inline">
+                                        <div class="col-md-10 col-md-offset-2">
+                                            <label>
+                                                 &nbsp; Metodo:
+                                                <div class="btn-group" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="checkbox"> Levanta
+                                                    </label>
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="checkbox"> Empuja
+                                                    </label>
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="checkbox"> Arrastra
+                                                    </label>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group form-inline">
+                                        <div class="col-md-10 col-md-offset-2">
+                                            <label>
+                                                 &nbsp; Uso de faja lumbar:
+                                                <div class="btn-group" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> Si
+                                                    </label>
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> No
+                                                    </label>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group form-inline">
+                                        <div class="col-md-3 col-md-offset-2">
+                                            <label>
+                                                 &nbsp; Jornada laboral:
+                                                <input type="text" class="form-control input-sm" style="width: 60px;"> Hs
+                                            </label>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <label>
+                                                 Tiempo de servicio:
+                                                <div class="btn-group" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> Dias
+                                                    </label>
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> Meses
+                                                    </label>
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> Años
+                                                    </label>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="breack"></div>
+                                    <hr class="line hide-print">
+                                    <h4>EXÁMEN FÍSICO:</h4>
+                                    <table class="table table-1 table-bordered">
+                                        <thead>
+                                        <tr>
+                                            <th class="text-center">Curvas</th>
+                                            <th class="text-center">Normal</th>
+                                            <th class="text-center">Aumentada</th>
+                                            <th class="text-center">Disminuida</th>
+                                            <th class="text-center">Apófisis espinosas dolorosas</th>
+                                            <th class="text-center">Contractura muscular</th>
+                                            <th class="text-center">Eje lateral Normal</th>
+                                            <th class="text-center">Concavidad derecha</th>
+                                            <th class="text-center">Concavidad Izquierda</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="text-center">Cervical</td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">Dorsal</td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">Lumbar</td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <h5>Movilidad - Dolor</h5>
+                                    <table class="table table-bordered">
+                                        <thead>
+                                        <tr>
+                                            <th width="10%" class="text-center">Curvas</th>
+                                            <th width="10%" class="text-center">Flexión</th>
+                                            <th width="10%" class="text-center">Extensión</th>
+                                            <th width="10%" class="text-center">Lateral. derecha</th>
+                                            <th width="10%" class="text-center">Lateral. Izquierda</th>
+                                            <th width="10%" class="text-center">Rotación derecha</th>
+                                            <th width="10%" class="text-center">Rotación Izquierda</th>
+                                            <th width="10%" class="text-center">Irradiación</th>
+                                            <th width="10%" class="text-center">Alter. Masa Muscular</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="text-center">Cervical</td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">Dorsal</td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">Lumbar</td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                            <td class="text-center">
+                                                <select class="form-control input-sm">
+                                                    <option>--</option>
+                                                    <option>Si</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="row row-1 form-group">
+                                        <div class="col-md-6">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                <tr>
+                                                    <th width="10%" class="text-center">Exploración</th>
+                                                    <th width="10%" class="text-center">Derecho</th>
+                                                    <th width="10%" class="text-center">Izquierdo</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td class="text-center">Lasegue</td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>POSITIVO</option>
+                                                            <option>NEGATIVO</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>POSITIVO</option>
+                                                            <option>NEGATIVO</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">Test de Schober</td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>POSITIVO</option>
+                                                            <option>NEGATIVO</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>POSITIVO</option>
+                                                            <option>NEGATIVO</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">Maniobra de Adams</td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>POSITIVO</option>
+                                                            <option>NEGATIVO</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>POSITIVO</option>
+                                                            <option>NEGATIVO</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                <tr>
+                                                    <th width="10%" class="text-center">Reflejos</th>
+                                                    <th width="10%" class="text-center">Nivel</th>
+                                                    <th width="10%" class="text-center">Derecha</th>
+                                                    <th width="10%" class="text-center">Izquierda</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td class="text-center">Bíceps</td>
+                                                    <td class="text-center">C5 – C6</td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>CONSERVADO</option>
+                                                            <option>ALTERADOS</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>CONSERVADO</option>
+                                                            <option>ALTERADOS</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">Tríceps</td>
+                                                    <td class="text-center">C6 – C7</td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>CONSERVADO</option>
+                                                            <option>ALTERADOS</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>CONSERVADO</option>
+                                                            <option>ALTERADOS</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">Rotuliano</td>
+                                                    <td class="text-center">L2-3-4</td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>CONSERVADO</option>
+                                                            <option>ALTERADOS</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>CONSERVADO</option>
+                                                            <option>ALTERADOS</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">Aquileo</td>
+                                                    <td class="text-center">L2 – S 1-2</td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>CONSERVADO</option>
+                                                            <option>ALTERADOS</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>CONSERVADO</option>
+                                                            <option>ALTERADOS</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="breack"></div>
+                                    <h5>Extremidades Superiores e inferiores</h5>
+                                    <div class="row form-group">
+                                        <div class="col-md-6">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                <tr>
+                                                    <th colspan="3" class="text-center">Exploración Muñecas</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td rowspan="2" class="text-center">Test de Phalen</td>
+                                                    <td class="text-center">Derecha</td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>POSITIVO</option>
+                                                            <option>NEGATIVO</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">Izquierda</td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>POSITIVO</option>
+                                                            <option>NEGATIVO</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td rowspan="2" class="text-center">Test de Tinel</td>
+                                                    <td class="text-center">Derecha</td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>POSITIVO</option>
+                                                            <option>NEGATIVO</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">Izquierda</td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>POSITIVO</option>
+                                                            <option>NEGATIVO</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                <tr>
+                                                    <th class="text-center">&nbsp;</th>
+                                                    <th class="text-center">Lado</th>
+                                                    <th class="text-center">Varo</th>
+                                                    <th class="text-center">valgo</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td rowspan="2" class="text-center">Codo</td>
+                                                    <td class="text-center">Derecha</td>
+                                                    <td class="text-center">
+                                                        <select name="select" class="form-control input-sm">
+                                                            <option>PRESENTE</option>
+                                                            <option>AUSENTE</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select name="select" class="form-control input-sm">
+                                                            <option>PRESENTE</option>
+                                                            <option>AUSENTE</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">Izquierda</td>
+                                                    <td class="text-center">
+                                                        <select name="select" class="form-control input-sm">
+                                                            <option>PRESENTE</option>
+                                                            <option>AUSENTE</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select name="select" class="form-control input-sm">
+                                                            <option>PRESENTE</option>
+                                                            <option>AUSENTE</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="text-center">&nbsp;</th>
+                                                    <th class="text-center">Lado</th>
+                                                    <th class="text-center">cavo</th>
+                                                    <th class="text-center">plano</th>
+                                                </tr>
+                                                <tr>
+                                                    <td rowspan="2" class="text-center">Pie</td>
+                                                    <td class="text-center">Derecha</td>
+                                                    <td class="text-center">
+                                                        <select name="select" class="form-control input-sm">
+                                                            <option>PRESENTE</option>
+                                                            <option>AUSENTE</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select name="select" class="form-control input-sm">
+                                                            <option>PRESENTE</option>
+                                                            <option>AUSENTE</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">Izquierda</td>
+                                                    <td class="text-center">
+                                                        <select name="select" class="form-control input-sm">
+                                                            <option>PRESENTE</option>
+                                                            <option>AUSENTE</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select name="select" class="form-control input-sm">
+                                                            <option>PRESENTE</option>
+                                                            <option>AUSENTE</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <h5>Articulaciones</h5>
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                <tr>
+                                                    <th colspan="2" class="text-center" width="10%">Evaluación dinámica de articulaciones</th>
+                                                    <th class="text-center" width="10%">AbducciÓn</th>
+                                                    <th class="text-center" width="10%">AducciÓn</th>
+                                                    <th class="text-center" width="10%">FlexiÓn</th>
+                                                    <th class="text-center" width="10%">ExtensiÓn</th>
+                                                    <th class="text-center" width="10%">Rot. Ext.</th>
+                                                    <th class="text-center" width="10%">Rot. Int</th>
+                                                    <th class="text-center" width="10%">IrradiaciÓn</th>
+                                                    <th class="text-center" width="10%">AlteraciÓn Masa Muscular</th>
+                                                </tr>
+                                              </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td rowspan="2" class="text-center" width="10%">Hombro</td>
+                                                    <td class="text-center" width="10%">Derecha</td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">Izquierda</td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td rowspan="2" class="text-center">Codo</td>
+                                                    <td class="text-center">Derecha</td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">Izquierda</td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td rowspan="2" class="text-center">Muñeca</td>
+                                                    <td class="text-center">Derecha</td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">Izquierda</td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td rowspan="2" class="text-center">Cadera</td>
+                                                    <td class="text-center">Derecha</td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">Izquierda</td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td rowspan="2" class="text-center">Rodilla</td>
+                                                    <td class="text-center">Derecha</td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">Izquierda</td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td rowspan="2" class="text-center">Tobillo</td>
+                                                    <td class="text-center">Derecha</td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">Izquierda</td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <select class="form-control input-sm">
+                                                            <option>0</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <ul>
+                                                <li>Grado <strong>0</strong>: Ausencia de signos y síntomas</li>
+                                                <li>Grado <strong>1</strong>: Existencia de sintomatología sugestiva y/o dolor en reposo</li>
+                                                <li>Grado <strong>2</strong>: Grado 1 más contractura y/o dolor a la movilización</li>
+                                                <li>Grado <strong>3</strong>: Grado 2 más dolor a la palpación y/o percusión</li>
+                                                <li>Grado <strong>4</strong>: Grado 3 más limitación funcional evidente clínicamente</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label>Diagnósticos:</label>
+                                            <textarea class="form-control input-sm" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label>Observaciones:</label>
+                                            <textarea class="form-control input-sm" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row btn-footer">
+                                <div class="col-md-12">
+                                    <div class="pull-left">
+                                        <button type="submit" class="btn btn-primary">Imprimir</button>
+                                    </div>
+                                    <div class="pull-right">
+                                        <button type="submit" class="btn btn-default">Cancelar</button>
+                                        <button type="submit" class="btn btn-default">Finalizar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row signing">
+                                <div class="col-md-12">
+                                    <div class="col-md-4 firm-1 text-center">
+                                        <hr />
+                                        Firma y sello del Médico
+                                    </div>
+                                    <div class="col-md-4 firm-2 text-center">
+                                        <hr />
+                                        Firma del examinado
+                                    </div>
+                                    <div class="col-md-4 firm-3 text-center">
+                                        <hr />
+                                        <div>Huella digital</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="text-center">
+                <p>© 2014 - Clinisanitas - V.0.0.1</p>
+            </div>
+        </footer>
+                    <!-- Bootstrap core JavaScript
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/docs.min.js"></script>
+        <script>
+            $(document).ready(function (){
+              $('.tooltips').tooltip()
+            });
+        </script>
+    </body>
+</html>

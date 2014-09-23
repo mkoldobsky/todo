@@ -1,0 +1,38 @@
+﻿<!-- Large modal usuarios-->
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="cancel()">&times;</button>
+    <h4 class="modal-title" id="myModalLabel">Agregar Turno</h4>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="tab-pane fade in active" id="perfil">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Empresa</label>
+                            <angucomplete-alt id="ex1" place-holder="Buscar empresa" pause="100" selected-object="newProspect.selectedCompany" local-data="companies" search-fields="name" title-field="name" minlength="2" clear-selected="true" input-class="form-control form-control-small" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="pull-left">Turno</label>
+                            <input type="text" class="form-control" id="" placeholder="" ng-model="newProspect.prospect">
+                        </div>
+                    </div>
+                    <div>
+                        <h3 ng-show="newProspect.selectedCompany">{{newProspect.selectedCompany.originalObject.name}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clean()">Limpiar</button>
+    <button type="button" class="btn btn-success" ng-click="saveProspect()">Grabar</button>
+</div>
+

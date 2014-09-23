@@ -1,0 +1,19 @@
+﻿<div class="container main box-shaded">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="main-header">
+                <h1 class="pull-left"><span class="glyphicon glyphicon-briefcase"></span> Administrativo</h1>
+                <div class="cont-buttons pull-right">
+                </div>
+            </div>
+            <ul id="myTab" class="nav nav-tabs">
+                <li ng-class="{active: activeCompanies}" ng-show="showTabCompanies"><a href="#" data-toggle="tab" ng-click="showCompanies()">Empresas</a></li>
+                <li ng-class="{active: activeProtocols}" ng-show="showTabProtocols"><a href="#" data-toggle="tab" ng-click="showProtocols()">Protocolos</a></li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+                <div ng-include="configTab"></div>
+            </div>
+           
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+﻿   <!-- PROTOCOLO -------------------------------------------->
+<div class="tab-pane fade in active" id="protocolos">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="filter form-inline">
+                <div class="pull-left">
+                    <input type="text" class="form-control input-sm" id="" ng-model="filter.name" placeholder="Nombre">
+                    <button type="submit" class="btn btn-default" ng-click="searchProtocols(filter)">Buscar</button>
+                </div>
+                <div class="pull-right">
+                    <button type="submit" class="btn btn-success" ng-click="showNewProtocol()"><span class="glyphicon glyphicon-plus"></span> Nuevo Protocolo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table admin table-hover">
+                <thead>
+                    <tr>
+                        <th># Nombre</th>
+                        <th>
+
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="protocol in filteredProtocols">
+                        <td>{{protocol.name}}</td>
+                        <td>
+                            <div class="pull-right">
+                                <div class="btn-group bs-glyphicons acciones">
+                                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                                        <span class="glyphicon glyphicon-cog"></span>
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#" ng-click="modifyProtocol()"><span class="glyphicon glyphicon-edit"></span> Modificar</a></li>
+                                        <li><a href="#" ng-click="deactivateProtocol(protocol)"><span class="glyphicon glyphicon-minus-sign"></span> Desactivar</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

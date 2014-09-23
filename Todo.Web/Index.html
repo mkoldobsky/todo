@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="Todo">
+    <head>
+        <meta charset="utf-8">
+        <title>Todo</title>
+        <link href="Content/css/bootstrap.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="Content/css/signin.css" rel="stylesheet">
+
+        <!-- Overrides styles -->
+        <link href="Content/css/overrides.css" rel="stylesheet">
+
+        <!-- Print styles -->
+        <link href="Content/css/print.css" rel="stylesheet" media="print">
+
+        <!-- Animate styles -->
+        <link href="Content/css/animate.css" rel="stylesheet">
+
+        <!-- Component styles -->
+        <link href="Content/css/component.css" rel="stylesheet" />
+
+        <link href="Content/css/angucomplete-alt.css" rel="stylesheet" />
+        <link href="Content/css/calendar.css" rel="stylesheet" />
+        <link href="Content/css/toaster.css" rel="stylesheet" />
+        <link href="Content/css/angular-multi-select.css" rel="stylesheet" />
+        <!-- Call to Google Fonts -->
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,600" rel="stylesheet" type="text/css">
+        <link href="favicon.ico" rel="shortcut icon" />
+    </head>
+    <body>
+        <header class="navbar" ng-show="$root.user != undefined">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand fadeInLeftBig animated"><img alt="Todo" src="Content/images/logo.png" /></a>
+                </div>
+                <div class="secundary-navbar" ng-show="$root.user != null" ng-controller="menuController">
+                    <ul class="nav navbar-nav">
+                        <li ng-class="{active: activeAgenda, disabled:disableAgenda}" ng-show="!disableAgenda"><a href=" #" ng-click="agenda()">Agenda</a></li>
+                        <li ng-class="{active: activeAdmision, disabled:disableAdmision}" ng-show="!disableAdmision"><a href="#" ng-click="admision()">Admisión</a></li>
+                        <li ng-class="{active: activeTriaje, disabled: disableTriaje}" ng-show="!disableTriaje"><a href="#" ng-click="triaje()">Triaje</a></li>
+                        <li ng-class="{active: activeDashboard, disabled:disableDashboard}" ng-show="!disableDashboard"><a href="#" ng-click="dashboard()">Dashboard</a></li>
+                        <li ng-class="{active: activeCircuit, disabled:disableCircuit}" ng-show="!disableCircuit"><a href="#" ng-click="circuit()">Circuito</a></li>
+                        <li ng-class="{active: activeAdmin, disabled:disableAdmin}" ng-show="!disableAdmin"><a href="#" ng-click="admin()">Administrativo</a></li>
+                        <li ng-class="{active: activeConfig, disabled:disableConfig}" ng-show="!disableConfig"><a href="#" ng-click="config()">Config</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown profile">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            {{$root.user.names}} <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><span>{{$root.currentTime|date:longdate}}</span></li>
+                                <li class="divider"></li>
+                                <li><a href="#" ng-controller="accountController" ng-click="logOff()">Desconectar</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <toaster-container></toaster-container>
+        <data-ng-view ng-animate ng-controller="accountController">
+        </data-ng-view>
+
+        <footer class="footer">
+            <div class="text-center">
+                <p>© 2014 - Todo - V.{{$root.version}} - rev. {{$root.rev}}</p>
+            </div>
+        </footer>
+
+        <script src="/Scripts/libs/jquery-1.9.1.min.js"></script>
+        <script src="Scripts/libs/bootstrap.js"></script>
+        <script src="Scripts/libs/underscore-min.js"></script>
+        <script src="Scripts/libs/underscore.string.min.js"></script>
+        <script src="Scripts/libs/moment-with-langs.min.js"></script>
+        <script src="/Scripts/libs/angular-1.2.16.min.js"></script>
+        <script src="/Scripts/libs/i18n/angular-locale_es-pe.js"></script>
+        <script src="/Scripts/libs/angular-resource-1.2.16.min.js"></script>
+        <script src="/Scripts/libs/angular-route-1.2.16.min.js"></script>
+        <script src="/Scripts/libs/angular-animate-1.2.16.min.js"></script>
+        <script src="Scripts/libs/angular-cookies.js"></script>
+        <script src="/Scripts/libs/angular-ui/select2.min.js"></script>
+        <script src="/Scripts/libs/semantic/semantic.min.js"></script>
+        <script src="/Scripts/libs/ng-table/ng-table.min.js"></script>
+        <script src="Scripts/libs/angular-ui/ui-bootstrap-tpls-0.11.0.min.js"></script>
+        <script src="Scripts/libs/angular-ui/angucomplete-alt.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/0.4.4/toaster.js"></script>
+        <script src="Scripts/libs/angular-ui/angular-multi-select.js"></script>
+        
+        <script src="/Scripts/config.js"></script>
+
+
+
+        <script src="/Scripts/app/app.js"></script>
+        <script src="Scripts/app/directives/ng-enter.js"></script>
+        <script src="Scripts/app/directives/ng-radio-button.js"></script>
+        <script src="Scripts/app/directives/ng-print.js"></script>
+        <script src="Scripts/app/helpers/authorizationInterceptor.js"></script>
+        <script src="Scripts/app/services/shared/servicehelper.js"></script>
+        <script src="Scripts/app/services/shared/usermngrSvc.js"></script>
+        <script src="Scripts/app/services/shared/modalSvc.js"></script>
+        <script src="Scripts/app/services/commonSvc.js"></script>
+        <script src="Scripts/app/services/companySvc.js"></script>
+        <script src="Scripts/app/services/agendaSvc.js"></script>
+        <script src="Scripts/app/services/patientSvc.js"></script>
+        <script src="Scripts/app/services/circuitSvc.js"></script>
+        <script src="Scripts/app/controllers/accountCtrl.js"></script>
+        <script src="Scripts/app/controllers/mainCtrl.js"></script>
+        <script src="Scripts/app/controllers/configCtrl.js"></script>
+        <script src="Scripts/app/controllers/menuCtrl.js"></script>
+        <script src="Scripts/app/controllers/agendaCtrl.js"></script>
+        <script src="Scripts/app/controllers/patientCtrl.js"></script>
+        <script src="Scripts/app/controllers/waybillCtrl.js"></script>
+        <script src="Scripts/app/controllers/dashboardCtrl.js"></script>
+        <script src="Scripts/app/controllers/circuitCtrl.js"></script>
+
+
+
+    </body>
+</html>

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://getbootstrap.com/examples/dashboard/ -->
+<html lang="en" class="no-touch">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="http://getbootstrap.com/assets/ico/favicon.ico">
+        <title>Circuito Pre-Ocupacional</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+
+        <!-- Overrides styles -->
+        <link href="css/overrides.css" rel="stylesheet">
+
+        <!-- Print styles -->
+        <link href="css/print.css" rel="stylesheet" media="print">
+
+        <!-- Animate styles -->
+        <link href="css/animate.css" rel="stylesheet">
+
+        <!-- Call to Google Fonts -->
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,600" rel="stylesheet" type="text/css">
+
+        <!-- Just for debugging purposes. Don't actually copy this line! -->
+        <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+                    <!--[if lt IE 9]>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <![endif]-->
+        <style id="holderjs-style" type="text/css"></style>
+        <script type="text/javascript" src="./Dashboard Template for Bootstrap_files/version.php"></script>
+        <script src="js/modernizr.custom.js"></script>
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand fadeInLeftBig animated"><img alt="Clinisanitas" src="images/logo.png" /></a>
+                </div>
+                <div class="secundary-navbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Agenda</a></li>
+                        <li><a href="#">Admisión</a></li>
+                        <li><a href="#">Triaje</a></li>
+                        <li><a href="#">Dashboard</a></li>
+                        <li class="active"><a href="#">Circuito Preocupacional</a></li>
+                        <li><a href="#">Administrador</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown profile">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Nombre de Usuario <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">22/05/2014</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Desconectar</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="container main box-shaded">
+            <div class="row stations">
+                <div class="col-lg-12">
+                    <div class="main-header">
+                        <h1 class="pull-left">Circuito preocupacional</h1>
+                        <div class="cont-buttons pull-right">
+                        </div>
+                    </div>
+                    <ul id="tab-circuito" class="nav nav-tabs">
+                        <li class="active"><a href="#espirometria" data-toggle="tab">Clínico</a></li>
+                    </ul>
+                    <div class="row form-group hide-print" style="margin-top: -10px;">
+                        <div class="col-md-12">
+                            <div class="pull-left form-inline" ng-show="">
+                                <label>
+                                    <select class="form-control">
+                                        <option value="default">Test de Stress</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-circuito" class="tab-content">
+                        <!-- TEST -------------------------------------------->
+                        <div id="espirometria" class="tab-pane active">
+                            <div class="page-header">
+                                <ul>
+                                    <li><img src="../../Content/images/logo-print.png" alt="Clinisanitas" /></li>
+                                    <li><div class="printh2">Ocupacional</div></li>
+                                </ul>
+                            </div>
+                            <div class="row form-header">
+                                <div class="col-md-12 form-horizontal">
+                                    <div class="form-group">
+                                        <div class="col-md-2 pull-right">
+                                            <input type="text" class="form-control input-sm">
+                                        </div>
+                                        <label class="pull-right text-right control-label">FECHA:</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="pull-right test-ocup">
+                                            <div class="btn-group" data-toggle="buttons">
+                                                <label class="btn btn-default btn-sm active">
+                                                    <input type="checkbox" checked> EMPO
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="checkbox"> EMOA
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="checkbox"> EMOR
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <label class="pull-right text-right control-label">TIPO DE EXÁMEN OCUPACIONAL:</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    <div class="cont-bordered">
+                                        <table>
+                                            <tr>
+                                                <td id="cell-1"><strong>APELLIDOS Y NOMBRES:</strong></td>
+                                                <td id="cell-2">Hugo Mauro German Rauber</td>
+                                            </tr>
+                                        </table>
+                                        <table>
+                                            <tr>
+                                                <td id="cell-3"><strong>EDAD:</strong></td>
+                                                <td id="cell-4">30</td>
+                                                <td id="cell-5"><strong>SEXO:</strong></td>
+                                                <td id="cell-6">Masculino</td>
+                                                <td id="cell-7"><strong>TIPO DE DOC:</strong></td>
+                                                <td id="cell-8">Pasaporte</td>
+                                                <td id="cell-9"><strong>NÚMERO  DE DOC:</strong></td>
+                                                <td id="cell-10">24703373</td>
+                                            </tr>
+                                        </table>
+                                        <table>
+                                            <tr>
+                                                <td id="cell-11"><strong>EMPRESA:</strong></td>
+                                                <td id="cell-12" colspan="5">BVision</td>
+                                                <td id="cell-13"><strong>PUESTO DE TRABAJO:</strong></td>
+                                                <td id="cell-14">Herrero</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                 <div class="col-md-12">
+                                    <h2 class="text-center">TEST DE STRESS</h2>
+                                </div>
+                            </div>
+                            <div class="row main-form">
+                                <div id="container-13" class="col-md-12">
+                                    <h4 class="text-center form-group">Inventario de ítems sobre vulnerabilidad al estrés</h4>
+                                    <p>
+                                        Comprueba si eres vulnerable al estrés. A continuación aparece una lista de problemas que las personas a veces tenemos, léelos atentamente y contesta <strong>Sí</strong>, cuando consideres que el problema en cuestión te afecta habitualmente, y <strong>No</strong> en caso de que el problema no te afecte en absoluto o lo haga raramente.
+                                    </p>
+                                    <table class="table-1 form-group">
+                                        <tr>
+                                            <td>1.</td>
+                                            <td>Tendencia a sufrir frecuentes dolores de cabeza.</td>
+                                            <td>
+                                                <div class="pull-right btn-group" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> Si
+                                                    </label>
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> No
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2.</td>
+                                            <td>Sensación de estar constantemente en estado de tensión y de  no hallarse nunca relajado</td>
+                                            <td>
+                                                <div class="pull-right btn-group" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> Si
+                                                    </label>
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> No
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3.</td>
+                                            <td>Estar excesivamente cansado la mayor parte del tiempo; no sentirse lo suficientemente descansado y fresco después de dormir</td>
+                                            <td>
+                                                <div class="pull-right btn-group" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> Si
+                                                    </label>
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> No
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4.</td>
+                                            <td>Sensaciones de presión en la cabeza, como si se tuvieran gomas muy tensas alrededor de ella	</td>
+                                            <td>
+                                                <div class="pull-right btn-group" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> Si
+                                                    </label>
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> No
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>5.</td>
+                                            <td>Sensación de falta de energía e impulso; necesidad de todas las reservas de energía para realizar las tareas ordinarias</td>
+                                            <td>
+                                                <div class="pull-right btn-group" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> Si
+                                                    </label>
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> No
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>6.</td>
+                                            <td>Temblores, excesivo sudor, taquicardia</td>
+                                            <td>
+                                                <div class="pull-right btn-group" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> Si
+                                                    </label>
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> No
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>7.</td>
+                                            <td>Problemas de sueño, pesadillas, sueño sin descansar</td>
+                                            <td>
+                                                <div class="pull-right btn-group" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> Si
+                                                    </label>
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> No
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>8.</td>
+                                            <td>Sensación de ahogo y tensión sin razón para ello</td>
+                                            <td>
+                                                <div class="pull-right btn-group" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> Si
+                                                    </label>
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> No
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>9.</td>
+                                            <td>Llegar a la conclusión de que las situaciones nos superan demasiado fácilmente; hacer una montaña de un grano de arena</td>
+                                            <td>
+                                                <div class="pull-right btn-group" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> Si
+                                                    </label>
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> No
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>10.</td>
+                                            <td>Darse cuenta de que los propios sentimientos se hieren con facilidad; ser excesivamente sensible</td>
+                                            <td>
+                                                <div class="pull-right btn-group" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> Si
+                                                    </label>
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> No
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>11.</td>
+                                            <td>Encontrar siempre algo por lo que preocuparse</td>
+                                            <td>
+                                                <div class="pull-right btn-group" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> Si
+                                                    </label>
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> No
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>12.</td>
+                                            <td>Sentarse para tener un momento de relax y pensar en aspectos negativos del pasado y el futuro</td>
+                                            <td>
+                                                <div class="pull-right btn-group" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> Si
+                                                    </label>
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> No
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>13.</td>
+                                            <td>Ser bastante consciente de los procesos del propio organismo; tales como latidos violentos del corazón, pinchazos, etc.</td>
+                                            <td>
+                                                <div class="pull-right btn-group" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> Si
+                                                    </label>
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> No
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>14.</td>
+                                            <td>Reaccionar en exceso ante pequeños problemas diarios, tanto en casa como en el trabajo</td>
+                                            <td>
+                                                <div class="pull-right btn-group" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> Si
+                                                    </label>
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> No
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>15.</td>
+                                            <td>Creer que sucederá lo peor, aun cuando el riesgo es muy pequeño; por ejemplo, no sentirse tranquilo hasta que toda la familia se encuentra, segura, en casa...</td>
+                                            <td>
+                                                <div class="pull-right btn-group" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> Si
+                                                    </label>
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> No
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>16.</td>
+                                            <td>Querer llamara la oficina durante las vacaciones para asegurarse de que todo va bien</td>
+                                            <td>
+                                                <div class="pull-right btn-group" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> Si
+                                                    </label>
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> No
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>17.</td>
+                                            <td>Tomarse a nivel personal todo aquello que sale mal</td>
+                                            <td>
+                                                <div class="pull-right btn-group" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> Si
+                                                    </label>
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> No
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>18.</td>
+                                            <td>Experimentar sobresaltos cuando suena el teléfono o se produce algún pequeño ruido extraño</td>
+                                            <td>
+                                                <div class="pull-right btn-group" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> Si
+                                                    </label>
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> No
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>19.</td>
+                                            <td>No ser capaz de concentrarse, encasa o en el trabajo; distraerse fácilmente por problemas </td>
+                                            <td>
+                                                <div class="pull-right btn-group" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> Si
+                                                    </label>
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> No
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>20.</td>
+                                            <td>Experimentar oleadas de miedo, ansiedad o sensaciones de pánico sin razón aparente</td>
+                                            <td>
+                                                <div class="pull-right btn-group" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> Si
+                                                    </label>
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> No
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>21.</td>
+                                            <td>Encontrarse muy indeciso; emplear demasiado tiempo para tomar decisiones, dejando a un lado </td>
+                                            <td>
+                                                <div class="pull-right btn-group" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> Si
+                                                    </label>
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> No
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>22.</td>
+                                            <td>Sentir que se está perdiendo el control sobre muchas situaciones de la vida propia; que uno es víctima desvalida de las circunstancias</td>
+                                            <td>
+                                                <div class="pull-right btn-group" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> Si
+                                                    </label>
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> No
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <div class="breack"></div>
+                                    <br><br>
+                                    <p>TODA LA INFORMACION QUE HE PROPORCIONADO A CLINISANITAS OCUPACIONAL ES VERDADERA, NO HABIENDO OMITIDO NINGUN DATO EN FORMA VOLUNTARIA.</p>
+                                </div>
+                            </div>
+                            <div class="row btn-footer">
+                                <div class="col-md-12">
+                                    <div class="pull-left">
+                                        <button type="submit" class="btn btn-primary">Imprimir</button>
+                                    </div>
+                                    <div class="pull-right">
+                                        <button type="submit" class="btn btn-default">Cancelar</button>
+                                        <button type="submit" class="btn btn-default">Finalizar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row signing">
+                                <div class="col-md-12">
+                                    <div class="col-md-4 text-center">
+                                        <hr />
+                                        Firma del examinado
+                                    </div>
+                                    <div class="col-md-4 pull-right text-center">
+                                        <hr />
+                                        <div>Huella digital</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="text-center">
+                <p>© 2014 - Clinisanitas - V.0.0.1</p>
+            </div>
+        </footer>
+                    <!-- Bootstrap core JavaScript
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/docs.min.js"></script>
+        <script src="js/classie.js"></script>
+        <script src="js/gnmenu.js"></script>
+        <script>
+            new gnMenu( document.getElementById( 'gn-menu' ) );
+        </script>
+    </body>
+</html>

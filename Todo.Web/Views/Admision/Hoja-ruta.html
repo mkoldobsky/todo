@@ -1,0 +1,82 @@
+﻿                    <!-- HOJA DE RUTA -------------------------------------------->
+<div class="container main box-shaded" ng-controller="waybillController">
+    <div class="main-header">
+        <div class="cont-buttons pull-right">
+            <button type="submit" class="btn btn-primary" ng-print print-element-id="waybill" >Imprimir</button>
+        </div>
+    </div>
+
+    <div id="waybill" class="paper-route">
+        <div class="page-header">
+            <ul>
+                <li><img src="/Content/images/logo-print.png" alt="Todo" /></li>
+                <li><div class="printh2">Ocupacional</div></li>
+            </ul>
+        </div>
+        <h2>Hoja de ruta del examen médico ocupacional</h2>
+        <div class="row">
+            <div class="col-md-12">
+                <ul>
+                    <li><strong>Tipo de examen:</strong> <span>{{waybill.examType}}</span></li>
+                    <li><div class="pull-left"><strong>Fecha de examen:</strong> <span>{{waybill.date}}</span></div></li>
+                </ul>
+            </div>
+        </div>
+        <hr />
+        <div class="row data-pacient">
+            <div class="col-md-12">
+                <ul>
+                    <li><strong>Nombre y Apellidos:</strong> <span>{{waybill.fullName}}</span></li>
+                    <li><div class="pull-left"><strong>{{waybill.documentType}}:</strong> <span>{{waybill.documentNumber}}</span></div></li>
+                    <li><strong>Fecha Nacimiento:</strong> <span>{{waybill.birthday}}</span></li>
+                    <li><strong>Edad:</strong> <span>{{waybill.age}}</span></li>
+                    <li><strong>Empresa:</strong> <span>{{waybill.companyName}}</span></li>
+                    <li><strong>RUC:</strong> <span>{{waybill.comapnyRuc}}</span></li>
+                    <li><strong>Protocolo:</strong> <span>{{waybill.protocolName}}</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Ruta</th>
+                            <th>Hora de asistencia</th>
+                            <th>Sello responsable</th>
+                            <th>Comentarios</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="practice in waybill.practices">
+                            <td>{{practice}}</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr></tr>
+                    </tbody>
+                </table>
+                <h4>Comentarios / Notas</h4>
+            </div>
+        </div>
+        <div class="row signing">
+            <div class="col-md-12">
+                <div class="col-md-4 text-center">
+                    <hr />
+                    Firma del examinador
+                </div>
+                <div class="col-md-4 text-center">
+                    <hr />
+                    Firma del examinado
+                </div>
+                <div class="finger-mark text-center">
+                    <div></div>
+                    <div>Huella digital</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

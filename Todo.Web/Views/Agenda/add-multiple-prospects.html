@@ -1,0 +1,39 @@
+﻿<!-- Large modal usuarios-->
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="close()">&times;</button>
+    <div class="bg-danger fadeInUp animated" ng-show="errorMessage != undefined"><span class="glyphicon glyphicon-remove"></span> <div class="media-body" id="error" ng-model="errorMessage">{{errorMessage}}</div></div>
+    <h4 class="modal-title" id="myModalLabel">Ingreso Masivo</h4>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="tab-pane fade in active" id="perfil">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Empresa</label>
+                            <angucomplete-alt id="ex1" place-holder="Buscar empresa" pause="100" selected-object="newProspect.selectedCompany" local-data="companies" search-fields="name" title-field="name" minlength="2" input-class="form-control form-control-small" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="pull-left">Turno</label>
+                            <input type="text" class="form-control" id="" placeholder="" ng-model="newProspect.prospect" ng-enter="addProspect(newProspect)">
+                        </div>
+                    </div>
+                    <div>
+                        <div ng-repeat="prospect in newProspects"><p>{{prospect}} </p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clean()">Limpiar</button>
+    <button type="button" class="btn btn-success" ng-click="saveProspect(newProspect)">Grabar</button>
+</div>
+

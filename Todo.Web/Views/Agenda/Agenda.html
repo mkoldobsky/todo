@@ -1,0 +1,195 @@
+﻿<div class="container main box-shaded" ng-controller="agendaController">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="main-header">
+                <h1 class="pull-left"><span class="glyphicon glyphicon-calendar"></span> Agenda</h1>
+                <div class="cont-buttons pull-right">
+                </div>
+            </div>
+            <ul id="myTab" class="nav nav-tabs">
+                <li class="active" ng-class="{active:activeDay}" ng-click="showDay()"><a href="#" data-toggle="tab">Diaria</a></li>
+                <li ng-class="{active:activeWeek}" ng-click="showWeek()"><a href="#" data-toggle="tab">Semanal</a></li>
+                <li ng-class="{active:activeMonth}" ng-click="showMonth()"><a href="#" data-toggle="tab">Mensual</a></li>
+                <li class="pull-right turnos-disp" ng-show="activeDay">
+                    <p><span class="badge tooltips" tooltip="turnos disponibles">{{date.remains}}</span> de {{date.capacity}}</p>
+                </li>
+                <li class="pull-right form-inline" ng-show="activeDay">
+                    <span>
+                        Turnos:
+                        <label>
+                            <select class="form-control input-sm" ng-init="selectedTurno=turnos[0]" ng-model="selectedTurno" ng-options="turno.name for turno in turnos" ng-change="changeTurno()"></select>
+                        </label>
+                    </span>
+                </li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+                <!-- DIARIA -->
+                <div class="tab-pane fade in active" id="diaria" ng-show="activeDay">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="more-turn fadeInDown animated form-inline" ng-show="selectedTurno.name != 'Todos'">
+                                <div class="pull-right">
+                                    <label>Capacidad:</label>
+                                    <input type="text" class="form-control input-sm" id="" placeholder="N° de turnos" ng-model="newCapacity">
+                                    <button type="submit" class="btn btn-primary" ng-click="changeCapacity(newCapacity)">Guardar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="btn-toolbar">
+                                <div class="pull-left">
+                                    <div class="btn-group chevron">
+                                        <button type="button" class="btn btn-default" ng-click="showPreviousDate()">
+                                            <span class="glyphicon glyphicon-chevron-left"></span>
+                                        </button>
+                                        <button type="button" class="btn btn-default" ng-click="showNextDate()">
+                                            <span class="glyphicon glyphicon-chevron-right"></span>
+                                        </button>
+                                    </div>
+                                    <div class="pull-left dia">
+                                        <label>{{date.date| date: longdate}}</label>
+                                    </div>
+                                </div>
+                                <div class="pull-right" ng-show="selectedTurno.id != -1">
+                                    <button type="submit" class="btn btn-default" data-placement="bottom" ng-click="addMultipleProspects()">Ingreso masivo</button>
+                                    <!--<button type="submit" class="btn btn-default" data-placement="bottom">Importar archivo</button>-->
+                                </div>
+                            </div>
+                            <table class="table agenda table-hover">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Empresa</th>
+                                        <th>Paciente</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-if="selectedTurno.id == -1" ng-repeat="prospect in date.prospects">
+                                        <td></td>
+                                        <td>{{prospect.companyName}}</td>
+                                        <td>{{prospect.name}}</td>
+                                    </tr>
+
+                                    <tr ng-if="selectedTurno.id != -1" ng-repeat="prospect in date.schedules[selectedTurno.id].prospects">
+                                        <td></td>
+                                        <td>{{prospect.companyName}}</td>
+                                        <td>{{prospect.name}}</td>
+                                        <td>
+                                            <div class="pull-right">
+                                                <div class="btn-group bs-glyphicons acciones">
+                                                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                                                        <span class="glyphicon glyphicon-cog"></span>
+                                                        <span class="caret"></span>
+                                                    </button>
+                                                    <ul class="dropdown-menu" role="menu">
+                                                        <li><a href="#" ng-click="deleteProspect(prospect)"><span class="glyphicon glyphicon-remove-circle"></span> Borrar</a></li>
+                                                        <li><a href="#" ng-click="modifyProspect(prospect)"><span class="glyphicon glyphicon-edit"></span> Modificar</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4">
+                                            <button type="submit" class="btn" ng-show="selectedTurno.id != -1" ng-disabled="date.remains == 0" ng-click="addProspect()">
+                                                <span class="glyphicon glyphicon-plus"></span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- SEMANAL -->
+                <div id="semanal" class="tab-pane in active" ng-show="activeWeek">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="btn-toolbar">
+                                <div class="pull-left">
+                                    <div class="btn-group chevron">
+                                        <button type="button" class="btn btn-default" ng-click="showPreviousWeek()">
+                                            <span class="glyphicon glyphicon-chevron-left"></span>
+                                        </button>
+                                        <button type="button" class="btn btn-default" ng-click="showNextWeek()">
+                                            <span class="glyphicon glyphicon-chevron-right"></span>
+                                        </button>
+                                    </div>
+                                    <div class="pull-left dia">
+                                        <label>Semana {{firstDayOfWeek}} de {{firstMonthWeek}} - {{lastDayOfWeek}} de {{lastMonthWeek}} del {{yearWeek}}</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="calendar" class="cal-context">
+
+                                <div class="cal-week-box">
+                                    <div class="cal-offset1 cal-column"></div>
+                                    <div class="cal-offset2 cal-column"></div>
+                                    <div class="cal-offset3 cal-column"></div>
+                                    <div class="cal-offset4 cal-column"></div>
+                                    <div class="cal-offset5 cal-column"></div>
+                                    <div class="cal-offset6 cal-column"></div>
+                                    <div class="cal-row-fluid cal-row-head">
+                                        <div class="cal-cell1" ng-repeat="day in week">
+                                            {{weekDays[day.weekDay]}}<br>
+                                            <small><span data-cal-date="">{{day.date|date:shortdate}}</span></small>
+                                            <a href="#" class="day-disp bounceIn animated" ng-click="showDate(day.date)"><span>{{day.remains}}</span></a>
+                                            <div class="footer-cell">
+                                                <progressbar max="day.capacity" value="day.capacity-day.remains"><span style="color:white; white-space:nowrap;">{{day.capacity - day.remains}} / {{day.capacity}}</span></progressbar>
+                                                <div class="numbers">{{day.remains}}-{{day.capacity}}</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- MENSUAL -->
+                <div id="mensual" class="tab-pane in active" ng-show="activeMonth">
+                    <div class="btn-toolbar">
+                        <div class="pull-left">
+                            <div class="btn-group chevron">
+                                <button type="button" class="btn btn-default" ng-click="showPreviousMonth()">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                </button>
+                                <button type="button" class="btn btn-default" ng-click="showNextMonth()">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </button>
+                            </div>
+                            <div class="pull-left dia">
+                                <label>{{nameMonth}} del {{yearMonth}}</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cal-row-fluid cal-row-head">
+                        <div class="cal-cell1">Domingo</div>
+                        <div class="cal-cell1">Lunes</div>
+                        <div class="cal-cell1">Martes</div>
+                        <div class="cal-cell1">Miercoles</div>
+                        <div class="cal-cell1">Jueves</div>
+                        <div class="cal-cell1">Viernes</div>
+                        <div class="cal-cell1">Sábado</div>
+                    </div>
+                    <div class="cal-month-box">
+                        <div class="cal-row-fluid cal-before-eventlist" ng-repeat="wee in weeks track by $index">
+                            <div class="cal-cell1 cal-cell" ng-repeat="day in wee track by $index">
+                                <div class="cal-month-day cal-day-outmonth cal-day-weekend cal-month-first-row">
+                                    <div class="cal-group">
+                                        <a href="#" class="day-disp bounceIn animated" ng-click="showDate(day.date)" ng-disabled="day.disabled"><span>{{day.remains}}</span></a>
+                                        <span class="pull-right" data-cal-date="">{{day.date|date:shortdate}}</span>
+                                    </div>
+                                    <progressbar max="day.capacity" value="day.capacity-day.remains"><span style="color:white; white-space:nowrap;">{{day.capacity - day.remains}} / {{day.capacity}}</span></progressbar>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

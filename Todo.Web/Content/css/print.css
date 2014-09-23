@@ -1,0 +1,449 @@
+body {
+    padding: 0;
+    font-size: 10pt;
+}
+
+hr.line, hr {
+    background: #e5e5e5 !important;
+    background-image: none;
+    border: 0;
+    height: 1px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 12pt !important;
+    margin-top: 10px;
+}
+
+h4, .h4 {
+    font-size: 10pt !important;
+}
+
+h4.condensed {
+    margin: 0;
+}
+
+h5 {
+    margin: 15px 0 5px 0;
+}
+
+.main {
+    padding: .5em !important;
+    margin-top: 0 !important;
+}
+
+.form-header, .form-header .btn, .main-form, .main-form .btn {
+    font-size: 8pt !important;
+}
+
+.breack {
+    display: block !important;
+    page-break-after: always !important;
+    page-break-inside: avoid !important;
+}
+
+.navbar, .btn-footer, .nav-tabs, .main-header, .hide-print {
+    display: none;
+}
+
+.box-shaded {
+    border: 0;
+    border-radius: 0;
+}
+
+#tab-circuito ul > li {
+    line-height: 24px !important;
+}
+
+.red {
+    color: red !important;
+}
+
+.blue {
+    color: #0096d1 !important;
+}
+
+/*! FOOTER PRINT */
+footer {
+    display: none;
+}
+
+/*! PAGE-HEADER PRINT */
+.page-header {
+    padding-bottom: 0;
+    margin: 0 0 10px;
+    border-bottom: 0;
+    display: block !important;
+}
+
+.page-header ul {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    height: 40px;
+}
+
+.page-header ul li {
+    display: inline-block;
+    position: relative;
+}
+
+.page-header .printh2 {
+    color: #0096d1 !important;
+    font-size: 21px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 5px;
+    left: 10px;
+}
+
+.paper-route .page-header {
+    margin-bottom: 0;
+}
+
+/*! ICONS STYLES PRINT */
+.glyphicon-bar {
+    background-color: #0096d1 !important;
+}
+
+.circle-red {
+    background-color: red !important;
+}
+
+/*! SIGN OF CIRCUIT PRINT */
+.signing {
+    display: block !important;
+    margin-top: 3.5cm;
+}
+
+.signing .col-md-4 {
+    float: left;
+    width: 33.3333%;
+}
+
+/*! BUTTONS PRINT */
+.btn {
+    padding: 2px 8px 3px 8px !important;
+    line-height: 1 !important;
+}
+
+.form-header .btn-default.active, .main-form .btn-default.active {
+    color: #fff !important;
+    background-color: #0096d1 !important;
+    border-color: #357ebd !important;
+}
+
+/*! FORMS PRINT */
+.form-inline .form-control {
+    display: inline-block;
+    width: 100px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-header .control-label {
+    padding-top: 0;
+}
+
+.form-header h2 + h2 {
+    margin-top: 20px;
+}
+
+.input-sm {
+    padding: 5px !important;
+}
+
+.col-md-offset-2 {
+    margin-left: 22%;
+}
+
+#cell-1 {
+    width: 140px;
+}
+
+#cell-4 {
+    width: 10%;
+}
+
+#cell-6, #cell-9 {
+    width: 20%;
+}
+
+#cell-7, #cell-8 {
+    width: 15%;
+}
+
+.triaje .col-md-3, #container-1 .row-1 .col-md-4, #container-1 .row-2 .col-md-3, #container-1 .row-2 .col-md-4, #container-1 .row-2 .col-md-5, #container-1 .row-3 .col-md-6, #container-1 .row-5 .col-md-7, #container-2 .row-3 .col-md-1, #container-2 .row-3 .col-md-3, #container-3 .col-md-6, #container-3 .col-md-1, #container-4 .row-2 .col-md-6, #container-5 .row-1 .col-md-6, #container-6 .row-1 .col-md-4, #container-6 .row-2 .col-md-4, #container-6 .row-3 .col-md-5, #container-6 .row-3 .col-md-7, #container-6 .row-4 .col-md-4, #container-6 .row-5 .col-md-6, #container-6 .row-5 .col-md-2, #container-6 .row-5 .col-md-10, #container-7 .row-1 .col-md-6, #container-7 .row-1 .col-md-2, #container-7 .row-1 .col-md-3, #container-7 .row-1 .col-md-7, #container-7 .row-3 .col-md-6, #container-7 .row-3 .col-md-2, #container-7 .row-3 .col-md-10, #container-7 .row-3 .col-md-3, #container-7 .row-3 .col-md-9, #container-8 .row-1 .col-md-6, #container-8 .row-1 .col-md-4, #container-16 .row-1 .col-md-4, #container-17 .row-1 .col-md-2, #container-17 .row-1 .col-md-3, #container-18 .row-1 .col-md-4, #container-19 .col-md-3, #container-19 .col-md-6, #container-19 .col-md-2, #container-19 .col-md-1, #container-19 .col-md-5, #container-19 .col-md-7, #container-19 .col-md-4, #container-19 .col-md-9 {
+    float: left;
+}
+
+.triaje .col-md-3, #container-19 .col-md-3 {
+    width: 25%;
+}
+
+#container-1 .row-1 .col-md-4, #container-1 .row-2 .col-md-4, #container-6 .row-1 .col-md-4, #container-6 .row-2 .col-md-4, #container-6 .row-4 .col-md-4, #container-8 .row-1 .col-md-4, #container-16 .row-1 .col-md-4, #container-18 .row-1 .col-md-4, #container-19 .col-md-4, #container-19 .row-1 .col-md-3 {
+    width: 33.3333%;
+}
+
+#container-19 .col-md-5 {
+    width: 41.66666667%;
+}
+
+#container-1 .row-3 .col-md-6, #container-3 .col-md-6, #container-4 .row-2 .col-md-6, #container-5 .row-1 .col-md-6, #container-6 .row-5 .col-md-6, #container-7 .row-1 .col-md-6, #container-7 .row-3 .col-md-6, #container-8 .row-1 .col-md-6, #container-19 .col-md-6 {
+    width: 50%;
+}
+
+#container-19 .col-md-7 {
+    width: 58.33333333%;
+}
+
+/*! Styles print Form Certificado Aptitud*/
+#container-2 #logo {
+    display: block;
+}
+
+#container-2 #cell-2, #container-2 #cell-6 {
+    width: 165px;
+}
+
+#container-2 #cell-2-1, #container-2 #cell-3-1 {
+    width: 160px;
+}
+
+#container-2 #cell-4, #container-2 #cell-7 {
+    width: 50px;
+}
+
+#container-2 #cell-8 {
+    width: 255px;
+}
+
+#container-2 #cell-8-1 {
+    width: 270px;
+}
+
+#container-2 #cell-9 {
+    width: 170px;
+}
+
+.select-cod {
+    padding-top: 5px;
+}
+
+#container-2 .row-4 .col-md-12 {
+    display: block;
+}
+
+/*! Styles print Form Audiometria*/
+#container-1 .row-5 .col-md-5 {
+    float: right;
+}
+
+#container-1 .row-4 .col-md-6, #container-1 .row-5 .col-md-7 {
+    width: 65%;
+}
+
+#container-1 .row-5 .col-md-5 {
+    width: 35%;
+}
+
+#container-1 .row-6 {
+    margin-top: 10px;
+}
+
+.cont-legend {
+    line-height: 1 !important;
+}
+
+.graph img {
+    width: 410px;
+}
+
+/*! Styles Print Odontologia*/
+#container-3 .col-md-1 {
+    width: 12.5%;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.span-1 {
+    border: 1px solid #666;
+    height: 32px;
+    margin-bottom: 10px;
+}
+
+.span-1 .cell-1, .span-1 .cell-2, .span-1 .cell-3, .span-1 .cell-4 {
+    height: 10px;
+}
+
+.span-1 .cell-1 {
+    border-bottom: 1px solid #666;
+    clear: both;
+}
+
+.span-1 .cell-1:last-child {
+    border-bottom: 0;
+}
+
+.span-1 .cell-2 {
+    float: left;
+    width: 33.33333%;
+    border-right: 1px solid #666;
+    border-bottom: 1px solid #666;
+}
+
+.span-1 .cell-2:last-child {
+    border-right: 0;
+}
+
+#container-3 .row-2 .col-md-6 {
+    border-bottom: 0;
+}
+
+#container-3 .row-2 .col-md-1 {
+    margin-top: 10px;
+}
+
+.row-2 .span-1 {
+    margin-bottom: 0;
+}
+
+/*! Styles Print Cardiologia*/
+#container-6 .row-5 .col-md-2 {
+    width: 24%;
+}
+
+#container-6 .row-5 .col-md-10 {
+    width: 76%;
+}
+
+.data-1 .cell-7, .data-1 .cell-8 {
+    width: 175px;
+}
+
+/*! Styles Print Ficha Medica*/
+.data-1 .table-2 .cell-1 {
+    width: 195px;
+}
+
+.data-1 .table-2 .cell-2 {
+    width: 40%;
+}
+
+.data-1 .table-2 .cell-3 {
+    width: 135px;
+}
+
+.data-1 .table-3 .cell-1 {
+    width: 85px;
+}
+
+.data-1 .table-3 .cell-3, .data-1 .table-4 .cell-1 {
+    width: 145px;
+}
+
+.data-1 .table-5 .cell-1, .data-1 .table-6 .cell-1, .data-1 .table-5 .cell-6, .data-1 .table-6 .cell-6 {
+    width: 10%;
+}
+
+.data-1 .table-5 .cell-5, .data-1 .table-6 .cell-5 {
+    width: 5%;
+}
+
+.data-1 .table-6 .cell-7, .data-1 .table-8 .cell-2, .data-1 .table-9 .cell-2, .data-1 .table-10 .cell-1 {
+    width: 20%;
+}
+
+.data-1 .table-7 .cell-1, .data-1 .table-8 .cell-1, .data-1 .table-9 .cell-1, .data-1 .table-8 .cell-3, .data-1 .table-9 .cell-3 {
+    width: 15%;
+}
+
+.data-1 .table-7 .cell-2, .data-1 .table-10 .cell-2 {
+    width: 28%;
+}
+
+.data-1 .table-8 .cell-4, .data-1 .table-9 .cell-4 {
+    width: 3%;
+}
+
+.data-1 .table-8 .cell-5, .data-1 .table-9 .cell-5 {
+    width: 22%;
+}
+
+#container-7 .row-1 .col-md-2, #container-7 .row-3 .col-md-2 {
+    width: 25%;
+}
+
+#container-7 .row-1 .btn-group {
+    margin-top: 5px;
+}
+
+#container-7 .row-3 .col-md-3 {
+    width: 32%;
+}
+
+#container-7 .row-3 .col-md-10, #container-7 .row-3 .col-md-9 {
+    width: 68%;
+}
+
+/*! Styles Print Ficha Tamizaje*/
+#container-11 .table-1 td, #container-13 .table-1 td, #container-14 .table-1 td {
+    vertical-align: top;
+}
+
+#container-11 .table-1 td:first-child, #container-13 .table-1 td:first-child, #container-14 .table-1 td:first-child {
+    width: 20px;
+}
+
+#container-11 .table-1 .cell-1 {
+    width: 400px;
+}
+
+/*! Styles Print Stress and Fobias*/
+#container-13 .table-1 td:last-child, #container-14 .table-1 td:last-child {
+    width: 120px;
+}
+
+/*! Styles Print Osteomuscular*/
+#container-18 .table-1 th, #container-18 .table-1 td {
+    width: 50px;
+}
+
+/*! Styles Print 7C*/
+#container-19 .span-2, #container-19 .span-6 {
+    width: 140px;
+}
+
+#container-19 .input-1 {
+    width: 22.5%;
+}
+
+#container-19 .span-5 {
+    width: 90px;
+}
+
+#container-19 .span-7 {
+    width: 125px;
+}
+
+#container-19 .row-3 .col-md-6:first-child {
+    width: 40%;
+}
+
+#container-19 .row-3 .col-md-6 {
+    width: 60%;
+}
+
+#container-19 .row-2 .col-md-3 {
+    width: 35%;
+}
+
+#container-19 .col-md-9 {
+    width: 65%;
+}

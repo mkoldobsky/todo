@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://getbootstrap.com/examples/dashboard/ -->
+<html lang="en" class="no-touch">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="http://getbootstrap.com/assets/ico/favicon.ico">
+        <title>Circuito Pre-Ocupacional</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+
+        <!-- Overrides styles -->
+        <link href="css/overrides.css" rel="stylesheet">
+
+        <!-- Print styles -->
+        <link href="css/print.css" rel="stylesheet" media="print">
+
+        <!-- Animate styles -->
+        <link href="css/animate.css" rel="stylesheet">
+
+        <!-- Call to Google Fonts -->
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,600" rel="stylesheet" type="text/css">
+
+        <!-- Just for debugging purposes. Don't actually copy this line! -->
+        <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+                    <!--[if lt IE 9]>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 <![endif]-->
+        <style id="holderjs-style" type="text/css"></style>
+        <script type="text/javascript" src="./Dashboard Template for Bootstrap_files/version.php"></script>
+        <script src="js/modernizr.custom.js"></script>
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand fadeInLeftBig animated"><img alt="Clinisanitas" src="images/logo.png" /></a>
+                </div>
+                <div class="secundary-navbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Agenda</a></li>
+                        <li><a href="#">Admisión</a></li>
+                        <li><a href="#">Triaje</a></li>
+                        <li><a href="#">Dashboard</a></li>
+                        <li class="active"><a href="#">Circuito</a></li>
+                        <li><a href="#">Administrador</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown profile">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Nombre de Usuario <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">22/05/2014</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Desconectar</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="container main box-shaded">
+            <div class="row stations">
+                <div class="col-lg-12">
+                    <div class="main-header">
+                        <h1 class="pull-left">Circuito preocupacional</h1>
+                        <div class="cont-buttons pull-right">
+                        </div>
+                    </div>
+                    <ul id="tab-circuito" class="nav nav-tabs">
+                        <li class="active"><a href="#espirometria" data-toggle="tab">Clínico</a></li>
+                    </ul>
+                    <div class="row form-group hide-print" style="margin-top: -10px;">
+                        <div class="col-md-12">
+                            <div class="pull-left form-inline" ng-show="">
+                                <label>
+                                    <select class="form-control">
+                                        <option value="default">Formato 7-C</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-circuito" class="tab-content">
+                        <!-- TEST -------------------------------------------->
+                        <div id="espirometria" class="tab-pane active">
+                            <div class="page-header">
+                                <ul>
+                                    <li><img src="../../Content/images/logo-print.png" alt="Clinisanitas" /></li>
+                                    <li><div class="printh2">Ocupacional</div></li>
+                                </ul>
+                            </div>
+                            <div class="row form-header">
+                                <div class="col-md-12">
+                                    <h2 class="h2">ANEXO 7C<span style="margin-top: 10px; display: block">FICHA MÉDICA OCUPACIONAL</span></h2>
+                                </div>
+                                <div class="col-md-12 form-horizontal">
+                                    <div class="form-group">
+                                        <div class="col-md-2 pull-right">
+                                            <input type="text" class="form-control input-sm">
+                                        </div>
+                                        <label class="pull-right text-right control-label">FECHA:</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="pull-right test-ocup">
+                                            <div class="btn-group" data-toggle="buttons">
+                                                <label class="btn btn-default btn-sm active">
+                                                    <input type="checkbox" checked> EMPO
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="checkbox"> EMOA
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="checkbox"> EMOR
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <label class="pull-right text-right control-label">TIPO DE EXÁMEN OCUPACIONAL:</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    <div class="cont-bordered">
+                                        <table>
+                                            <tr>
+                                                <td id="cell-1"><strong>APELLIDOS Y NOMBRES:</strong></td>
+                                                <td id="cell-2">Hugo Mauro German Rauber</td>
+                                            </tr>
+                                        </table>
+                                        <table>
+                                            <tr>
+                                                <td id="cell-3"><strong>EDAD:</strong></td>
+                                                <td id="cell-4">30</td>
+                                                <td id="cell-5"><strong>SEXO:</strong></td>
+                                                <td id="cell-6">Masculino</td>
+                                                <td id="cell-7"><strong>TIPO DE DOC:</strong></td>
+                                                <td id="cell-8">Pasaporte</td>
+                                                <td id="cell-9"><strong>NÚMERO  DE DOC:</strong></td>
+                                                <td id="cell-10">A-2476789</td>
+                                            </tr>
+                                        </table>
+                                        <table>
+                                            <tr>
+                                                <td id="cell-11"><strong>EMPRESA:</strong></td>
+                                                <td id="cell-12" colspan="5">BVision</td>
+                                                <td id="cell-13"><strong>PUESTO DE TRABAJO:</strong></td>
+                                                <td id="cell-14">Herrero</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 data-1">
+                                    <div class="cont-bordered">
+                                        <table class="table-1">
+                                            <tr>
+                                                <td class="cell-1"><strong>DOMICILIO:</strong></td>
+                                                <td>Calle....</td>
+                                            </tr>
+                                        </table>
+                                        <table class="table-3">
+                                            <tr>
+                                                <td class="cell-1"><strong>ESTADO CIVIL:</strong></td>
+                                                <td class="cell-2" colspan="5">Texto viene de la admision</td>
+                                                <td class="cell-3"><strong>GRADO DE INSTRUCCIÓN:</strong></td>
+                                                <td>Herrero</td>
+                                            </tr>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="triaje">
+                                <div class="row form-group">
+                                    <div class="col-md-3">
+                                        <label>Peso|Kg:</label>
+                                        <label>xxxx</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label>Talla|mts:</label>
+                                        <label>xxxx</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label>IMC:</label>
+                                        <label>xxxx</label>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-md-3">
+                                        <label>FC|min:</label>
+                                        <label>xxxx</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label>FR|min:</label>
+                                        <label>xxxx</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label>% SAT:</label>
+                                        <label>xxxx</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label>Temperatura|°:</label>
+                                        <label>xxxx</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="line">
+                            <div class="row main-form">
+                                <div id="container-19" class="col-md-12 form-horizontal">
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label>MINERALES EXPLOTADOS O PROCESADOS:</label>
+                                            <textarea class="form-control input-sm"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <div class="btn-group" data-toggle="buttons">
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> Superficie
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> Encontradora
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> Subsuelo
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label class="control-label">ALTURA DE LA LABOR:</label>
+                                            <div class="btn-group" data-toggle="buttons">
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> Hasta 2500m
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> 2501 a 3000m
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> 3001 a 3500m
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> 3501 a 4000m
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> 4001 a 4500m
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> más de 4501m
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="line">
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label>AGENTES PRESENTES EN EL PUESTO ACTUAL:</label>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-3">
+                                            <table>
+                                                <tr>
+                                                    <td>Ruido</td>
+                                                    <td>
+                                                        <div class="btn-group pull-right" data-toggle="buttons">
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> Si
+                                                            </label>
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> No
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Polvo</td>
+                                                    <td>
+                                                        <div class="btn-group pull-right" data-toggle="buttons">
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> Si
+                                                            </label>
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> No
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Visegmentaria</td>
+                                                    <td>
+                                                        <div class="btn-group pull-right" data-toggle="buttons">
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> Si
+                                                            </label>
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> No
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Vitotal</td>
+                                                    <td>
+                                                        <div class="btn-group pull-right" data-toggle="buttons">
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> Si
+                                                            </label>
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> No
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <table>
+                                                <tr>
+                                                    <td>Cancerígenos</td>
+                                                    <td>
+                                                        <div class="btn-group pull-right" data-toggle="buttons">
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> Si
+                                                            </label>
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> No
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Mutagénicos</td>
+                                                    <td>
+                                                        <div class="btn-group pull-right" data-toggle="buttons">
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> Si
+                                                            </label>
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> No
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Solventes</td>
+                                                    <td>
+                                                        <div class="btn-group pull-right" data-toggle="buttons">
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> Si
+                                                            </label>
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> No
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Metales pesados</td>
+                                                    <td>
+                                                        <div class="btn-group pull-right" data-toggle="buttons">
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> Si
+                                                            </label>
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> No
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <table>
+                                                <tr>
+                                                    <td>Temperaturas</td>
+                                                    <td>
+                                                        <div class="btn-group pull-right" data-toggle="buttons">
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> Si
+                                                            </label>
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> No
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Biológicos</td>
+                                                    <td>
+                                                        <div class="btn-group pull-right" data-toggle="buttons">
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> Si
+                                                            </label>
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> No
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Posturas</td>
+                                                    <td>
+                                                        <div class="btn-group pull-right" data-toggle="buttons">
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> Si
+                                                            </label>
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> No
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Turnos</td>
+                                                    <td>
+                                                        <div class="btn-group pull-right" data-toggle="buttons">
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> Si
+                                                            </label>
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> No
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <table>
+                                                <tr>
+                                                    <td>Cargas</td>
+                                                    <td>
+                                                        <div class="btn-group pull-right" data-toggle="buttons">
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> Si
+                                                            </label>
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> No
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Mov. Repet.</td>
+                                                    <td>
+                                                        <div class="btn-group pull-right" data-toggle="buttons">
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> Si
+                                                            </label>
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> No
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Otros</td>
+                                                    <td>
+                                                        <div class="btn-group pull-right" data-toggle="buttons">
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> Si
+                                                            </label>
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> No
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <hr class="line">
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label class="control-label">PUESTO AL QUE POSTULA:</label>
+                                            <label class="control-label">xxxxx</label>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-6">
+                                            <label class="control-label">PUESTO ACTUAL:</label>
+                                            <label class="control-label">xxxxx</label>
+                                        </div>
+                                        <div class="col-md-3 form-inline">
+                                            <label>TIEMPO:</label>
+                                            <input type="text" class="form-control input-sm">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label class="control-label">REUBICACIÓN:</label>
+                                            <div class="btn-group" data-toggle="buttons">
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> Si
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> No
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="line">
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label>ANTECEDENTES PERSONALES ( Enfermedades y accidentes en el trabajo y fuera del mismo):</label>
+                                            <textarea rows="3" class="form-control input-sm"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label>ANTECEDENTES FAMILIARES:</label>
+                                            <textarea rows="3" class="form-control input-sm"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-2">
+                                            <label class="control-label">HIJOS:</label>
+                                            <div class="btn-group" data-toggle="buttons">
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="checkbox"> SIN HIJOS
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 span-2">
+                                            <label class="control-label">NÚMERO DE HIJOS:</label>
+                                        </div>
+                                        <div class="col-md-1 span-3">
+                                            <label class="control-label">VIVOS:</label>
+                                        </div>
+                                        <div class="col-md-2 input-1">
+                                            <input type="text" class="form-control input-sm">
+                                        </div>
+                                        <div class="col-md-1 span-4">
+                                            <label class="control-label">MUERTOS:</label>
+                                        </div>
+                                        <div class="col-md-2 input-1">
+                                            <input type="text" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    <hr class="line">
+                                    <div class="row form-group">
+                                        <div class="col-md-5">
+                                            <table>
+                                                <tr>
+                                                    <td colspan="2">HABITOS</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tabaco:</td>
+                                                    <td>
+                                                        <div class="btn-group" data-toggle="buttons">
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> No
+                                                            </label>
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> Poco
+                                                            </label>
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> Regular
+                                                            </label>
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> Excesivo
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Alcohol:</td>
+                                                    <td>
+                                                        <div class="btn-group" data-toggle="buttons">
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> No
+                                                            </label>
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> Poco
+                                                            </label>
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> Regular
+                                                            </label>
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> Excesivo
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Drogas:</td>
+                                                    <td>
+                                                        <div class="btn-group" data-toggle="buttons">
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> No
+                                                            </label>
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> Poco
+                                                            </label>
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> Regular
+                                                            </label>
+                                                            <label class="btn btn-default btn-sm">
+                                                                <input type="radio"> Excesivo
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <label>FUNCIÓN RESPIRATORIA ABS %</label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <label>Espirometría Conclusión:</label>
+                                                    <textarea rows="3" class="form-control input-sm"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label>Cintura:</label>
+                                            <input type="text" class="form-control input-sm">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>Cadera:</label>
+                                            <input type="text" class="form-control input-sm">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>ICC:</label>
+                                            <input type="text" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    <hr class="line">
+                                    <div class="row row-1 form-group">
+                                        <div class="col-md-3">
+                                            <label>CABEZA:</label>
+                                            <div class="btn-group" data-toggle="buttons">
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> Normal
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> Anormal
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label>CUELLO:</label>
+                                            <div class="btn-group" data-toggle="buttons">
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> Normal
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> Anormal
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label>NARIZ:</label>
+                                            <div class="btn-group" data-toggle="buttons">
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> Normal
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> Anormal
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label>BOCA, AMÍGDALA, FARINGE, LARINGE:</label>
+                                            <div class="btn-group" data-toggle="buttons">
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> Normal
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> Anormal
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-2 span-5">
+                                            <label class="control-label">DENTADURA:</label>
+                                        </div>
+                                        <div class="col-md-2 span-6">
+                                            <label class="control-label">Piezas en mal estado:</label>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <input type="text" class="form-control input-sm">
+                                        </div>
+                                        <div class="col-md-2 span-7">
+                                            <label class="control-label">Piezas que faltan:</label>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <input type="text" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <table class="table table-bordered">
+                                                <tr>
+                                                    <td rowspan="2">OJOS</td>
+                                                    <td colspan="2" class="text-center">Sin Corregir</td>
+                                                    <td colspan="2" class="text-center">Corregida</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">OD</td>
+                                                    <td class="text-center">OI</td>
+                                                    <td class="text-center">OD</td>
+                                                    <td class="text-center">OI</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>VISIÓN DE CERCA</td>
+                                                    <td><input type="text" class="form-control input-sm"></td>
+                                                    <td><input type="text" class="form-control input-sm"></td>
+                                                    <td><input type="text" class="form-control input-sm"></td>
+                                                    <td><input type="text" class="form-control input-sm"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>VISIÓN DE LEJOS</td>
+                                                    <td><input type="text" class="form-control input-sm"></td>
+                                                    <td><input type="text" class="form-control input-sm"></td>
+                                                    <td><input type="text" class="form-control input-sm"></td>
+                                                    <td><input type="text" class="form-control input-sm"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>VISIÓN DE COLORES</td>
+                                                    <td><input type="text" class="form-control input-sm"></td>
+                                                    <td><input type="text" class="form-control input-sm"></td>
+                                                    <td><input type="text" class="form-control input-sm"></td>
+                                                    <td><input type="text" class="form-control input-sm"></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label>ENFERMEDADES OCULARES:</label>
+                                            <textarea class="form-control input-sm" rows="2"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label>REFLEJOS PUPILARES:</label>
+                                            <textarea class="form-control input-sm" rows="2"></textarea>
+                                        </div>
+                                    </div>
+                                    <hr class="line">
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label>OIDOS</label>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label class="control-label">Audiometría:</label>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-6">
+                                            <label>Diagnóstico OD:</label>
+                                            <input type="text" class="form-control input-sm">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="">Diagnóstico OI:</label>
+                                            <input type="text" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label>Método de clasificación Audiométrica:</label>
+                                            <input type="text" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    <hr class="line">
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label>OTOSCOPIA</label>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-6">
+                                            <label>OD:</label>
+                                            <input type="text" class="form-control input-sm">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="">OI:</label>
+                                            <input type="text" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    <hr class="line">
+                                    <div class="row form-group">
+                                        <div class="col-md-6">
+                                            <label>TORAX:</label>
+                                            <input type="text" class="form-control input-sm">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="">CORAZÓN:</label>
+                                            <input type="text" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label>EN REPOSO</label>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label>Presión sistémica:</label>
+                                        </div>
+                                        <div class="col-md-4 form-inline">
+                                            <label>Sistólica:</label>
+                                            <input type="text" class="form-control input-sm">
+                                            <label>mm Hg</label>
+                                        </div>
+                                        <div class="col-md-4 form-inline">
+                                            <label>Diastólica:</label>
+                                            <input type="text" class="form-control input-sm">
+                                            <label>mm Hg</label>
+                                        </div>
+
+                                    </div>
+                                    <hr class="line">
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label>PULMONES:</label>
+                                            <div class="btn-group" data-toggle="buttons">
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> Normal
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> Anormal
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label>Miembros superiores:</label>
+                                            <input type="text" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label>Miembros inferiores:</label>
+                                            <input type="text" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-6">
+                                            <label>Reflejos Osteo-tendinosos:</label>
+                                            <textarea rows="2" class="form-control input-sm"></textarea>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>Miembros inferiores:</label>
+                                            <textarea rows="2" class="form-control input-sm"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label>Columna Vertebral:</label>
+                                            <input type="text" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label>Abdómen:</label>
+                                            <input type="text" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label>Tacto renal:</label>
+                                            <div class="btn-group" data-toggle="buttons">
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="checkbox"> No se hizo
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="checkbox"> Normal
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="checkbox"> Anormal
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="checkbox"> Describir en Observaciones
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-4">
+                                            <label>Anillos Inguinales:</label>
+                                            <input type="text" class="form-control input-sm">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>Hernias:</label>
+                                            <input type="text" class="form-control input-sm">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>Várices:</label>
+                                            <input type="text" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-6">
+                                            <label>Organos Genitales:</label>
+                                            <input type="text" class="form-control input-sm">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>Ganglios:</label>
+                                            <input type="text" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label>Lenguaje, Atención, Memoria, Orientación, Inteligencia, Afectividad :</label>
+                                            <textarea rows="3" class="form-control input-sm"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row row-2 form-group">
+                                        <div class="col-md-3 text-center">
+                                            <div class="cont-img">
+                                                <img src="images/pulmones.jpg" width="190" height="200" alt="Pulmones">
+                                            </div>
+                                            <div class="row text-left">
+                                                <div class="col-md-12">
+                                                    <label>Nº Rx:</label>
+                                                    <label>xxxx</label>
+                                                </div>
+                                            </div>
+                                            <div class="row text-left">
+                                                <div class="col-md-12">
+                                                    <label>Fecha:</label>
+                                                    <label>xxxx</label>
+                                                </div>
+                                            </div>
+                                            <div class="row text-left">
+                                                <div class="col-md-12">
+                                                    <label>Calidad:</label>
+                                                    <label>xxxx</label>
+                                                </div>
+                                            </div>
+                                            <div class="row text-left">
+                                                <div class="col-md-12">
+                                                    <label>Símbolos:</label>
+                                                    <label>xxxx</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div class="row form-group">
+                                                <div class="col-md-12">
+                                                    <label>Vértices:</label>
+                                                    <input type="text" class="form-control input-sm">
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-md-12">
+                                                    <label>Campos pulmonares:</label>
+                                                    <input type="text" class="form-control input-sm">
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-md-12">
+                                                    <label>Hilios:</label>
+                                                    <input type="text" class="form-control input-sm">
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-md-6 ">
+                                                    <label>Senos:</label>
+                                                    <input type="text" class="form-control input-sm">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label>Mediastinos:</label>
+                                                    <input type="text" class="form-control input-sm">
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-md-6 ">
+                                                    <label>Conclusiones radiográficas:</label>
+                                                    <input type="text" class="form-control input-sm">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label>Silueta cardiovascular:</label>
+                                                    <input type="text" class="form-control input-sm">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center">0/0</th>
+                                                <th class="text-center">1/0</th>
+                                                <th class="text-center">1/1 , 1/2</th>
+                                                <th class="text-center">2/1, 2/2 , 2/3 </th>
+                                                <th class="text-center">3/2 , 3/3 , 3/+</th>
+                                                <th class="text-center">A, B, C</th>
+                                                <th class="text-center">St</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <input type="text" class="form-control input-sm">
+                                                </td>
+                                                <td>
+                                                    <input type="text" class="form-control input-sm">
+                                                </td>
+                                                <td>
+                                                    <input type="text" class="form-control input-sm">
+                                                </td>
+                                                <td>
+                                                    <input type="text" class="form-control input-sm">
+                                                </td>
+                                                <td>
+                                                    <input type="text" class="form-control input-sm">
+                                                </td>
+                                                <td>
+                                                    <input type="text" class="form-control input-sm">
+                                                </td>
+                                                <td>
+                                                    <input type="text" class="form-control input-sm">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label>Reacciones serológicas a Lues:</label>
+                                            <div class="btn-group" data-toggle="buttons">
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> Negativo
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> Positivo
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row row-3 form-group">
+                                        <div class="col-md-6">
+                                            <label>Sin neumoconiosis:</label>
+                                            <div class="btn-group" data-toggle="buttons">
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> Normal
+                                                </label>
+                                                 <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> Sospecha
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>Imagen Radiográfica de Exposición a Polvo:</label>
+                                            <div class="btn-group" data-toggle="buttons">
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> Normal
+                                                </label>
+                                                 <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> Sospecha
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label>Con Neumoconiosis:</label>
+                                            <textarea rows="3" class="form-control input-sm"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label>Otros exámenes:</label>
+                                            <textarea rows="3" class="form-control input-sm"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-6">
+                                            <label>Grupo Sanguíneo:</label>
+                                            <div class="btn-group" data-toggle="buttons">
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> O
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> A
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> B
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> AB
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> Rh (+)
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> Rh (-)
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 form-inline">
+                                            <label>Hemoglobina / Hematocrito:</label>
+                                            <input type="text" class="form-control input-sm">
+                                            <label>gr. %</label>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label>Orina:</label>
+                                            <input type="text" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label>Apto para trabajar:</label>
+                                            <div class="btn-group" data-toggle="buttons">
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> Si
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> No
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label>Observaciones:</label>
+                                            <textarea rows="3" class="form-control input-sm"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row btn-footer">
+                                <div class="col-md-12">
+                                    <div class="pull-left">
+                                        <button type="submit" class="btn btn-primary">Imprimir</button>
+                                    </div>
+                                    <div class="pull-right">
+                                        <button type="submit" class="btn btn-default">Cancelar</button>
+                                        <button type="submit" class="btn btn-default">Finalizar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row signing">
+                                <div class="col-md-12">
+                                    <div class="col-md-4 firm-1 text-center">
+                                        <hr />
+                                        Firma y sello del Médico
+                                    </div>
+                                    <div class="col-md-4 firm-2 text-center">
+                                        <hr />
+                                        Firma del examinado
+                                    </div>
+                                    <div class="col-md-4 firm-3 text-center">
+                                        <hr />
+                                        <div>Huella digital</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="text-center">
+                <p>© 2014 - Clinisanitas - V.0.0.1</p>
+            </div>
+        </footer>
+                    <!-- Bootstrap core JavaScript
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/docs.min.js"></script>
+        <script src="js/classie.js"></script>
+        <script src="js/gnmenu.js"></script>
+        <script>
+            new gnMenu( document.getElementById( 'gn-menu' ) );
+        </script>
+    </body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://getbootstrap.com/examples/dashboard/ -->
+<html lang="en" class="no-touch">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="http://getbootstrap.com/assets/ico/favicon.ico">
+        <title>Circuito Pre-Ocupacional</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+
+        <!-- Overrides styles -->
+        <link href="css/overrides.css" rel="stylesheet">
+
+        <!-- Print styles -->
+        <link href="css/print.css" rel="stylesheet" media="print">
+
+        <!-- Animate styles -->
+        <link href="css/animate.css" rel="stylesheet">
+
+        <!-- Call to Google Fonts -->
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,600" rel="stylesheet" type="text/css">
+
+        <!-- Just for debugging purposes. Don't actually copy this line! -->
+        <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+                    <!--[if lt IE 9]>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 <![endif]-->
+        <style id="holderjs-style" type="text/css"></style>
+        <script type="text/javascript" src="./Dashboard Template for Bootstrap_files/version.php"></script>
+        <script src="js/modernizr.custom.js"></script>
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand fadeInLeftBig animated"><img alt="Clinisanitas" src="images/logo.png" /></a>
+                </div>
+                <div class="secundary-navbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Agenda</a></li>
+                        <li><a href="#">Admisión</a></li>
+                        <li><a href="#">Triaje</a></li>
+                        <li><a href="#">Dashboard</a></li>
+                        <li class="active"><a href="#">Circuito Preocupacional</a></li>
+                        <li><a href="#">Administrador</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown profile">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Nombre de Usuario <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">22/05/2014</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Desconectar</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="container main box-shaded">
+            <div class="row stations">
+                <div class="col-lg-12">
+                    <div class="main-header">
+                        <h1 class="pull-left">Circuito preocupacional</h1>
+                        <div class="cont-buttons pull-right">
+                        </div>
+                    </div>
+                    <ul id="tab-circuito" class="nav nav-tabs">
+                        <li class="active"><a href="#auditora" data-toggle="tab">Auditora</a></li>
+                    </ul>
+                    <div class="row form-group hide-print" style="margin-top: -10px;">
+                        <div class="col-md-12">
+                            <div class="pull-left form-inline">
+                                <label>
+                                    <select class="form-control">
+                                        <option value="default">Certificado de Aptitud Médico Ocupacional</option>
+                                        <option>Certificado de Aptitud para Empresa</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-circuito" class="tab-content">
+                        <!-- TEST -------------------------------------------->
+                        <div class="tab-pane active">
+                            <div id="container-2">
+                                <div class="row form-header">
+                                    <div class="col-md-12">
+                                        <h2 class="h2">CERTIFICADO DE APTITUD MÉDICO OCUPACIONAL</h2>
+                                    </div>
+                                    <div class="col-md-12 form-horizontal">
+                                        <div class="pull-left">
+                                            <img id="logo" src="images/logo-print.png" alt="Clinisanitas" />
+                                        </div>
+                                        <div class="form-group select-cod">
+                                            <div class="pull-right test-ocup">
+                                                <div class="btn-group" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-sm active">
+                                                        <input type="checkbox" checked> EMPO
+                                                    </label>
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="checkbox"> EMOP
+                                                    </label>
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="checkbox"> EMOR
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <label class="pull-right text-right control-label">CÓDIGO:</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <h2 class="h2 no-border">CERTIFICA que el Sr. (a):</h2>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="cont-bordered">
+                                            <table width="100%" border="0">
+                                                <tr>
+                                                    <td id="cell-1"><strong>APELLIDOS Y NOMBRES:</strong></td>
+                                                    <td>Hugo Mauro German Rauber</td>
+                                                </tr>
+                                            </table>
+                                            <table width="100%" border="0">
+                                                <tr>
+                                                    <td id="cell-2"><strong>DOCUMENTO DE IDENTIDAD:</strong></td>
+                                                    <td id="cell-2-1">24703373</td>
+                                                    <td id="cell-3"><strong>EDAD:</strong></td>
+                                                    <td id="cell-3-1">30</td>
+                                                    <td id="cell-4"><strong>GÉNERO:</strong></td>
+                                                    <td>Masculino</td>
+                                                </tr>
+                                            </table>
+                                            <table width="100%" border="0">
+                                                <tr>
+                                                    <td id="cell-7"><strong>EMPRESA:</strong></td>
+                                                    <td>METALURGICA DE LIMA</td>
+                                                </tr>
+                                            </table>
+                                            <table width="100%" border="0">
+                                                <tr>
+                                                    <td id="cell-8-1"><strong>OCUPACIÓN ACTUAL/PUESTO AL QUE POSTULA/ O ÚLTIMA OCUPACIÓN:</strong></td>
+                                                    <td>OFTALMOLOGO</td>
+                                                </tr>
+                                            </table>
+                                            <table width="100%" border="0">
+                                                <tr>
+                                                    <td id="cell-9"><strong>GRUPO SANGUÍNEO/FACTOR:</strong></td>
+                                                    <td class="form-inline"><input type="text" class="form-control input-sm"></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row main-form">
+                                    <div class="col-md-12">
+                                        <h4>APTITUD MÉDICA</h4>
+                                        <div class="row row-1 form-group">
+                                            <div class="col-md-12">
+                                                <div class="btn-group" data-toggle="buttons">
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> APTO
+                                                    </label>
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> APTO CON RESTRICCIONES
+                                                    </label>
+                                                    <label class="btn btn-default btn-sm">
+                                                        <input type="radio"> NO APTO TEMPORAL
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row row-2 form-group">
+                                            <div class="col-md-12">
+                                                <input type="text" class="form-control input-sm">
+                                            </div>
+                                        </div>
+                                        <hr class="line">
+                                        <div class="row row-3 form-horizontal form-group">
+                                            <div class="col-md-1">
+                                                <label class="control-label">Fecha:</label>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row row-4">
+                                            <div class="col-md-12">
+                                                Sello y Firma del Médico que CERTIFICA
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row btn-footer">
+                                    <div class="col-md-12">
+                                        <div class="pull-left">
+                                            <button type="submit" class="btn btn-primary">Imprimir</button>
+                                        </div>
+                                        <div class="pull-right">
+                                            <button type="submit" class="btn btn-default">Cancelar</button>
+                                            <button type="submit" class="btn btn-default">Finalizar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="text-center">
+                <p>© 2014 - Clinisanitas - V.0.0.1</p>
+            </div>
+        </footer>
+                    <!-- Bootstrap core JavaScript
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/docs.min.js"></script>
+        <script>
+            $(document).ready(function (){
+              $('.tooltips').tooltip()
+            });
+        </script>
+    </body>
+</html>

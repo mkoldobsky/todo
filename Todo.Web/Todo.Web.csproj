@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9B8BF380-7F42-4F02-8107-2C03CA88527C}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Clinisanitas.Web</RootNamespace>
+    <AssemblyName>Clinisanitas.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+    <JSLintSkip>\Scripts\</JSLintSkip>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="nunit.core">
+      <HintPath>..\packages\NUnitTestAdapter.1.0\lib\nunit.core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.core.interfaces">
+      <HintPath>..\packages\NUnitTestAdapter.1.0\lib\nunit.core.interfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.util">
+      <HintPath>..\packages\NUnitTestAdapter.1.0\lib\nunit.util.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NUnit.VisualStudio.TestAdapter">
+      <HintPath>..\packages\NUnitTestAdapter.1.0\lib\NUnit.VisualStudio.TestAdapter.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\css\angucomplete-alt.css" />
+    <Content Include="Content\css\angucomplete.css" />
+    <Content Include="Content\css\angular-multi-select.css" />
+    <Content Include="Content\css\calendar.css" />
+    <Content Include="Content\css\toaster.css" />
+    <Content Include="Content\images\arrow.png" />
+    <Content Include="Content\images\clinisanitas-bkg.png" />
+    <Content Include="Content\images\logo-print.png" />
+    <Content Include="Content\images\user-info.png" />
+    <Content Include="Content\images\user-profile.png" />
+    <Content Include="Scripts\app\controllers\accountCtrl.js" />
+    <Content Include="Scripts\app\controllers\agendaCtrl.js" />
+    <Content Include="Scripts\app\controllers\configCtrl.js" />
+    <Content Include="Scripts\app\controllers\circuitCtrl.js" />
+    <Content Include="Scripts\app\controllers\menuCtrl.js" />
+    <Content Include="Scripts\app\controllers\dashboardCtrl.js" />
+    <Content Include="Scripts\app\controllers\waybillCtrl.js" />
+    <Content Include="Scripts\app\controllers\patientCtrl.js" />
+    <Content Include="Scripts\app\directives\ng-enter.js" />
+    <Content Include="Scripts\app\directives\ng-radio-button.js" />
+    <Content Include="Scripts\app\directives\ng-print.js" />
+    <Content Include="Scripts\app\services\circuitSvc.js" />
+    <Content Include="Scripts\app\services\commonSvc.js" />
+    <Content Include="Scripts\app\services\patientSvc.js" />
+    <Content Include="Scripts\app\services\agendaSvc.js" />
+    <Content Include="Scripts\app\services\shared\modalSvc.js" />
+    <Content Include="Scripts\app\helpers\authorizationInterceptor.js" />
+    <Content Include="Scripts\app\services\companySvc.js" />
+    <Content Include="Scripts\app\services\shared\servicehelper.js" />
+    <Content Include="Scripts\app\services\shared\usermngrSvc.js" />
+    <Content Include="Scripts\config.js" />
+    <Content Include="Content\css\animate.css" />
+    <Content Include="Content\css\animate.min.css" />
+    <Content Include="Content\css\bootstrap-responsive.css" />
+    <Content Include="Content\css\bootstrap-responsive.min.css" />
+    <Content Include="Content\css\bootstrap-theme.css" />
+    <Content Include="Content\css\bootstrap-theme.min.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\component.css" />
+    <Content Include="Content\css\component.min.css" />
+    <Content Include="Content\css\normalize.css" />
+    <Content Include="Content\css\normalize.min.css" />
+    <Content Include="Content\css\overrides.css" />
+    <Content Include="Content\css\overrides.min.css" />
+    <Content Include="Content\css\signin.css" />
+    <Content Include="Content\css\signin.min.css" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\css\site.css" />
+    <Content Include="Content\css\ng-grid.css" />
+    <Content Include="Content\images\logo-login.png" />
+    <Content Include="Content\images\logo.png" />
+    <Content Include="favicon.ico" />
+    <Content Include="Index.html" />
+    <Content Include="Scripts\libs\angular-1.2.16.js" />
+    <Content Include="Scripts\libs\angular-1.2.16.min.js" />
+    <Content Include="Scripts\libs\angular-animate-1.2.16.js" />
+    <Content Include="Scripts\libs\angular-animate-1.2.16.min.js" />
+    <Content Include="Scripts\libs\angular-animate.js" />
+    <Content Include="Scripts\libs\angular-animate.min.js" />
+    <Content Include="Scripts\libs\angular-cookies.js" />
+    <Content Include="Scripts\libs\angular-cookies.min.js" />
+    <Content Include="Scripts\libs\angular-csp.css" />
+    <Content Include="Scripts\libs\angular-loader.js" />
+    <Content Include="Scripts\libs\angular-loader.min.js" />
+    <Content Include="Scripts\libs\angular-mocks-1.2.16.js" />
+    <Content Include="Scripts\libs\angular-mocks-1.2.16.min.js" />
+    <Content Include="Scripts\libs\angular-mocks.js" />
+    <Content Include="Scripts\libs\angular-ng-grid.js" />
+    <Content Include="Scripts\libs\angular-resource-1.2.16.js" />
+    <Content Include="Scripts\libs\angular-resource-1.2.16.min.js" />
+    <Content Include="Scripts\libs\angular-resource.js" />
+    <Content Include="Scripts\libs\angular-resource.min.js" />
+    <Content Include="Scripts\libs\angular-route-1.2.16.js" />
+    <Content Include="Scripts\libs\angular-route-1.2.16.min.js" />
+    <Content Include="Scripts\libs\angular-route.js" />
+    <Content Include="Scripts\libs\angular-route.min.js" />
+    <Content Include="Scripts\libs\angular-sanitize.js" />
+    <Content Include="Scripts\libs\angular-sanitize.min.js" />
+    <Content Include="Scripts\libs\angular-scenario.js" />
+    <Content Include="Scripts\libs\angular-touch.js" />
+    <Content Include="Scripts\libs\angular-touch.min.js" />
+    <Content Include="Scripts\libs\angular-ui\angucomplete-alt.js" />
+    <Content Include="Scripts\libs\angular-ui\angucomplete.js" />
+    <Content Include="Scripts\libs\angular-ui\angular-multi-select.js" />
+    <Content Include="Scripts\libs\angular-ui\select2.js" />
+    <Content Include="Scripts\libs\angular-ui\select2.min.js" />
+    <Content Include="Scripts\libs\angular-ui\ui-bootstrap-0.11.0.min.js" />
+    <Content Include="Scripts\libs\angular-ui\ui-bootstrap-tpls-0.11.0.min.js" />
+    <Content Include="Scripts\libs\angular.js" />
+    <Content Include="Scripts\libs\angular.min.js" />
+    <Content Include="Scripts\app\app.js" />
+    <Content Include="Scripts\app\directives\directives.js" />
+    <Content Include="Scripts\app\controllers\mainCtrl.js" />
+    <Content Include="Scripts\libs\bootstrap.js" />
+    <Content Include="Scripts\libs\bootstrap.min.js" />
+    <Content Include="Scripts\libs\errors.json" />
+    <Content Include="Scripts\libs\angular-touch.min.js.map" />
+    <Content Include="Scripts\libs\angular-sanitize.min.js.map" />
+    <Content Include="Scripts\libs\angular-route.min.js.map" />
+    <Content Include="Scripts\libs\angular-resource.min.js.map" />
+    <Content Include="Scripts\libs\angular-loader.min.js.map" />
+    <Content Include="Scripts\libs\angular-cookies.min.js.map" />
+    <Content Include="Scripts\libs\angular-animate.min.js.map" />
+    <Content Include="Scripts\libs\angular.min.js.map" />
+    <Content Include="Content\css\bootstrap-theme.css.map" />
+    <Content Include="Content\css\bootstrap.css.map" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Properties\PublishProfiles\Demo.pubxml" />
+    <None Include="Properties\PublishProfiles\QA.pubxml" />
+    <None Include="Scripts\libs\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\libs\i18n\angular-locale_es-pe.js" />
+    <Content Include="Scripts\libs\jasmine-2.0.0\boot.js" />
+    <Content Include="Scripts\libs\jasmine-2.0.0\boot.min.js" />
+    <Content Include="Scripts\libs\jasmine-2.0.0\console.js" />
+    <Content Include="Scripts\libs\jasmine-2.0.0\console.min.js" />
+    <Content Include="Scripts\libs\jasmine-2.0.0\jasmine-html.js" />
+    <Content Include="Scripts\libs\jasmine-2.0.0\jasmine-html.min.js" />
+    <Content Include="Scripts\libs\jasmine-2.0.0\jasmine.js" />
+    <Content Include="Scripts\libs\jasmine-2.0.0\jasmine.min.js" />
+    <Content Include="Scripts\libs\jquery-1.9.1.js" />
+    <Content Include="Scripts\libs\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\libs\jquery-ui-1.10.3.min.js" />
+    <Content Include="Scripts\libs\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\libs\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\libs\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\libs\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\libs\jquery-1.9.1.min.map" />
+    <None Include="Scripts\libs\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\libs\jquery.validate.js" />
+    <Content Include="Scripts\libs\jquery.validate.min.js" />
+    <Content Include="Scripts\libs\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\libs\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\libs\modernizr-2.6.2.js" />
+    <Content Include="Scripts\libs\ng-table\ng-table.js" />
+    <Content Include="Scripts\libs\ng-table\ng-table.min.js" />
+    <Content Include="Scripts\libs\select2\select2.js" />
+    <Content Include="Scripts\libs\select2\select2.min.js" />
+    <Content Include="Scripts\libs\semantic\semantic.js" />
+    <Content Include="Scripts\libs\semantic\semantic.min.js" />
+    <Content Include="Scripts\libs\underscore-min.js" />
+    <Content Include="Scripts\libs\underscore.string.min.js" />
+    <Content Include="Scripts\libs\moment-with-langs.js" />
+    <Content Include="Scripts\libs\moment-with-langs.min.js" />
+    <Content Include="Scripts\libs\moment.js" />
+    <Content Include="Scripts\libs\moment.min.js" />
+    <Content Include="Views\Admin\Config.html" />
+    <Content Include="Views\Admin\admin.htm" />
+    <Content Include="Views\Admin\Admin.html" />
+    <Content Include="Views\Admin\new-protocol.html" />
+    <Content Include="Views\Admin\new-company.html" />
+    <Content Include="Views\Admin\new-user.html" />
+    <Content Include="Views\Admision\admision.htm" />
+    <Content Include="Views\Admision\Admision.html" />
+    <Content Include="Views\Admision\Hoja-ruta.html" />
+    <Content Include="Views\Admision\Triaje.html" />
+    <Content Include="Views\Agenda\add-multiple-prospects.html" />
+    <Content Include="Views\Agenda\add-prospect.html" />
+    <Content Include="Views\Agenda\agenda-diaria.htm" />
+    <Content Include="Views\Agenda\Agenda.html" />
+    <Content Include="Views\Circuit\Circuit.html" />
+    <Content Include="Views\Admin\companies.html" />
+    <Content Include="Views\Circuit\Forms\audiometria.html" />
+    <Content Include="Views\Circuit\Forms\certificado-aptitud-interno.html" />
+    <Content Include="Views\Circuit\Forms\espirometria.html" />
+    <Content Include="Views\config\Config.html" />
+    <Content Include="Views\Admin\protocols.html" />
+    <Content Include="Views\Admin\users.html" />
+    <Content Include="Views\Dashboard\Dashboard.html" />
+    <Content Include="Views\Home\Home.html" />
+    <Content Include="Views\Shared\ChangePassword.html" />
+    <Content Include="Views\Shared\Error.html" />
+    <Content Include="Views\Shared\Login.html" />
+    <Content Include="Views\Shared\modal.html" />
+    <Content Include="Views\Shared\Register.html" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\libs\_references.js" />
+    <Content Include="Scripts\libs\version.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Account\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:4422/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,165 @@
+﻿  <!-- Large modal usuarios-->
+
+<div class="modal-header" ng-controller="configController">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="cancel()">&times;</button>
+    <h4 class="modal-title" id="myModalLabel">Datos</h4>
+</div>
+<div class="modal-body" ng-controller="configController">
+    <div class="row">
+        <div class="col-md-12">
+            <ul id="tab-usuarios" class="nav nav-tabs">
+                <li class="active" ng-class="{active: activeProfile}" ng-click="showProfile()"><a href="#" data-toggle="tab">Perfil</a></li>
+                <li ng-class="{active:activePermissions}" ng-click="showPermissions()"><a href="#" data-toggle="tab">Permisos</a></li>
+            </ul>
+            <div id="tab-usuarios" class="tab-content" ng-show="activeProfile">
+                <div class="tab-pane fade in active" id="perfil">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" ng-model="$parent.newUser.active">
+                                    Activo
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label>Tipo Doc</label>
+                                <select class="form-control input-sm" ng-model="$parent.newUser.documentType" ng-options="type.name for type in documentTypes">
+                                    <option value="">-- seleccione --</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Nº</label>
+                                <input type="text" class="form-control" id="" placeholder="" ng-model="$parent.newUser.documentNumber">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Nombre</label>
+                                <input type="text" class="form-control" id="" placeholder="" ng-model="$parent.newUser.names">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Apellido Paterno</label>
+                                <input type="text" class="form-control" id="" placeholder="" ng-model="$parent.newUser.fatherLastName">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="pull-left">Apellido Materno</label>
+                                <input type="text" class="form-control" id="" placeholder="" ng-model="$parent.newUser.motherLastName">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Nombre de Usuario</label>
+                            <input type="text" class="form-control" id="" placeholder="" ng-model="$parent.newUser.username">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Contraseña</label>
+                            <input type="password" class="form-control" id="" placeholder="" ng-model="$parent.newUser.password">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="pull-left">Repetir Contraseña</label>
+                            <input type="password" class="form-control" id="" placeholder="" ng-model="$parent.newUser.confirmPassword">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="permisos" class="tab-pane" ng-show="activePermissions">
+                <legend class="subtitle">Lista de Menús</legend>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" ng-model="$parent.newUser.agenda"> Agenda
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" ng-model="$parent.newUser.admision"> Admisión
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" ng-model="$parent.newUser.triaje"> Triaje
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" ng-model="$parent.newUser.dashboard"> Dashboard
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" ng-model="$parent.newUser.circuit"> Circuito
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" ng-model="$parent.newUser.admin"> Administrativo
+                            </label>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" ng-model="$parent.$parent.newUser.adminCompany"> Empresas
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" ng-model="$parent.$parent.newUser.adminProtocols"> Protocolos
+                                </label>
+                            </div>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" ng-model="$parent.newUser.config"> Configurador
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-8" ng-show="$parent.newUser.circuit">
+                        <fieldset>
+                            <legend>Circuito Preocupacional</legend>
+                            <div ng-repeat="practice in practices">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" ng-model="$parent.$parent.newUser.practices[practice.id]"> {{practice.name}}
+                                    </label>
+                                </div>
+
+                                <!--<div class="checkbox col-md-offset-1" ng-show="practice.hasExams && $parent.$parent.newUser.practices[practice.id]">
+                                    <div multi-select
+                                         input-model="practice.exams"
+                                         output-model="$parent.$parent.selectedExams"
+                                         button-label="name"
+                                         item-label="name"
+                                         tick-property="ticked">
+                                    </div>
+                                </div>-->
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clean()">Limpiar</button>
+    <button type="button" class="btn btn-success" ng-click="saveUser()">Grabar</button>
+</div>
+

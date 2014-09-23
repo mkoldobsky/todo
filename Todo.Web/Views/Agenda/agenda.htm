@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://getbootstrap.com/examples/dashboard/ -->
+<html lang="en" class="no-touch">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="favicon.ico">
+        <title>Agenda</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="css/signin.css" rel="stylesheet">
+
+        <!-- Calendar styles -->
+        <link href="css/calendar.css" rel="stylesheet">
+
+        <!-- Animate styles -->
+        <link href="css/animate.css" rel="stylesheet">
+
+        <!-- Overrides styles -->
+        <link href="css/overrides.css" rel="stylesheet">
+
+        <!-- Call to Google Fonts -->
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,600" rel="stylesheet" type="text/css">
+
+        <!-- Just for debugging purposes. Don't actually copy this line! -->
+        <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+                    <!--[if lt IE 9]>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <![endif]-->
+        <style id="holderjs-style" type="text/css"></style>
+        <script type="text/javascript" src="./Dashboard Template for Bootstrap_files/version.php"></script>
+        <script src="js/modernizr.custom.js"></script>
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand fadeInLeftBig animated"><img alt="Clinisanitas" src="images/logo.png" /></a>
+                </div>
+                <div class="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown profile">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Nombre de Usuario <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">22/05/2014</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Desconectar</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="container secundary-navbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Agenda</a></li>
+                <li><a href="#">Admisión</a></li>
+                <li><a href="#">Triaje</a></li>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Circuito Preocupacional</a></li>
+                <li><a href="#">Administrador</a></li>
+            </ul>
+        </div>
+        <div class="container main box-shaded">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="main-header">
+                        <h1 class="pull-left">Agenda</h1>
+                        <div class="cont-buttons pull-right">
+                        </div>
+                    </div>
+                    <ul id="myTab" class="nav nav-tabs">
+                        <li class="active"><a href="#diaria" data-toggle="tab">Diaria</a></li>
+                        <li><a href="#semanal" data-toggle="tab">Semanal</a></li>
+                        <li><a href="#mensual" data-toggle="tab">Mensual</a></li>
+                        <li class="pull-right turnos-disp">
+                           <p><span class="badge tooltips" title="Turnos disponibles">2</span> de 20</p>
+                        </li>
+                        <li class="pull-right form-inline">
+                            <span>
+                                Turnos:
+                                <label>
+                                    <select class="form-control">
+                                        <option value="default">Todos</option>
+                                        <option>Mañana</option>
+                                        <option>Tarde</option>
+                                    </select>
+                                </label>
+                            </span>
+                        </li>
+                    </ul>
+                    <div id="myTabContent" class="tab-content">
+                        <!-- DIARIA -->
+                        <div class="tab-pane active" id="diaria">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="more-turn fadeInDown animated form-inline">
+                                        <div class="pull-right">
+                                            <label><span class="glyphicon glyphicon-plus"></span> Capacidad:</label>
+                                            <input type="text" class="form-control input-sm" id="" placeholder="N° de turnos">
+                                            <button type="submit" class="btn btn-primary">Guardar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="btn-toolbar">
+                                        <div class="pull-left">
+                                            <div class="btn-group chevron">
+                                                <button type="button" class="btn btn-default">
+                                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                                </button>
+                                                <button type="button" class="btn btn-default">
+                                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                                </button>
+                                            </div>
+                                            <div class="pull-left dia">
+                                                <label>5 de Mayo del 2014</label>
+                                            </div>
+                                        </div>
+                                        <div class="pull-right">
+                                            <button type="submit" class="btn btn-default" data-placement="bottom">Imprimir archivos</button>
+                                            <button type="submit" class="btn btn-default" data-placement="bottom">Carga Masiva</button>
+                                        </div>
+                                    </div>
+                                    <table class="table agenda table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Empresa</th>
+                                            <th>Paciente</th>
+                                            <th></th>
+                                        </tr>
+                                            </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td></td>
+                                            <td>Empresa S.R.L</td>
+                                            <td>José Goiti</td>
+                                            <td>
+                                                <div class="pull-right">
+                                                    <div class="btn-group bs-glyphicons acciones">
+                                                        <button type="button" class="btn dropdown-toggle tooltips" data-toggle="dropdown" data-placement="left" title="Acciones">
+                                                            <span class="glyphicon glyphicon-cog"></span>
+                                                            <span class="caret"></span>
+                                                        </button>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li><a href="#">Modificar</a></li>
+                                                            <li><a href="#">Borrar</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>Empresa S.A.</td>
+                                            <td>Rubén Darío</td>
+                                            <td>
+                                                <div class="pull-right">
+                                                    <div class="btn-group bs-glyphicons acciones">
+                                                        <button type="button" class="btn dropdown-toggle tooltips" data-toggle="dropdown" data-placement="left" title="Acciones">
+                                                            <span class="glyphicon glyphicon-cog"></span>
+                                                            <span class="caret"></span>
+                                                        </button>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li><a href="#">Modificar</a></li>
+                                                            <li><a href="#">Borrar</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <button type="button" class="btn tooltips" title="Crear nueva fila">
+                                                    <span class="glyphicon glyphicon-plus"></span>
+                                                </button>
+                                            </td>
+                                            <td>Empresa 2 S.R.L.</td>
+                                            <td>Ana suarez</td>
+                                            <td>
+                                                <div class="pull-right">
+                                                    <div class="btn-group bs-glyphicons acciones">
+                                                        <button type="button" class="btn dropdown-toggle tooltips" data-toggle="dropdown" data-placement="left" title="Acciones">
+                                                            <span class="glyphicon glyphicon-cog"></span>
+                                                            <span class="caret"></span>
+                                                        </button>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li><a href="#">Modificar</a></li>
+                                                            <li><a href="#">Borrar</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                            </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- SEMANAL -->
+                        <div id="semanal" class="tab-pane fade">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="btn-toolbar">
+                                        <div class="pull-left">
+                                            <div class="btn-group chevron">
+                                                <button type="button" class="btn btn-default">
+                                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                                </button>
+                                                <button type="button" class="btn btn-default">
+                                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                                </button>
+                                            </div>
+                                            <div class="pull-left dia">
+                                                <label>10-16 de Marzo del 2014</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="calendar" class="cal-context">
+
+                                        <div class="cal-week-box">
+                                            <div class="cal-offset1 cal-column"></div>
+                                            <div class="cal-offset2 cal-column"></div>
+                                            <div class="cal-offset3 cal-column"></div>
+                                            <div class="cal-offset4 cal-column"></div>
+                                            <div class="cal-offset5 cal-column"></div>
+                                            <div class="cal-offset6 cal-column"></div>
+                                            <div class="cal-row-fluid cal-row-head">
+                                                <div class="cal-cell1">Domingo<br>
+                                                    <small><span data-cal-date="">10 Mar</span></small>
+                                                    <a href="#" class="day-disp bounceIn animated"><span>9</span></a>
+                                                    <div class="footer-cell">
+                                                        <div class="progress">
+                                                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                                60%
+                                                            </div>
+                                                        </div>
+                                                        <div><a href="#" class="numbers">20-25</a></div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="cal-cell1" data-toggle="tooltip" title="" data-original-title="">Lunes<br>
+                                                    <small><span data-cal-date="2013-03-11" data-cal-view="day">11 Mar</span></small>
+                                                    <a href="#" class="day-disp bounceIn animated"><span>5</span></a>
+                                                    <div class="footer-cell">
+                                                        <div class="progress">
+                                                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
+                                                            </div>
+                                                        </div>
+                                                        <div><a href="#" class="numbers">20-25</a></div>
+                                                    </div>
+                                                </div>
+                                                <div class="cal-cell1" data-toggle="tooltip" title="" data-original-title="">Martes<br>
+                                                    <small><span data-cal-date="2013-03-12" data-cal-view="day">12 Mar</span></small>
+                                                    <a href="#" class="day-disp bounceIn animated"><span>5</span></a>
+                                                    <div class="footer-cell">
+                                                        <div class="progress">
+                                                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 10%;">
+                                                            </div>
+                                                        </div>
+                                                        <div><a href="#" class="numbers">20-25</a></div>
+                                                    </div>
+                                                </div>
+                                                <div class="cal-cell1" data-toggle="tooltip" title="" data-original-title="">Miercoles<br>
+                                                    <small><span data-cal-date="2013-03-13" data-cal-view="day">13 Mar</span></small>
+                                                    <a href="#" class="day-disp bounceIn animated"><span>5</span></a>
+                                                    <div class="footer-cell">
+                                                        <div class="progress">
+                                                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                                                                80%
+                                                            </div>
+                                                        </div>
+                                                        <div><a href="#" class="numbers">20-25</a></div>
+                                                    </div>
+                                                </div>
+                                                <div class="cal-cell1 no-disp" data-toggle="tooltip" title="" data-original-title="">Jueves<br>
+                                                    <small><span data-cal-date="2013-03-14" data-cal-view="day">14 Mar</span></small>
+                                                    <a href="#" class="day-disp bounceIn animated"><span class="glyphicon glyphicon-lock"></span></a>
+                                                    <div class="footer-cell">
+                                                        <div class="progress">
+                                                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                                                                100%
+                                                            </div>
+                                                        </div>
+                                                        <div><a href="#" class="numbers">25-25</a></div>
+                                                    </div>
+                                                </div>
+                                                <div class="cal-cell1" data-toggle="tooltip" title="" data-original-title="">Viernes<br>
+                                                    <small><span data-cal-date="2013-03-15" data-cal-view="day">15 Mar</span></small>
+                                                    <a href="#" class="day-disp bounceIn animated"><span>5</span></a>
+                                                    <div class="footer-cell">
+                                                        <div class="progress">
+                                                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                                                                40%
+                                                            </div>
+                                                        </div>
+                                                        <div><a href="#" class="numbers">20-25</a></div>
+                                                    </div>
+                                                </div>
+                                                <div class="cal-cell1" data-toggle="tooltip" title="" data-original-title="">Sábado<br>
+                                                    <small><span data-cal-date="2013-03-16" data-cal-view="day">16 Mar</span></small>
+                                                    <a href="#" class="day-disp bounceIn animated"><span>5</span></a>
+                                                    <div class="footer-cell">
+                                                        <div class="progress">
+                                                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                                                                30%
+                                                            </div>
+                                                        </div>
+                                                        <div><a href="#" class="numbers">20-25</a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- MENSUAL -->
+                        <div id="mensual" class="tab-pane fade">
+                            <div class="btn-toolbar">
+                                <div class="pull-left">
+                                    <div class="btn-group chevron">
+                                        <button type="button" class="btn btn-default">
+                                            <span class="glyphicon glyphicon-chevron-left"></span>
+                                        </button>
+                                        <button type="button" class="btn btn-default">
+                                            <span class="glyphicon glyphicon-chevron-right"></span>
+                                        </button>
+                                    </div>
+                                    <div class="pull-left dia">
+                                        <label>Mayo del 2014</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cal-row-fluid cal-row-head">
+                                <div class="cal-cell1">Domingo</div>
+                                <div class="cal-cell1">Lunes</div>
+                                <div class="cal-cell1">Martes</div>
+                                <div class="cal-cell1">Miercoles</div>
+                                <div class="cal-cell1">Jueves</div>
+                                <div class="cal-cell1">Viernes</div>
+                                <div class="cal-cell1">Sábado</div>
+                            </div>
+                            <div class="cal-month-box">
+                                <div class="cal-row-fluid cal-before-eventlist">
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-outmonth cal-day-weekend cal-month-first-row">
+                                            <span class="pull-right" data-cal-date="">24</span>
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-outmonth cal-month-first-row">
+                                            <span class="pull-right" data-cal-date="">25</span>
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-outmonth cal-month-first-row">
+                                            <span class="pull-right" data-cal-date="">26</span>
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-outmonth cal-month-first-row">
+                                            <span class="pull-right" data-cal-date="">27</span>
+
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-outmonth cal-month-first-row">
+                                            <span class="pull-right" data-cal-date="">28</span>
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-inmonth">
+                                            <span class="pull-right" data-cal-date="">1</span>
+
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-inmonth cal-day-weekend">
+                                            <span class="pull-right" data-cal-date="">2</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cal-row-fluid cal-before-eventlist">
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-inmonth cal-day-weekend">
+                                            <span class="pull-right" data-cal-date="">3</span>
+
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-inmonth">
+                                            <span class="pull-right" data-cal-date="">4</span>
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-inmonth">
+                                            <span class="pull-right" data-cal-date="">5</span>
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-inmonth">
+                                            <span class="pull-right" data-cal-date="">6</span>
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-inmonth">
+                                            <span class="pull-right" data-cal-date="">7</span>
+
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-inmonth">
+                                            <span class="pull-right" data-cal-date="">8</span>
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-inmonth cal-day-weekend">
+                                            <span class="pull-right" data-cal-date="">9</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cal-row-fluid cal-before-eventlist">
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-inmonth cal-day-weekend">
+                                            <span class="pull-right" data-cal-date="">10</span>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                </div>
+                                            </div>
+                                            <div class="events-list">
+                                                <a href="" class="pull-left day-disp">
+                                                    5
+                                                </a>
+                                                <a href="" class="pull-right">
+                                                    20-25
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-inmonth">
+                                            <span class="pull-right" data-cal-date="">11</span>
+                                            <div class="events-list">
+                                                <a href="" class="pull-left"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell no-disp" data-cal-row="-day3">
+                                        <div class="cal-month-day cal-day-inmonth">
+                                            <span class="pull-right" data-cal-date="">12</span>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                                                </div>
+                                            </div>
+                                            <div class="events-list">
+                                                <a href="" class="pull-left day-disp">
+                                                    <span class="glyphicon glyphicon-lock"></span>
+                                                </a>
+                                                <a href="" class="pull-right numbers">
+                                                    25-25
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-inmonth">
+                                            <span class="pull-right" data-cal-date="">13</span>
+                                            <div class="events-list">
+                                                <a href="" class="pull-left"></a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-inmonth">
+                                            <span class="pull-right" data-cal-date="">14</span>
+                                            <div class="events-list">
+                                                <a href="" class="pull-left"></a>
+                                                <a href="" class="pull-left"></a>
+                                                <a href="" class="pull-left"></a>
+                                                <a href="" class="pull-left"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-inmonth">
+                                            <span class="pull-right" data-cal-date="">15</span>
+                                            <div class="events-list">
+                                                <a href="" class="pull-left"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell" data-cal-row="-day7">
+                                        <div class="cal-month-day cal-day-inmonth cal-day-weekend">
+                                            <span class="pull-right" data-cal-date="">16</span>
+                                            <div class="events-list">
+                                                <a href="" class="pull-left"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cal-row-fluid cal-before-eventlist">
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-inmonth cal-day-weekend">
+                                            <span class="pull-right" data-cal-date="">17</span>
+                                            <div class="events-list">
+                                                <a href="" class="pull-left"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-inmonth">
+                                            <span class="pull-right" data-cal-date="">18</span>
+                                            <div class="events-list">
+                                                <a href="" class="pull-left"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-inmonth">
+                                            <span class="pull-right" data-cal-date="">19</span>
+                                            <div class="events-list">
+                                                <a href=""></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-inmonth">
+                                            <span class="pull-right" data-cal-date="">20</span>
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-inmonth">
+                                            <span class="pull-right" data-cal-date="">21</span>
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-inmonth">
+                                            <span class="pull-right" data-cal-date="">22</span>
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-inmonth cal-day-weekend">
+                                            <span class="pull-right" data-cal-date="">23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cal-row-fluid cal-before-eventlist">
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-inmonth cal-day-weekend">
+                                            <span class="pull-right" data-cal-date="">24</span>
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-inmonth">
+                                            <span class="pull-right" data-cal-date="">25</span>
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-inmonth">
+                                            <span class="pull-right" data-cal-date="">26</span>
+                                            <div class="events-list">
+                                                <a href="" class="pull-left"></a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-inmonth">
+                                            <span class="pull-right" data-cal-date="">27</span>
+                                            <div class="events-list">
+                                                <a href="" class="pull-left"></a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-inmonth">
+                                            <span class="pull-right" data-cal-date="">28</span>
+                                            <div class="events-list">
+                                                <a href="" class="pull-left"></a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-inmonth">
+                                            <span class="pull-right" data-cal-date="">29</span>
+
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-inmonth cal-day-weekend">
+                                            <span class="pull-right" data-cal-date="">30</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cal-row-fluid cal-before-eventlist">
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-inmonth cal-day-weekend">
+                                            <span class="pull-right" data-cal-date="">31</span>
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-outmonth">
+                                            <span class="pull-right" data-cal-date="">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-outmonth">
+                                            <span class="pull-right" data-cal-date="">2</span>
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-outmonth">
+                                            <span class="pull-right" data-cal-date="">3</span>
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-outmonth">
+                                            <span class="pull-right" data-cal-date="">4</span>
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-outmonth">
+                                            <span class="pull-right" data-cal-date="">5</span>
+                                        </div>
+                                    </div>
+                                    <div class="cal-cell1 cal-cell">
+                                        <div class="cal-month-day cal-day-outmonth cal-day-weekend">
+                                            <span class="pull-right" data-cal-date="">6</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="text-center">
+                <p>© 2014 - Clinisanitas - V.0.0.1</p>
+            </div>
+        </footer>
+                    <!-- Bootstrap core JavaScript
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/docs.min.js"></script>
+        <script>
+            $(document).ready(function (){
+              $('.tooltips').tooltip()
+            });
+        </script>
+    </body>
+</html>

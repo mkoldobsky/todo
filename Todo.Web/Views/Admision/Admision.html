@@ -1,0 +1,180 @@
+﻿<div class="container main box-shaded" ng-controller="patientController">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="main-header">
+                <h1 class="pull-left"><span class="glyphicon glyphicon-log-in"></span> Admisión</h1>
+                <div class="cont-buttons pull-right">
+                    <button type="submit" class="btn btn-default" ng-click="clean()">Limpiar</button>
+                    <button type="submit" class="btn btn-success" ng-click="savePatient(newPatient)" ng-disabled="activeShowWaybill">Grabar</button>
+                    <button type="submit" class="btn btn-primary" ng-class="{disabled:!activeShowWaybill}" ng-click="showWaybill(patient.id)">Hoja de Ruta</button>
+                </div>
+            </div>
+            <ul id="myTab" class="nav nav-tabs">
+                <li class="active" ng-class="{active:activeData}" ng-click="showData()"><a href="#" data-toggle="tab">Datos</a></li>
+                <li ng-class="{active: activeProtocol}" ng-click="showProtocol()"><a href="#" data-toggle="tab">Editar protocolo</a></li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+                <div class="tab-pane fade in active" id="datos" ng-show="activeData">
+                    <form role="form">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="row form-group">
+                                    <div class="col-md-4">
+                                        <label>Tipo Doc.</label>
+                                        <select class="form-control" ng-model="newPatient.documentType.number" ng-options="type.number as type.name for type in documentTypes">
+                                            <option value="">-- seleccione --</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <label>N°</label>
+                                        <input type="text" class="form-control" id="" placeholder="" ng-model="newPatient.documentNumber" ng-enter="verifyPatient(newPatient)">
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-md-12">
+                                        <label>Nombre</label>
+                                        <input type="text" class="form-control" id="" placeholder="" ng-model="newPatient.names">
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-md-12">
+                                        <label>Apellido Paterno</label>
+                                        <input type="text" class="form-control" id="" placeholder="" ng-model="newPatient.fatherLastName">
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-md-12">
+                                        <label>Apellido Materno</label>
+                                        <input type="text" class="form-control" id="" placeholder="" ng-model="newPatient.motherLastName">
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-md-4">
+                                        <label for="sex">Sexo</label>
+                                        <select id="sex" class="form-control" ng-model="newPatient.sex.number" ng-options="sex.number as sex.name for sex in sexs">
+                                            <option value="">-- seleccione --</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>Fecha Nac</label>
+                                        <input type="text" class="form-control" placeholder="dd/mm/aaaa" ng-model="newPatient.birthday" ng-blur="calculateAge(newPatient.birthday)">
+
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>Edad</label>
+                                        <input type="text" class="form-control" id="" ng-disabled="true" placeholder="" ng-model="newPatient.age">
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-md-6">
+                                        <label>Lugar de Nacimiento</label>
+                                        <input type="text" class="form-control" placeholder="" ng-model="newPatient.birthdayLocation">
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="sex">País</label>
+                                        <select id="sex" class="form-control" ng-model="newPatient.birthdayCountry.id" ng-options="country.id as country.name for country in countries">
+                                            <option value="">-- seleccione --</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-md-6">
+                                        <label for="sex">Estado Civil</label>
+                                        <select id="" class="form-control" ng-model="newPatient.maritalStatus" ng-options="maritalStatus.id as maritalStatus.name for maritalStatus in maritalStatuses">
+                                            <option value="">-- seleccione --</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>Grado de Instrucción</label>
+                                        <select id="sex" class="form-control" ng-model="newPatient.instructionLevel" ng-options="instructionLevel.id as instructionLevel.name for instructionLevel in instructionLevels">
+                                            <option value="">-- seleccione --</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row form-group">
+                                    <div class="col-md-12">
+                                        <label for="">Tipo de Examen</label>
+                                        <select class="form-control" ng-model="newPatient.examType" ng-options="type.name for type in examTypes">
+                                            <option value="">-- seleccione --</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Empresa</label>
+                                    <angucomplete-alt id="ex1" place-holder="Buscar empresa" pause="100" selected-object="newPatient.selectedCompany" local-data="companies" search-fields="name" title-field="name" minlength="1" clear-selected="true" input-class="form-control form-control-small" />
+                                </div>
+                                <div class="form-group">
+                                    <h3 ng-show="newPatient.selectedCompany">{{newPatient.selectedCompany.originalObject.name}}</h3>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Puesto de Trabajo</label>
+                                    <input type="text" class="form-control" id="" placeholder="{{newPatient.job}}" ng-model="newPatient.job">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Protocolos</label>
+                                    <select class="form-control" ng-model="newPatient.protocol" ng-options="protocol.name for protocol in protocols" ng-change="protocolChanged()">
+                                        <option value="">-- seleccione --</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label for="sex">Dirección</label>
+                                <input type="text" class="form-control" placeholder="" ng-model="newPatient.address">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-4">
+                                <label>Correo Electrónico</label>
+                                <input type="text" class="form-control" placeholder="" ng-model="newPatient.email">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="sex">Teléfono</label>
+                                <input type="text" class="form-control" placeholder="" ng-model="newPatient.phone">
+                            </div>
+                            <div class="col-md-4">
+                                <label>Teléfono de Contacto</label>
+                                <input type="text" class="form-control" placeholder="" ng-model="newPatient.contactPhone">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade in active" id="protocolo" ng-show="activeProtocol">
+                    <form role="form">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Nombre</label>
+                                    <input type="text" class="form-control" id="" placeholder="{{newPatient.protocol.name}}" ng-model="newPatient.editedProtocolName">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <div ng-repeat="practice in practices">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" ng-model="$parent.newPatient.practices[practice.id]"> {{practice.name}}
+                                            </label>
+                                        </div>
+
+                                        <div class="checkbox col-md-offset-1" ng-show="practice.hasExams && $parent.newPatient.practices[practice.id]">
+                                            <div multi-select input-model="practice.exams" output-model="$parent.selectedExams" button-label="name" item-label="name" tick-property="ticked">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

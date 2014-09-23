@@ -1,0 +1,351 @@
+﻿<div class="row main-form" ng-controller="circuitController">
+    <div class="col-md-12">
+        <h4>RELACIONES DE CRITERIO DE EXCLUSION</h4>
+        <table width="100%" border="0">
+            <tr>
+                <td>¿Tuvo desprendimiento de la retina  o una operación (cirugía) de los ojos, tórax o abdomen en los últimos 3 meses?</td>
+                <td class="td-1">
+                    <div class="pull-right btn-group" data-toggle="buttons">
+                        <label class="btn btn-default btn-sm" ng-radio-button value="true" ng-model="$parent.station.selectedForm.data.desprendimiento" ng-change="edited()">
+                            Si
+                        </label>
+                        <label class="btn btn-default btn-sm" ng-radio-button value="false" ng-model="$parent.station.selectedForm.data.desprendimiento" ng-change="edited()">
+                            No
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>¿Ha tenido algún ataque cardiaco o infarto al corazón en los últimos 3 meses?</td>
+                <td>
+                    <div class="pull-right btn-group" data-toggle="buttons">
+                        <label class="btn btn-default btn-sm" ng-radio-button value="true" ng-model="$parent.station.selectedForm.data.ataque" ng-change="edited()">
+                            Si
+                        </label>
+                        <label class="btn btn-default btn-sm" ng-radio-button value="false" ng-model="$parent.station.selectedForm.data.ataque" ng-change="edited()">
+                            No
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ¿Ha estado hospitalizado (a) por cualquier otro problema del corazón en los últimos 3 meses?
+                </td>
+                <td>
+                    <div class="pull-right btn-group" data-toggle="buttons">
+                        <label class="btn btn-default btn-sm" ng-radio-button value="true" ng-model="$parent.station.selectedForm.data.hospitalizado" ng-change="edited()">
+                            Si
+                        </label>
+                        <label class="btn btn-default btn-sm" ng-radio-button value="false" ng-model="$parent.station.selectedForm.data.hospitalizado" ng-change="edited()">
+                            No
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ¿Esta usando medicamentos para la tuberculosis en este momento?
+                </td>
+                <td>
+                    <div class="pull-right btn-group" data-toggle="buttons">
+                        <label class="btn btn-default btn-sm" ng-radio-button value="true" ng-model="$parent.station.selectedForm.data.tuberculosis" ng-change="edited()">
+                            Si
+                        </label>
+                        <label class="btn btn-default btn-sm" ng-radio-button value="false" ng-model="$parent.station.selectedForm.data.tuberculosis" ng-change="edited()">
+                            No
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>En caso de ser mujer ¿Está embarazada actualmente?</td>
+                <td>
+                    <div class="pull-right btn-group" data-toggle="buttons">
+                        <label class="btn btn-default btn-sm" ng-radio-button value="true" ng-model="$parent.station.selectedForm.data.embarazada" ng-change="edited()">
+                            Si
+                        </label>
+                        <label class="btn btn-default btn-sm" ng-radio-button value="false" ng-model="$parent.station.selectedForm.data.embarazada" ng-change="edited()">
+                            No
+                        </label>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <hr class="line">
+        <h4>PARA SER LLENADO POR EL PERSONAL QUE REALIZA LA PRUEBA</h4>
+        <table width="100%" border="0">
+            <tr>
+                <td>Hemoptisis</td>
+                <td class="td-1">
+                    <div class="pull-right btn-group" data-toggle="buttons">
+                        <label class="btn btn-default btn-sm" ng-radio-button value="true" ng-model="$parent.station.selectedForm.data.exclusionHemoptisis" ng-change="edited()">
+                            Si
+                        </label>
+                        <label class="btn btn-default btn-sm" ng-radio-button value="false" ng-model="$parent.station.selectedForm.data.exclusionHemoptisis" ng-change="edited()">
+                            No
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Pneomotorax</td>
+                <td>
+                    <div class="pull-right btn-group" data-toggle="buttons">
+                        <label class="btn btn-default btn-sm" ng-radio-button value="true" ng-model="$parent.station.selectedForm.data.exclusionPneumotorax" ng-change="edited()">
+                            Si
+                        </label>
+                        <label class="btn btn-default btn-sm" ng-radio-button value="false" ng-model="$parent.station.selectedForm.data.exclusionPneumotorax" ng-change="edited()">
+                            No
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Traqueostomía</td>
+                <td>
+                    <div class="pull-right btn-group" data-toggle="buttons">
+                        <label class="btn btn-default btn-sm" ng-radio-button value="true" ng-model="$parent.station.selectedForm.data.exclusionTraqueotomia" ng-change="edited()">
+                            Si
+                        </label>
+                        <label class="btn btn-default btn-sm" ng-radio-button value="false" ng-model="$parent.station.selectedForm.data.exclusionTraqueotomia" ng-change="edited()">
+                            No
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Sonda pleural</td>
+                <td>
+                    <div class="pull-right btn-group" data-toggle="buttons">
+                        <label class="btn btn-default btn-sm" ng-radio-button value="true" ng-model="$parent.station.selectedForm.data.exclusionSondapleural" ng-change="edited()">
+                            Si
+                        </label>
+                        <label class="btn btn-default btn-sm" ng-radio-button value="false" ng-model="$parent.station.selectedForm.data.exclusionSondapleural" ng-change="edited()">
+                            No
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Aneurisma cerebral, abdomen y torax</td>
+                <td>
+                    <div class="pull-right btn-group" data-toggle="buttons">
+                        <label class="btn btn-default btn-sm" ng-radio-button value="true" ng-model="$parent.station.selectedForm.data.exclusionAneurisma" ng-change="edited()">
+                            Si
+                        </label>
+                        <label class="btn btn-default btn-sm" ng-radio-button value="false" ng-model="$parent.station.selectedForm.data.exclusionAneurisma" ng-change="edited()">
+                            No
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Embolia pulmonar</td>
+                <td>
+                    <div class="pull-right btn-group" data-toggle="buttons">
+                        <label class="btn btn-default btn-sm" ng-radio-button value="true" ng-model="$parent.station.selectedForm.data.exclusionEmbolia" ng-change="edited()">
+                            Si
+                        </label>
+                        <label class="btn btn-default btn-sm" ng-radio-button value="false" ng-model="$parent.station.selectedForm.data.exclusionEmbolia" ng-change="edited()">
+                            No
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Infarto reciente</td>
+                <td>
+                    <div class="pull-right btn-group" data-toggle="buttons">
+                        <label class="btn btn-default btn-sm" ng-radio-button value="true" ng-model="$parent.station.selectedForm.data.exclusionInfarto" ng-change="edited()">
+                            Si
+                        </label>
+                        <label class="btn btn-default btn-sm" ng-radio-button value="false" ng-model="$parent.station.selectedForm.data.exclusionInfarto" ng-change="edited()">
+                            No
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Inestabilidad CV</td>
+                <td>
+                    <div class="pull-right btn-group" data-toggle="buttons">
+                        <label class="btn btn-default btn-sm" ng-radio-button value="true" ng-model="$parent.station.selectedForm.data.exclusionInestabilidad" ng-change="edited()">
+                            Si
+                        </label>
+                        <label class="btn btn-default btn-sm" ng-radio-button value="false" ng-model="$parent.station.selectedForm.data.exclusionInestabilidad" ng-change="edited()">
+                            No
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Fiebre, nauseas, vómitos</td>
+                <td>
+                    <div class="pull-right btn-group" data-toggle="buttons">
+                        <label class="btn btn-default btn-sm" ng-radio-button value="true" ng-model="$parent.station.selectedForm.data.exclusionFiebre" ng-change="edited()">
+                            Si
+                        </label>
+                        <label class="btn btn-default btn-sm" ng-radio-button value="false" ng-model="$parent.station.selectedForm.data.exclusionFiebre" ng-change="edited()">
+                            No
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Embarazo avanzado</td>
+                <td>
+                    <div class="pull-right btn-group" data-toggle="buttons">
+                        <label class="btn btn-default btn-sm" ng-radio-button value="true" ng-model="$parent.station.selectedForm.data.exclusionEmbarazoAvanzado" ng-change="edited()">
+                            Si
+                        </label>
+                        <label class="btn btn-default btn-sm" ng-radio-button value="false" ng-model="$parent.station.selectedForm.data.exclusionEmbarazoAvanzado" ng-change="edited()">
+                            No
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Embarazo complicado</td>
+                <td>
+                    <div class="pull-right btn-group" data-toggle="buttons">
+                        <label class="btn btn-default btn-sm" ng-radio-button value="true" ng-model="$parent.station.selectedForm.data.embarazoComplicado" ng-change="edited()">
+                            Si
+                        </label>
+                        <label class="btn btn-default btn-sm" ng-radio-button value="false" ng-model="$parent.station.selectedForm.data.embarazoComplicado" ng-change="edited()">
+                            No
+                        </label>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <hr class="line">
+        <h4>PARA TODOS LOS ENTREVISTADOS QUE NO TIENEN LOS CRITERIOS DE EXCLUSION Y QUE POR LO TANTO DEBEN HACER ESPIROMETRÍA</h4>
+        <table width="100%" border="0">
+            <tr>
+                <td>¿Tuvo infección respiratoria (resfriado) en las últimas 3 semanas?</td>
+                <td class="td-1">
+                    <div class="pull-right btn-group" data-toggle="buttons">
+                        <label class="btn btn-default btn-sm" ng-radio-button value="true" ng-model="$parent.station.selectedForm.data.infeccionRespiratoria" ng-change="edited()">
+                            Si
+                        </label>
+                        <label class="btn btn-default btn-sm" ng-radio-button value="false" ng-model="$parent.station.selectedForm.data.infeccionRespiratoria" ng-change="edited()">
+                            No
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>¿Tuvo infección en el oido en las últimas 3 semanas?</td>
+                <td>
+                    <div class="pull-right btn-group" data-toggle="buttons">
+                        <label class="btn btn-default btn-sm" ng-radio-button value="true" ng-model="$parent.station.selectedForm.data.infeccionOido" ng-change="edited()">
+                            Si
+                        </label>
+                        <label class="btn btn-default btn-sm" ng-radio-button value="false" ng-model="$parent.station.selectedForm.data.infeccionOido" ng-change="edited()">
+                            No
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>¿Usó aerosoles (sprays inhalados) o nebulizadores con broncodilatadores en los últimas 8 horas?</td>
+                <td>
+                    <div class="pull-right btn-group" data-toggle="buttons">
+                        <label class="btn btn-default btn-sm" ng-radio-button value="true" ng-model="$parent.station.selectedForm.data.aerosoles" ng-change="edited()">
+                            Si
+                        </label>
+                        <label class="btn btn-default btn-sm" ng-radio-button value="false" ng-model="$parent.station.selectedForm.data.aerosoles" ng-change="edited()">
+                            No
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>¿Ha usado algún medicamento broncodilatador en las últimas 8 horas?</td>
+                <td>
+                    <div class="pull-right btn-group" data-toggle="buttons">
+                        <label class="btn btn-default btn-sm" ng-radio-button value="true" ng-model="$parent.station.selectedForm.data.broncodilatador" ng-change="edited()">
+                            Si
+                        </label>
+                        <label class="btn btn-default btn-sm" ng-radio-button value="false" ng-model="$parent.station.selectedForm.data.broncodilatador" ng-change="edited()">
+                            No
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>¿Fumo (cualquier tipo de cigarrillo) en las últimas 2 horas? ¿Cuántos?</td>
+                <td>
+                    <div class="pull-right btn-group" data-toggle="buttons">
+                        <label class="btn btn-default btn-sm" ng-radio-button value="true" ng-model="$parent.station.selectedForm.data.fumo" ng-change="edited()">
+                            Si
+                        </label>
+                        <label class="btn btn-default btn-sm" ng-radio-button value="false" ng-model="$parent.station.selectedForm.data.fumo" ng-change="edited()">
+                            No
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>¿Realizó algún tipo de ejercicio físico fuerte (como gimnasia, caminata o trotar) en la última hora?</td>
+                <td>
+                    <div class="pull-right btn-group" data-toggle="buttons">
+                        <label class="btn btn-default btn-sm" ng-radio-button value="true" ng-model="$parent.station.selectedForm.data.gimnasia" ng-change="edited()">
+                            Si
+                        </label>
+                        <label class="btn btn-default btn-sm" ng-radio-button value="false" ng-model="$parent.station.selectedForm.data.gimnasia" ng-change="edited()">
+                            No
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>¿Comió en la última hora?</td>
+                <td>
+                    <div class="pull-right btn-group" data-toggle="buttons">
+                        <label class="btn btn-default btn-sm" ng-radio-button value="true" ng-model="$parent.station.selectedForm.data.comio" ng-change="edited()">
+                            Si
+                        </label>
+                        <label class="btn btn-default btn-sm" ng-radio-button value="false" ng-model="$parent.station.selectedForm.data.comio" ng-change="edited()">
+                            No
+                        </label>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="breack"></div>
+        <h4>COMENTARIOS</h4>
+        <textarea ng-show="!print" class="form-control" rows="5" ng-model="$parent.station.selectedForm.data.notas" ng-blur="edited()"></textarea>
+        <span ng-show="print" class="form-control"  >{{$parent.station.selectedForm.data.notas}}</span>
+    </div>
+</div>
+<div class="row btn-footer" ng-show="!print">
+    <div class="col-md-12">
+        <div class="pull-left">
+            <button type="submit" class="btn btn-primary" ng-print print-element-id="print" ng-click="print=true">Imprimir</button>
+        </div>
+        <div class="pull-right">
+            <button type="submit" class="btn btn-default" ng-click="cancel($parent.station)">Cancelar</button>
+            <button type="submit" class="btn btn-default" ng-click="save($parent.station)">Grabar</button>
+            <button type="submit" class="btn btn-default" ng-click="finish($parent.station)">Finalizar</button>
+            <button type="submit" class="btn btn-default" ng-click="close($parent.station)">Cerrar</button>
+        </div>
+    </div>
+</div>
+<div class="row signing" ng-show="print">
+    <div class="col-md-12">
+        <div class="col-md-4 firm-1 text-center">
+            <hr />
+            Firma y sello del Médico
+        </div>
+        <div class="col-md-4 firm-2 text-center">
+            <hr />
+            Firma del examinado
+        </div>
+        <div class="col-md-4 firm-3 text-center">
+            <hr />
+            <div>Huella digital</div>
+        </div>
+    </div>
+</div>

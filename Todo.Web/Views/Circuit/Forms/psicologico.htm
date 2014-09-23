@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://getbootstrap.com/examples/dashboard/ -->
+<html lang="en" class="no-touch">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="http://getbootstrap.com/assets/ico/favicon.ico">
+        <title>Circuito Pre-Ocupacional</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+
+        <!-- Overrides styles -->
+        <link href="css/overrides.css" rel="stylesheet">
+
+        <!-- Print styles -->
+        <link href="css/print.css" rel="stylesheet" media="print">
+
+        <!-- Animate styles -->
+        <link href="css/animate.css" rel="stylesheet">
+
+        <!-- Call to Google Fonts -->
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,600" rel="stylesheet" type="text/css">
+
+        <!-- Just for debugging purposes. Don't actually copy this line! -->
+        <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+                    <!--[if lt IE 9]>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <![endif]-->
+        <style id="holderjs-style" type="text/css"></style>
+        <script type="text/javascript" src="./Dashboard Template for Bootstrap_files/version.php"></script>
+        <script src="js/modernizr.custom.js"></script>
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand fadeInLeftBig animated"><img alt="Clinisanitas" src="images/logo.png" /></a>
+                </div>
+                <div class="secundary-navbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Agenda</a></li>
+                        <li><a href="#">Admisión</a></li>
+                        <li><a href="#">Triaje</a></li>
+                        <li><a href="#">Dashboard</a></li>
+                        <li class="active"><a href="#">Circuito Preocupacional</a></li>
+                        <li><a href="#">Administrador</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown profile">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Nombre de Usuario <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">22/05/2014</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Desconectar</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="container main box-shaded">
+            <div class="row stations">
+                <div class="col-lg-12">
+                    <div class="main-header">
+                        <h1 class="pull-left">Circuito preocupacional</h1>
+                        <div class="cont-buttons pull-right">
+                        </div>
+                    </div>
+                    <ul id="tab-circuito" class="nav nav-tabs">
+                        <li class="active"><a href="#espirometria" data-toggle="tab">Psicológico</a></li>
+                    </ul>
+                    <div class="row form-group hide-print" style="margin-top: -10px;">
+                        <div class="col-md-12">
+                            <div class="pull-left form-inline" ng-show="">
+                                <label>
+                                    <select class="form-control">
+                                        <option value="default">Nombre de un exámen</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-circuito" class="tab-content">
+                        <!-- TEST -------------------------------------------->
+                        <div class="tab-pane active">
+                            <div class="page-header">
+                                <ul>
+                                    <li><img src="../../Content/images/logo-print.png" alt="Clinisanitas" /></li>
+                                    <li><div class="printh2">Ocupacional</div></li>
+                                </ul>
+                            </div>
+                            <div class="row form-header">
+                                <div class="col-md-12">
+                                    <h2 class="h2">INFORME PSICOLÓGICO</h2>
+                                </div>
+                                <div class="col-md-12 form-horizontal">
+                                    <div class="form-group">
+                                        <div class="col-md-2 pull-right">
+                                            <input type="text" class="form-control input-sm">
+                                        </div>
+                                        <label class="pull-right text-right control-label">FECHA:</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="pull-right test-ocup">
+                                            <div class="btn-group" data-toggle="buttons">
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="checkbox" checked> EMPO
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="checkbox"> EMOA
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="checkbox"> EMOR
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <label class="pull-right text-right control-label">TIPO DE EXÁMEN OCUPACIONAL:</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="cont-bordered">
+                                        <table width="100%" border="0">
+                                            <tr>
+                                                <td id="cell-1"><strong>APELLIDOS Y NOMBRES:</strong></td>
+                                                <td>Hugo Mauro German Rauber</td>
+                                            </tr>
+                                        </table>
+                                        <table width="100%" border="0">
+                                            <tr>
+                                                <td id="cell-2"><strong>EDAD:</strong></td>
+                                                <td>30</td>
+                                                <td id="cell-3"><strong>SEXO:</strong></td>
+                                                <td>Masculino</td>
+                                                <td id="cell-4"><strong>TIPO DE DOC:</strong></td>
+                                                <td>Pasaporte</td>
+                                                <td id="cell-5"><strong>NÚMERO  DE DOC:</strong></td>
+                                                <td>24703373</td>
+                                            </tr>
+                                        </table>
+                                        <table width="100%" border="0">
+                                            <tr>
+                                                <td id="cell-6"><strong>EMPRESA:</strong></td>
+                                                <td colspan="5">BVision</td>
+                                                <td id="cell-7"><strong>PUESTO DE TRABAJO:</strong></td>
+                                                <td>Herrero</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row main-form">
+                                <div id="container-8" class="col-md-12 form-horizontal">
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label>Principales Riesgos:</label>
+                                            <input type="text" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <label>Medidas de seguridad:</label>
+                                            <input type="text" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    <hr class="line">
+                                    <h4>OBSERVACIÓN DE CONDUCTAS</h4>
+                                    <div class="row row-1 form-group">
+                                        <div class="col-md-6">
+                                            <label>Presentación:</label>
+                                            <select class="form-control input-sm">
+                                                <option>ADECUADO</option>
+                                                <option>INADEACUADO</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>Apetito:</label>
+                                            <select class="form-control input-sm">
+                                                <option>AUMENTADO</option>
+                                                <option>DISMINUIDO</option>
+                                                <option>ADECUADO</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row row-1 form-group">
+                                        <div class="col-md-6">
+                                            <label>Postura:</label>
+                                            <select class="form-control input-sm">
+                                                <option>ERGUIDA</option>
+                                                <option>ENCORVADA</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>Sueño:</label>
+                                            <select class="form-control input-sm">
+                                                <option>AUMENTADO </option>
+                                                <option>DISMINUIDO</option>
+                                                <option>ADECUADO</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <h5>DISCURSO</h5>
+                                    <div class="row row-1 form-group">
+                                        <div class="col-md-4">
+                                            <label>Ritmo:</label>
+                                            <select class="form-control input-sm">
+                                                <option>LENTO</option>
+                                                <option>RAPIDO</option>
+                                                <option>FLUIDO</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>Tono:</label>
+                                            <select class="form-control input-sm">
+                                                <option>BAJO</option>
+                                                <option>MODERADO</option>
+                                                <option>ALTO</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>Articulación:</label>
+                                            <select class="form-control input-sm">
+                                                <option>CON DIFICULTAD</option>
+                                                <option>SIN DIFICULTAD</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <h5>Orientación</h5>
+                                    <div class="row row-1 form-group">
+                                        <div class="col-md-4">
+                                            <label>Tiempo:</label>
+                                            <select class="form-control input-sm">
+                                                <option>ORIENTADO</option>
+                                                <option>DESORIENTADO</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>Espacio:</label>
+                                            <select class="form-control input-sm">
+                                                <option>ORIENTADO</option>
+                                                <option>DESORIENTADO</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>Persona:</label>
+                                            <select class="form-control input-sm">
+                                                <option>ORIENTADO</option>
+                                                <option>DESORIENTADO</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <hr class="line">
+                                    <h4>RESULTADOS DE EVALUACIÓN</h4>
+                                    <div class="row row-1 form-group">
+                                        <div class="col-md-6">
+                                            <label>Nivel intelectual:</label>
+                                            <select class="form-control input-sm">
+                                                <option>MUY SUPERIOR</option>
+                                                <option>SUPERIOR</option>
+                                                <option>PROMEDIO SUPERIOR</option>
+                                                <option>PROMEDIO</option>
+                                                <option>PROMEDIO INFERIOR</option>
+                                                <option>FRONTERIZO</option>
+                                                <option>RM LEVE</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>Coordinación Visomotriz:</label>
+                                            <select class="form-control input-sm">
+                                                <option>NO ADECUADO</option>
+                                                <option>ADECUADO</option>
+                                                <option>OPTIMO</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row row-1 form-group">
+                                        <div class="col-md-6">
+                                            <label>Nivel de memoria:</label>
+                                            <select class="form-control input-sm">
+                                                <option>DISMINUIDA</option>
+                                                <option>CONSERVADO</option>
+                                                <option>ÓPTIMO</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>Personalidad:</label>
+                                            <select class="form-control input-sm">
+                                                <option>AJUSTADA AL MEDIO</option>
+                                                <option>NO AJUSTADA AL MEDIO </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row row-1 form-group">
+                                        <div class="col-md-4">
+                                            <label>Afectividad:</label>
+                                            <select class="form-control input-sm">
+                                                <option>NO ADECUADO</option>
+                                                <option>ADECUADO</option>
+                                                <option>ÓPTIMO</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>Estabilidad emocional:</label>
+                                            <select class="form-control input-sm">
+                                                <option>NO ADECUADA</option>
+                                                <option>DUDOSA</option>
+                                                <option>REGULAR</option>
+                                                <option>ESPERADA</option>
+                                                <option>ELEVADA</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>Control de impulsos:</label>
+                                            <select class="form-control input-sm">
+                                                <option>NO ADECUADA</option>
+                                                <option>DUDOSA</option>
+                                                <option>REGULAR</option>
+                                                <option>ESPERADA</option>
+                                                <option>ELEVADA</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="breack"></div>
+                                    <hr class="line hide-print">
+                                    <h4>CONCLUSIONES</h4>
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <div class="btn-group" data-toggle="buttons">
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> Apto
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> Apto con restricciones
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> No apto
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> Cumple con el perfil del puesto
+                                                </label>
+                                                <label class="btn btn-default btn-sm">
+                                                    <input type="radio"> No cumple con el perfil del puesto
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label>Área Cognitiva:</label>
+                                            <textarea class="form-control input-sm" rows="2"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label>Área Emocional:</label>
+                                            <textarea class="form-control input-sm" rows="2"></textarea>
+                                        </div>
+                                    </div>
+                                    <hr class="line">
+                                    <h4>RECOMENDACIONES</h4>
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <textarea class="form-control input-sm" rows="5"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row btn-footer">
+                        <div class="col-md-12">
+                            <div class="pull-left">
+                                <button type="submit" class="btn btn-primary">Imprimir</button>
+                            </div>
+                            <div class="pull-right">
+                                <button type="submit" class="btn btn-default">Cancelar</button>
+                                <button type="submit" class="btn btn-default">Finalizar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row signing">
+                        <div class="col-md-12">
+                            <div class="col-md-4 firm-1 text-center">
+                                <hr />
+                                        Firma y sello del Médico
+                            </div>
+                            <div class="col-md-4 firm-2 text-center">
+                                <hr />
+                                        Firma del examinado
+                            </div>
+                            <div class="col-md-4 firm-3 text-center">
+                                <hr />
+                                <div>Huella digital</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <footer class="footer">
+            <div class="text-center">
+                <p>© 2014 - Clinisanitas - V.0.0.1</p>
+            </div>
+        </footer>
+                    <!-- Bootstrap core JavaScript
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/docs.min.js"></script>
+        <script>
+            $(document).ready(function (){
+              $('.tooltips').tooltip()
+            });
+        </script>
+    </body>
+</html>

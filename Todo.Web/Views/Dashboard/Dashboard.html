@@ -1,0 +1,62 @@
+﻿<div class="container main box-shaded">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="main-header">
+                <h1><span class="glyphicon glyphicon-eye-open" style="margin-left: 5px;"></span> Dashboard</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="filter form-inline">
+                        <select class="form-control input-sm" ng-model="filter" ng-options="status.name for status in statuses" ng-change="filterList(filter)">
+                            <option value="">Todos</option>
+                        </select>
+                        <div class="btn-group pull-right" data-toggle="buttons">
+                            <label class="btn btn-default btn-sm" ng-radio-button ng-model="allPatients" value="true" ng-change="listChanged()">
+                                Vista General
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table admin table-hover">
+                        <thead>
+                        <tr>
+                            <th>Estado</th>
+                            <th>Nombre</th>
+                            <th>Estación</th>
+                            <th class="time"><span class="glyphicon glyphicon-time"></span></th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="patient in filteredPatients">
+                            <td>{{patient.examStatus}}</td>
+                            <td>{{patient.fullName}}</td>
+                            <td>{{patient.station}}</td>
+                            <td class="text-center">{{patient.stationTime}}</td>
+                            <td>
+                                <div class="pull-right">
+                                    <div class="btn-group bs-glyphicons acciones">
+                                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                                            <span class="glyphicon glyphicon-cog"></span>
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li ng-show="$root.user.stations.selectedStation != 'Auditoría'" ng-repeat="practice in patient.practices" ng-click="takePatient(patient, practice)"><a href="#"><span class="glyphicon glyphicon-file"></span> {{practice.name}}</a></li>
+                                            <li ng-show="$root.user.stations.selectedStation == 'Auditoría'" ng-click="auditPatient(patient, {name:'Auditoría', id:10})"><a href="#"><span class="glyphicon glyphicon-pencil"></span> Auditar</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

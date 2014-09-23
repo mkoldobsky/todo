@@ -1,0 +1,62 @@
+﻿<div class="modal-header" ng-controller="configController">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="cancel()">&times;</button>
+    <h4 class="modal-title" id="myModalLabel">Datos</h4>
+</div>
+<div class="modal-body" ng-controller="configController">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="tab-usuarios" class="tab-content">
+                <div class="tab-pane fade in active" id="perfil">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" ng-model="$parent.newProtocol.active">
+                                    Activo
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Nombre</label>
+                                <input type="text" class="form-control" id="" placeholder="" ng-model="$parent.newProtocol.name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div ng-repeat="practice in practices">
+                                    <div class="checkbox">
+                                        <label ng-show="practice.name != 'Auditoría'">
+                                            <input type="checkbox" ng-model="$parent.newProtocol.practices[practice.id]"> {{practice.name}}
+                                        </label>
+                                    </div>
+
+                                    <div class="checkbox col-md-offset-1" ng-show="practice.hasExams && $parent.newProtocol.practices[practice.id]" >
+                                        <div multi-select
+                                             input-model="practice.exams"
+                                             output-model="$parent.selectedExams"
+                                             button-label="name"
+                                             item-label="name"
+                                             tick-property="ticked">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clean()">Limpiar</button>
+    <button type="button" class="btn btn-success" ng-click="saveProtocol()">Grabar</button>
+</div>
+

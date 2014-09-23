@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Todo API Help Page</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Clinisanita API Help Page</h1>
+    <h2>Account</h2>
+    <table>
+        <tr>
+            <td><h3>Request Token</h3></td>
+            <td>curl -X POST -H Cache-Control:no-cache -H Content-Type:application/x-www-form-urlencoded -d 'grant_type=password&username=xxxxx&password=yyyyy' http://localhost:7828/token</td>
+        </tr>
+        <tr>
+            <td><h3>Regiter Account</h3>  Authentication required</td>
+            <td>
+                curl -X POST -H Authorization:Bearer {{token}} -H Cache-Control:no-cache -H Content-Type:application/x-www-form-urlencoded -d 'Username=Pong&Password=Passw0rd!&Email=mkoldobsky%40gmail.com' http://localhost:7828/account/register
+            </td>
+        </tr>
+
+        <tr>
+            <td><h3>Get All Users</h3>  Authentication required</td>
+            <td>
+                curl -X GET -H Authorization:Bearer {{token}} -H Cache-Control:no-cache  http://localhost:7828/account
+            </td>
+        </tr>
+    </table>
+    <h2>Department/State/District</h2>
+
+    <h2>Company</h2>
+    <table>
+        <tr>
+            <td>
+                <h3>Get all companies</h3>  Authentication required
+            </td>
+            <td>
+                curl -X GET -H Cache-Control:no-cache -H Authorization:Bearer {{token}}  http://localhost:7828/Company
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>
+                    Get Company by Id
+                </h3>  Authentication required
+            </td>
+            <td>
+                curl -X GET -H Cache-Control:no-cache -H Authorization:Bearer {{token}}  http://localhost:7828/company/2
+            </td>
+        </tr>
+    </table>
+
+    <h2>Agenda</h2>
+    <table>
+        <tr>
+            <td>
+                <h3>
+                    Get Date
+                </h3> Authentication required
+            </td>
+            <td>
+                curl -X GET -H Authorization:bearer {{token}} -H Cache-Control:no-cache http://localhost:7828/agenda/2014-06-06
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>
+                    Delete Prospect 8
+                </h3> Authentication required
+            </td>
+            <td>
+                curl -X DELETE -H Authorization:bearer {{token}} -H Cache-Control:no-cache -H Content-Type:application/x-www-form-urlencoded -d 'id=8' http://localhost:7828/agenda/prospect
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Create Prospect
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                Create Schedule
+            </td>
+            <td></td>
+
+        </tr>
+    </table>
+
+
+</body>
+</html>
