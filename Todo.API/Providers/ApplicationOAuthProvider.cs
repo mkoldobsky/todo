@@ -48,7 +48,7 @@ namespace Todo.API.Providers
                     context.Options.AuthenticationType);
                 //ClaimsIdentity cookiesIdentity = await userManager.CreateIdentityAsync(user,
                 //    CookieAuthenticationDefaults.AuthenticationType);
-                AuthenticationProperties properties = CreateProperties(user.UserName, user.Names, user.Id, user.ShouldChangePassword, user.Active);
+                AuthenticationProperties properties = CreateProperties(user.UserName, user.Name, user.Id);
                 AuthenticationTicket ticket = new AuthenticationTicket(oAuthIdentity, properties);
                 context.Validated(ticket);
                 //context.Request.Context.Authentication.SignIn(cookiesIdentity);
@@ -91,15 +91,13 @@ namespace Todo.API.Providers
             return Task.FromResult<object>(null);
         }
 
-        public static AuthenticationProperties CreateProperties(string userName, string names, string userId, bool shouldChangePassword, bool active)
+        public static AuthenticationProperties CreateProperties(string userName, string name, string userId)
         {
             IDictionary<string, string> data = new Dictionary<string, string>
             {
                 { "userName", userName },
-                {"names", names},
+                {"names", name},
                 {"id", userId},
-                {"shouldChangePassword", shouldChangePassword.ToString()},
-                {"active", active.ToString()}
             };
             return new AuthenticationProperties(data);
         }

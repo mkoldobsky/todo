@@ -87,7 +87,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountControllerTests.cs" />
-    <Compile Include="AgendaControllerTests.cs" />
+    <Compile Include="TodoControllerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

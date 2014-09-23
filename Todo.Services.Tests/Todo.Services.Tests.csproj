@@ -62,11 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\CircuitServiceTests.cs" />
-    <Compile Include="Services\AgendaServiceTests.cs" />
-    <Compile Include="Validators\LengthValidatorTests.cs" />
-    <Compile Include="Validators\MandatoryPatientValidatorTests.cs" />
-    <Compile Include="Validators\MandatoryValidatorTests.cs" />
+    <Compile Include="Services\TodoServiceTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
