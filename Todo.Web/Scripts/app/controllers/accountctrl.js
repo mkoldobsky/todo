@@ -1,4 +1,4 @@
-var controllers = angular.module('Todo.controllers', []);
+var controllers = angular.module('todo.controllers', []);
 controllers.controller('accountController', ['$scope', '$rootScope', '$location', 'toaster', 'userMngrSvc', '$window', function ($scope, $rootScope, $location, toaster, userMngrSvc, $window) {
     "use strict";
     $scope.souldChangePassword = false;

@@ -87,28 +87,16 @@
     <Content Include="Content\css\calendar.css" />
     <Content Include="Content\css\toaster.css" />
     <Content Include="Content\images\arrow.png" />
-    <Content Include="Content\images\clinisanitas-bkg.png" />
     <Content Include="Content\images\logo-print.png" />
-    <Content Include="Content\images\user-info.png" />
-    <Content Include="Content\images\user-profile.png" />
     <Content Include="Scripts\app\controllers\accountCtrl.js" />
-    <Content Include="Scripts\app\controllers\agendaCtrl.js" />
-    <Content Include="Scripts\app\controllers\configCtrl.js" />
-    <Content Include="Scripts\app\controllers\circuitCtrl.js" />
-    <Content Include="Scripts\app\controllers\menuCtrl.js" />
-    <Content Include="Scripts\app\controllers\dashboardCtrl.js" />
-    <Content Include="Scripts\app\controllers\waybillCtrl.js" />
-    <Content Include="Scripts\app\controllers\patientCtrl.js" />
+    <Content Include="Scripts\app\controllers\todoCtrl.js" />
     <Content Include="Scripts\app\directives\ng-enter.js" />
     <Content Include="Scripts\app\directives\ng-radio-button.js" />
     <Content Include="Scripts\app\directives\ng-print.js" />
-    <Content Include="Scripts\app\services\circuitSvc.js" />
     <Content Include="Scripts\app\services\commonSvc.js" />
-    <Content Include="Scripts\app\services\patientSvc.js" />
     <Content Include="Scripts\app\services\agendaSvc.js" />
     <Content Include="Scripts\app\services\shared\modalSvc.js" />
     <Content Include="Scripts\app\helpers\authorizationInterceptor.js" />
-    <Content Include="Scripts\app\services\companySvc.js" />
     <Content Include="Scripts\app\services\shared\servicehelper.js" />
     <Content Include="Scripts\app\services\shared\usermngrSvc.js" />
     <Content Include="Scripts\config.js" />
@@ -191,8 +179,6 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
-    <None Include="Properties\PublishProfiles\Demo.pubxml" />
-    <None Include="Properties\PublishProfiles\QA.pubxml" />
     <None Include="Scripts\libs\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\libs\i18n\angular-locale_es-pe.js" />
     <Content Include="Scripts\libs\jasmine-2.0.0\boot.js" />
@@ -269,6 +255,7 @@
     <Content Include="Scripts\libs\version.json" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
     <Folder Include="Views\Account\" />
   </ItemGroup>
   <ItemGroup>

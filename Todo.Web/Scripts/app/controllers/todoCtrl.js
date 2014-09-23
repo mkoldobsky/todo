@@ -1,4 +1,4 @@
-var controllers = angular.module('Todo.controllers');
+var controllers = angular.module('todo.controllers');
 controllers.controller('agendaController', ['$scope', 'toaster', 'agendaService', 'companyService', '$modal', '$timeout', function ($scope, toaster, agendaService, companyService, $modal, $timeout) {
     "use strict";
     

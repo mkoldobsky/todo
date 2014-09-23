@@ -1,5 +1,5 @@
 
-var services = angular.module('Todo.services');
+var services = angular.module('todo.services');
 services.factory('serviceHelper', ['$http', '$resource', function ($http, $resource) {
     'use strict';
     

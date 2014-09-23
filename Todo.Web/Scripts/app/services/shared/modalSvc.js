@@ -1,5 +1,5 @@
 
-angular.module('Todo.services').service('modalService', ['$modal',
+angular.module('todo.services').service('modalService', ['$modal',
     function ($modal) {
 
         'use strict';

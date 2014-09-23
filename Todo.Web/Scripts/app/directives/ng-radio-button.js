@@ -1,4 +1,4 @@
-﻿var directives = angular.module('Todo.directives');
+﻿var directives = angular.module('todo.directives');
 directives.directive("ngRadioButton", function () {
     return {
         restrict: 'A',

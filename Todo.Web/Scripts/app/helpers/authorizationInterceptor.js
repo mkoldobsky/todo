@@ -1,7 +1,7 @@
 (function () {
     'use strict';
     
-    var services = angular.module('Todo.services', []);
+    var services = angular.module('todo.services', []);
     services.factory('authorizationInterceptor', ['$rootScope', '$q', '$location', function ($rootScope, $q, $location) {
         return {
             responseError: function (rejection) {

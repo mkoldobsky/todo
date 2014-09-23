@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html data-ng-app="Todo">
+<html data-ng-app="todo">
     <head>
         <meta charset="utf-8">
         <title>Todo</title>
@@ -10,9 +10,6 @@
 
         <!-- Overrides styles -->
         <link href="Content/css/overrides.css" rel="stylesheet">
-
-        <!-- Print styles -->
-        <link href="Content/css/print.css" rel="stylesheet" media="print">
 
         <!-- Animate styles -->
         <link href="Content/css/animate.css" rel="stylesheet">
@@ -33,17 +30,6 @@
             <div class="container">
                 <div class="navbar-header">
                     <a class="navbar-brand fadeInLeftBig animated"><img alt="Todo" src="Content/images/logo.png" /></a>
-                </div>
-                <div class="secundary-navbar" ng-show="$root.user != null" ng-controller="menuController">
-                    <ul class="nav navbar-nav">
-                        <li ng-class="{active: activeAgenda, disabled:disableAgenda}" ng-show="!disableAgenda"><a href=" #" ng-click="agenda()">Agenda</a></li>
-                        <li ng-class="{active: activeAdmision, disabled:disableAdmision}" ng-show="!disableAdmision"><a href="#" ng-click="admision()">Admisión</a></li>
-                        <li ng-class="{active: activeTriaje, disabled: disableTriaje}" ng-show="!disableTriaje"><a href="#" ng-click="triaje()">Triaje</a></li>
-                        <li ng-class="{active: activeDashboard, disabled:disableDashboard}" ng-show="!disableDashboard"><a href="#" ng-click="dashboard()">Dashboard</a></li>
-                        <li ng-class="{active: activeCircuit, disabled:disableCircuit}" ng-show="!disableCircuit"><a href="#" ng-click="circuit()">Circuito</a></li>
-                        <li ng-class="{active: activeAdmin, disabled:disableAdmin}" ng-show="!disableAdmin"><a href="#" ng-click="admin()">Administrativo</a></li>
-                        <li ng-class="{active: activeConfig, disabled:disableConfig}" ng-show="!disableConfig"><a href="#" ng-click="config()">Config</a></li>
-                    </ul>
                 </div>
                 <div class="navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -103,19 +89,9 @@
         <script src="Scripts/app/services/shared/usermngrSvc.js"></script>
         <script src="Scripts/app/services/shared/modalSvc.js"></script>
         <script src="Scripts/app/services/commonSvc.js"></script>
-        <script src="Scripts/app/services/companySvc.js"></script>
         <script src="Scripts/app/services/agendaSvc.js"></script>
-        <script src="Scripts/app/services/patientSvc.js"></script>
-        <script src="Scripts/app/services/circuitSvc.js"></script>
         <script src="Scripts/app/controllers/accountCtrl.js"></script>
         <script src="Scripts/app/controllers/mainCtrl.js"></script>
-        <script src="Scripts/app/controllers/configCtrl.js"></script>
-        <script src="Scripts/app/controllers/menuCtrl.js"></script>
-        <script src="Scripts/app/controllers/agendaCtrl.js"></script>
-        <script src="Scripts/app/controllers/patientCtrl.js"></script>
-        <script src="Scripts/app/controllers/waybillCtrl.js"></script>
-        <script src="Scripts/app/controllers/dashboardCtrl.js"></script>
-        <script src="Scripts/app/controllers/circuitCtrl.js"></script>
 
 
 

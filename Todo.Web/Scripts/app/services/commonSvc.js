@@ -1,4 +1,4 @@
-var services = angular.module('Todo.services');
+var services = angular.module('todo.services');
 services.factory('commonService', ['$http', function ($http) {
     'use strict';
 

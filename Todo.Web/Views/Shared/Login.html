@@ -16,19 +16,9 @@
                 <label for="password">Contraseña</label>
                 <input type="password" class="form-control" id="password" name="password" data-ng-model="userLogin.password">
             </div>
-            <div ng-show="shouldChangePassword">
-                <div class="form-group">
-                    <label for="password">Nueva Contraseña</label>
-                    <input type="password" class="form-control" id="password" name="password" data-ng-model="userLogin.newPassword">
-                </div>
-                <div class="form-group">
-                    <label for="password">Confirme Nueva Contraseña</label>
-                    <input type="password" class="form-control" id="password" name="password" data-ng-model="userLogin.confirmNewPassword">
-                </div>
-            </div>
             <div class="form-group">
-                <button  ng-show="!shouldChangePassword" type="submit" class="btn btn-primary" data-ng-click="login(userLogin)">Ingresar</button>
-                <button ng-show="shouldChangePassword" type="submit" class="btn btn-primary" data-ng-click="changePassword(userLogin)">Cambiar Contraseña</button>
+                <button  type="submit" class="btn btn-primary" data-ng-click="login(userLogin)">Ingresar</button>
+                <button type="submit" class="btn btn-primary" data-ng-click="register(userLogin)">Registrar</button>
             </div>
             <div class="form-group text-center">
                 <p>© 2014 - Todo - V.{{$root.version}} - rev. {{$root.rev}}</p>
