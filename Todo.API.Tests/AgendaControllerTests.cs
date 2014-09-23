@@ -26,7 +26,7 @@ namespace Todo.API.Test
             var service = new Mock<ITodoService>();
             service.Setup(x => x.GetByDate(DateTime.Today))
                 .Returns(new List<Schedule> {new Schedule {Capacity = 10}, new Schedule {Capacity = 20}});
-            var controller = new AgendaController(service.Object);
+            var controller = new TodoController(service.Object);
             var result = controller.Get(DateTime.Today) as OkNegotiatedContentResult<DateViewModel>;
             Assert.IsNotNull(result);
             Assert.AreEqual(30, result.Content.capacity);
@@ -44,7 +44,7 @@ namespace Todo.API.Test
                     new Schedule {Capacity = 10, Prospects = new List<Prospect> {new Prospect {Name = "Prospect1"}}},
                     new Schedule {Capacity = 20}
                 });
-            var controller = new AgendaController(service.Object);
+            var controller = new TodoController(service.Object);
             var result = controller.Get(DateTime.Today) as OkNegotiatedContentResult<DateViewModel>;
             Assert.IsNotNull(result);
             Assert.AreEqual(29, result.Content.remains);
@@ -62,7 +62,7 @@ namespace Todo.API.Test
                     new Schedule {Capacity = 10, Prospects = new List<Prospect> {new Prospect {Name = "Prospect1", Company = new Company{Name = "Company"}}}},
                     new Schedule {Capacity = 20}
                 });
-            var controller = new AgendaController(service.Object);
+            var controller = new TodoController(service.Object);
             var result = controller.Get(DateTime.Today) as OkNegotiatedContentResult<DateViewModel>;
             Assert.IsNotNull(result);
             Assert.AreEqual("Company", result.Content.schedules[0].prospects[0].companyName);
@@ -87,7 +87,7 @@ namespace Todo.API.Test
                     new Schedule {Capacity = 20},
                     new Schedule {Capacity = 20}
                 });
-            var controller = new AgendaController(service.Object);
+            var controller = new TodoController(service.Object);
             var result = controller.Get(today.Month, today.Year) as OkNegotiatedContentResult<List<DateViewModel>>;
             Assert.IsNotNull(result);
             Assert.AreEqual(42, result.Content.Count);
@@ -102,7 +102,7 @@ namespace Todo.API.Test
             var service = new Mock<ITodoService>();
             service.Setup(x => x.GetByDate(DateTime.Today))
                 .Returns(new List<Schedule>());
-            var controller = new AgendaController(service.Object);
+            var controller = new TodoController(service.Object);
             var result = controller.Get(DateTime.Today) as OkNegotiatedContentResult<DateViewModel>;
             Assert.IsNotNull(result);
             Assert.AreEqual(0, result.Content.remains);
@@ -121,7 +121,7 @@ namespace Todo.API.Test
         {
             var service = new Mock<ITodoService>();
             service.Setup(x => x.DeleteProspect(It.IsAny<Prospect>())).Returns(true).Verifiable();
-            var controller = new AgendaController(service.Object);
+            var controller = new TodoController(service.Object);
             var result = controller.Delete(new ProspectViewModel{companyId = 1, scheduleId = 1, name = "Prospect"}) as OkNegotiatedContentResult<bool>;
             Assert.IsNotNull(result);
             service.Verify(x=>x.DeleteProspect(It.IsAny<Prospect>()), Times.Once);
@@ -134,7 +134,7 @@ namespace Todo.API.Test
             var viewModel = new CapacityViewModel{capacity =  10, id = 1};
             var service = new Mock<ITodoService>();
             service.Setup(x => x.UpdateCapacity(It.IsAny<Schedule>())).Returns(true).Verifiable();
-            var controller = new AgendaController(service.Object);
+            var controller = new TodoController(service.Object);
             var result = controller.Update(viewModel) as OkNegotiatedContentResult<bool>;
             Assert.IsNotNull(result);
             Assert.IsTrue(result.Content);

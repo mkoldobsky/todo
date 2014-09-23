@@ -15,14 +15,14 @@ namespace Todo.API.Controllers
 {
 
     [RoutePrefix("agenda")]
-    public class AgendaController : ApiController
+    public class TodoController : ApiController
     {
         private ITodoService _service;
 
         /// <summary>
         /// Handles initializing shared properties
         /// </summary>
-        public AgendaController(ITodoService service)
+        public TodoController(ITodoService service)
         {
             _service = service;
         }

@@ -16,18 +16,8 @@ namespace Todo.API.Mappers
 
         protected override void Configure()
         {
-            Mapper.CreateMap<CompanyViewModel, Company>();
             Mapper.CreateMap<RegisterViewModel, ApplicationUser>();
-            Mapper.CreateMap<ProspectViewModel, Prospect>();
-            Mapper.CreateMap<CapacityViewModel, Schedule>();
-            Mapper.CreateMap<PatientViewModel, Patient>();
-            Mapper.CreateMap<ProtocolViewModel, Protocol>();
-            Mapper.CreateMap<PracticeViewModel, Practice>();
-            Mapper.CreateMap<TriajeViewModel, Triaje>();
-            Mapper.CreateMap<IdNameViewModel, Department>();
-            Mapper.CreateMap<IdNameViewModel, State>();
-            Mapper.CreateMap<IdNameViewModel, District>();
-            Mapper.CreateMap<CountryViewModel, Country>();
+            Mapper.CreateMap<TodoViewModel, Item>();
         }
     }
 }
